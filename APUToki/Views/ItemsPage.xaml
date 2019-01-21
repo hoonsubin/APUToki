@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APUToki.Views.ItemsPage"
+             Title="{Binding Title}"
+             x:Name="BrowseItemsPage">
+    <ContentPage.ToolbarItems>
+        <!--<ToolbarItem Text="Add" Clicked="AddItem_Clicked">-->
+        <ToolbarItem Text="Export" Clicked="ExportItem_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="add.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="ItemsListView"
+                      x:FieldModifier="public"
+                      IsGroupingEnabled="true"
+                      GroupDisplayBinding="{Binding Heading}"
+                      ItemAppearing="Handle_ItemAppearing"
+                      VerticalOptions="FillAndExpand" 
+                      HasUnevenRows="true"
+                      RefreshCommand="{Binding LoadItemsCommand}"
+                      IsPullToRefreshEnabled="true"
+                      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                      CachingStrategy="RecycleElement"
+                      ItemSelected="OnItemSelected">
+                <ListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="30">
+                            <StackLayout VerticalOptions="FillAndExpand" 
+                                         Padding="5" 
+                                         BackgroundColor="#7c0020">
+                                
+                                <Label Text="{Binding Heading}" 
+                                       TextColor="White"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="End"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.GroupHeaderTemplate>
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout x:Name="cellBackground" Padding="10">
+                                
+                                <Label Text="{Binding EventName}" x:Name="lblEventName"
+                                       LineBreakMode="NoWrap"
+                                       Style="{DynamicResource ListItemTextStyle}"
+                                       TextColor="{Binding TextColor}"
+                                       FontSize="16" />
+                                
+                                <Label Text="{Binding StartDateTime}" x:Name="lblStartDateTime"
+                                       LineBreakMode="NoWrap" 
+                                       Style="{DynamicResource ListItemDetailTextStyle}"
+                                       FontSize="13"
+                                       TextColor="Maroon"/>
+
+                                <Label Text="{Binding DayOfWeek}" x:Name="lblDayOfWeek"
+                                       LineBreakMode="NoWrap"
+                                       Style="{DynamicResource ListItemDetailTextStyle}"
+                                       FontSize="13"
+                                       TextColor="Green"/>
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

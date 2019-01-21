@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Title="{Binding Title}"
+             x:Class="APUToki.Views.TimetablePage">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="1" RowSpacing="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <BoxView Color="Gray" Grid.Row="0" Grid.Column="0"/>
+            <BoxView Color="Blue" Grid.Row="0" Grid.Column="1"/>
+            <BoxView Color="Blue" Grid.Row="0" Grid.Column="2"/>
+            <BoxView Color="Blue" Grid.Row="0" Grid.Column="3"/>
+            <BoxView Color="Blue" Grid.Row="0" Grid.Column="4"/>
+            
+            <BoxView Color="Blue" Grid.Row="1" Grid.Column="0"/>
+            <BoxView Color="Blue" Grid.Row="2" Grid.Column="0"/>
+            <BoxView Color="Blue" Grid.Row="3" Grid.Column="0"/>
+            <BoxView Color="Blue" Grid.Row="4" Grid.Column="0"/>
+            <BoxView Color="Blue" Grid.Row="5" Grid.Column="0"/>
+            <BoxView Color="Blue" Grid.Row="6" Grid.Column="0"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
