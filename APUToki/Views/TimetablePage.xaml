@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:dg="clr-namespace:Xamarin.Forms.DataGrid;assembly=Xamarin.Forms.DataGrid"
-             Title="{Binding Title}"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Title="{Binding Title}" 
              x:Class="APUToki.Views.TimetablePage">
     <ContentPage.ToolbarItems>
         <!--<ToolbarItem Text="Add" Clicked="AddItem_Clicked">-->
@@ -14,8 +13,9 @@
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
-        <Grid ColumnSpacing="1" RowSpacing="1">
+        <Grid ColumnSpacing="1" RowSpacing="1" BackgroundColor="Gray">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -25,19 +25,68 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             
-            <BoxView Color="Gray" Grid.Row="0" Grid.Column="0"/>
-            <BoxView Color="Blue" Grid.Row="0" Grid.Column="1"/>
-            <BoxView Color="Blue" Grid.Row="0" Grid.Column="2"/>
-            <BoxView Color="Blue" Grid.Row="0" Grid.Column="3"/>
-            <BoxView Color="Blue" Grid.Row="0" Grid.Column="4"/>
-            <BoxView Color="Blue" Grid.Row="0" Grid.Column="5"/>
+            <BoxView Color="Silver" Grid.Row="0" Grid.Column="0"/>
+            <BoxView Color="Silver" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Mon" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <BoxView Color="Silver" Grid.Row="0" Grid.Column="2"/>
+            <Label Text="Tue" Grid.Row="0" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <BoxView Color="Silver" Grid.Row="0" Grid.Column="3"/>
+            <Label Text="Wed" Grid.Row="0" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <BoxView Color="Silver" Grid.Row="0" Grid.Column="4"/>
+            <Label Text="Thu" Grid.Row="0" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <BoxView Color="Silver" Grid.Row="0" Grid.Column="5"/>
+            <Label Text="Fri" Grid.Row="0" Grid.Column="5" VerticalOptions="Center" HorizontalOptions="Center"/>
             
-            <BoxView Color="Blue" Grid.Row="1" Grid.Column="0"/>
-            <BoxView Color="Blue" Grid.Row="2" Grid.Column="0"/>
-            <BoxView Color="Blue" Grid.Row="3" Grid.Column="0"/>
-            <BoxView Color="Blue" Grid.Row="4" Grid.Column="0"/>
-            <BoxView Color="Blue" Grid.Row="5" Grid.Column="0"/>
-            <BoxView Color="Blue" Grid.Row="6" Grid.Column="0"/>
+            <BoxView Color="Silver" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="1" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <BoxView Color="Silver" Grid.Row="2" Grid.Column="0"/>
+            <Label Text="2" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <BoxView Color="Silver" Grid.Row="3" Grid.Column="0"/>
+            <Label Text="3" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <BoxView Color="Silver" Grid.Row="4" Grid.Column="0"/>
+            <Label Text="4" Grid.Row="4" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <BoxView Color="Silver" Grid.Row="5" Grid.Column="0"/>
+            <Label Text="5" Grid.Row="5" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <BoxView Color="Silver" Grid.Row="6" Grid.Column="0"/>
+            <Label Text="6" Grid.Row="6" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"/>
+            
+            <BoxView Color="White" Grid.Row="1" Grid.Column="1"/>
+            <BoxView Color="White" Grid.Row="1" Grid.Column="2"/>
+            <BoxView Color="White" Grid.Row="1" Grid.Column="3"/>
+            <BoxView Color="White" Grid.Row="1" Grid.Column="4"/>
+            <BoxView Color="White" Grid.Row="1" Grid.Column="5"/>
+            
+            <BoxView Color="White" Grid.Row="2" Grid.Column="1"/>
+            <BoxView Color="White" Grid.Row="2" Grid.Column="2"/>
+            <BoxView Color="White" Grid.Row="2" Grid.Column="3"/>
+            <BoxView Color="White" Grid.Row="2" Grid.Column="4"/>
+            <BoxView Color="White" Grid.Row="2" Grid.Column="5"/>
+            
+            <BoxView Color="White" Grid.Row="3" Grid.Column="1"/>
+            <BoxView Color="White" Grid.Row="3" Grid.Column="2"/>
+            <BoxView Color="White" Grid.Row="3" Grid.Column="3"/>
+            <BoxView Color="White" Grid.Row="3" Grid.Column="4"/>
+            <BoxView Color="White" Grid.Row="3" Grid.Column="5"/>
+            
+            <BoxView Color="White" Grid.Row="4" Grid.Column="1"/>
+            <BoxView Color="White" Grid.Row="4" Grid.Column="2"/>
+            <BoxView Color="White" Grid.Row="4" Grid.Column="3"/>
+            <BoxView Color="White" Grid.Row="4" Grid.Column="4"/>
+            <BoxView Color="White" Grid.Row="4" Grid.Column="5"/>
+            
+            <BoxView Color="White" Grid.Row="5" Grid.Column="1"/>
+            <BoxView Color="White" Grid.Row="5" Grid.Column="2"/>
+            <BoxView Color="White" Grid.Row="5" Grid.Column="3"/>
+            <BoxView Color="White" Grid.Row="5" Grid.Column="4"/>
+            <BoxView Color="White" Grid.Row="5" Grid.Column="5"/>
+            
+            <BoxView Color="White" Grid.Row="6" Grid.Column="1"/>
+            <BoxView Color="White" Grid.Row="6" Grid.Column="2"/>
+            <BoxView Color="White" Grid.Row="6" Grid.Column="3"/>
+            <BoxView Color="White" Grid.Row="6" Grid.Column="4"/>
+            <BoxView Color="White" Grid.Row="6" Grid.Column="5"/>
+            
+            
         </Grid>
     </ContentPage.Content>
 </ContentPage>

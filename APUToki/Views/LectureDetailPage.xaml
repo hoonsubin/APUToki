@@ -10,8 +10,32 @@
                FontSize="Large" XAlign="Center"/>
         <Label Text="Instructor" FontSize="Medium"/>
         <Label Text="{Binding LectureItem.InstructorEN}"
-               FontSize="Medium" Grid.Row="0" Grid.Column="0"/>
-        <Label Text="{Binding LectureItem.Period}"
                FontSize="Medium"/>
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="{Binding LectureItem.Period}" />
+                        <Span Text=" " />
+                        <Span Text="{Binding LectureItem.DayOfWeek}" />
+                        <Span Text="." />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="{Binding LectureItem.Classroom}" />
+                        <Span Text=" " />
+                        <Span Text="{Binding LectureItem.BuildingFloor}" />
+                        <Span Text="." />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label Text="{Binding LectureItem.Curriculum}" FontSize="Small"/>
+        
     </StackLayout>
 </ContentPage>

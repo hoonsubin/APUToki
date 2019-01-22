@@ -5,13 +5,15 @@
              Title="{Binding Title}">
     <ContentView.Content>
         <StackLayout>
-            <SearchBar x:Name="searchName" Placeholder="Search Keyword"/>
+            <SearchBar x:Name="searchQuery"
+                       Placeholder="Search Keyword"
+                       SearchButtonPressed="OnSearchButtonPressed"/>
             <ListView x:Name="ItemsListView"
                       x:FieldModifier="public"
-                      ItemAppearing="Handle_ItemAppearing"
                       VerticalOptions="FillAndExpand" 
                       HasUnevenRows="true"
-                      IsPullToRefreshEnabled="false"
+                      RefreshCommand="{Binding LoadItemsCommand}"
+                      IsPullToRefreshEnabled="true"
                       IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                       CachingStrategy="RecycleElement"
                       ItemSelected="OnItemSelected"
@@ -32,7 +34,7 @@
                                        LineBreakMode="NoWrap" 
                                        Style="{DynamicResource ListItemDetailTextStyle}"
                                        FontSize="13"
-                                       TextColor="Maroon"/>
+                                       TextColor="Green"/>
                                 
                             </StackLayout>
                         </ViewCell>

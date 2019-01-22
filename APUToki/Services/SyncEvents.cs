@@ -7,6 +7,7 @@ using Plugin.Calendars;
 using Plugin.Permissions;
 using Plugin.Calendars.Abstractions;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using APUToki.Models;
 using Acr.UserDialogs;
 using Xamarin.Essentials;
@@ -233,5 +234,46 @@ namespace APUToki.Services
             }
 
         }
+
+        /// <summary>
+        /// Updates the course database to the ones online
+        /// </summary>
+        /// <returns>The course list async</returns>
+        public static async Task UpdateLectureListAsync()
+        {
+            var dbItems = await App.Database.GetLecturesAsync();
+
+            //only get the list of lectures online, but are not in the db
+            //the LectureItem model interface will only compare the EventName and StartDateTime, and add to the list only if they are the same
+            var newOnlineItems = ApuBot.LecturesList().Except(dbItems).ToList();
+
+            //sync if there are new items
+            if (newOnlineItems.Count > 0)
+            {
+                var answer = await Application.Current.MainPage.DisplayAlert("Notice", "Found " + newOnlineItems.Count + " new lectures, wish to update database?", "Yes", "No");
+                Debug.WriteLine("[SyncEvents]Found new lectures");
+
+                if (answer)
+                {
+                    foreach (var i in newOnlineItems)
+                    {
+                        //get the lecture with the name subject name, different period, or different classroom
+                        var changedEvent = dbItems.FirstOrDefault(db => db.SubjectNameEN == i.SubjectNameEN && db.Curriculum == i.Curriculum
+                                                                        && db.Period != i.Period || db.Classroom != i.Classroom);
+
+                        if (changedEvent != null)
+                        {
+                            //delete the old one
+                            await App.Database.DeleteLectureAsync(changedEvent);
+                        }
+
+                        //add the new item to the database
+                        await App.Database.SaveLectureAsync(i);
+                    }
+                    Debug.WriteLine("[SyncEvents]The lectures database has been updated");
+                }
+            }
+        }
+
     }
 }

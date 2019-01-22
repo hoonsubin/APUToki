@@ -27,21 +27,21 @@ namespace APUToki.Views
             ItemsListView.ItemsSource = viewModel.ItemGrouped;
 
         }
-        /*
+
         //execute when an item is selected
-        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             //if the selected item is not an item, exit out of the block
             if (!(args.SelectedItem is Item item))
                 return;
 
             //show a new page which is the ItemDetailViewModel
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            //await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
 
             //Manually deselect item after the page shows
             ItemsListView.SelectedItem = null;
         }
-        */
+
         /*
         //execute when the AddItem button is touched
         async void AddItem_Clicked(object sender, EventArgs e)
@@ -70,6 +70,11 @@ namespace APUToki.Views
 
         }
 
+        /// <summary>
+        /// Scroll to the most closest event when the item appears
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">E.</param>
         void Handle_ItemAppearing(object sender, ItemVisibilityEventArgs e)
         {
             //only scroll when the item is more than 1 in the list

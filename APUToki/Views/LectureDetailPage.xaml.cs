@@ -30,9 +30,13 @@ namespace APUToki.Views
             //declare the temp item information that'll be shown
             var lectureItem = new LectureItem
             {
-                SubjectNameEN = "Lecture 1",
+                SubjectNameEN = "Empty Lecture",
                 InstructorEN = "Professor",
-                //DayOfWeek = DateTime.Now.DayOfWeek.ToString()
+                Period = "5th Period",
+                Classroom = "classroom",
+                DayOfWeek = "Monday",
+                Curriculum = "curriculum",
+                BuildingFloor = "A building 3rd floor"
             };
 
             //set a new view model page

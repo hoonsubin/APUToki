@@ -18,10 +18,12 @@ namespace APUToki.Views
             BindingContext = viewModel = new TimetableViewModel();
         }
 
-        async void Search_ClickedAsync(object sender, System.EventArgs e)
+        async void Search_ClickedAsync(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new NavigationPage(new LectureSearchPage()));
 
         }
+
+
     }
 }

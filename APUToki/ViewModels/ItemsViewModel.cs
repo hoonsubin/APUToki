@@ -33,7 +33,8 @@ namespace APUToki.ViewModels
 
             //load the items from the database
             //set the load items command to Execute load items command
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+            async void execute() => await ExecuteLoadItemsCommand();
+            LoadItemsCommand = new Command(execute);
 
             /*
             //messaging center is used to communicate with different components with in the project
@@ -118,6 +119,7 @@ namespace APUToki.ViewModels
                 }
                 else { Debug.WriteLine("No internet connection"); }
 
+                //load the items in the database
                 var itemsInDb = await App.Database.SortListByDate();
 
                 //add all the items to the list

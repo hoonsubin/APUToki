@@ -23,6 +23,7 @@
                       ItemAppearing="Handle_ItemAppearing"
                       VerticalOptions="FillAndExpand" 
                       HasUnevenRows="true"
+                      ItemSelected="OnItemSelected"
                       RefreshCommand="{Binding LoadItemsCommand}"
                       IsPullToRefreshEnabled="true"
                       IsRefreshing="{Binding IsBusy, Mode=OneWay}"
