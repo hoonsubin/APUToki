@@ -124,6 +124,9 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\tab_calendar.png" />
+    <BundleResource Include="Resources\tab_calendar%402x.png" />
+    <BundleResource Include="Resources\tab_calendar%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

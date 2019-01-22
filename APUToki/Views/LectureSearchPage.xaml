@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APUToki.Views.LectureSearchPage"
+             Title="{Binding Title}">
+    <ContentView.Content>
+        <StackLayout>
+            <SearchBar x:Name="searchName" Placeholder="Search Keyword"/>
+            <ListView x:Name="ItemsListView"
+                      x:FieldModifier="public"
+                      ItemAppearing="Handle_ItemAppearing"
+                      VerticalOptions="FillAndExpand" 
+                      HasUnevenRows="true"
+                      IsPullToRefreshEnabled="false"
+                      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                      CachingStrategy="RecycleElement"
+                      ItemSelected="OnItemSelected"
+                      ItemsSource="{Binding SearchResults}">
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout x:Name="cellBackground" Padding="10">
+                                
+                                <Label Text="{Binding SubjectNameEN}" x:Name="lblLectureName"
+                                       LineBreakMode="NoWrap"
+                                       Style="{DynamicResource ListItemTextStyle}"
+                                       TextColor="{Binding TextColor}"
+                                       FontSize="16" />
+                                
+                                <Label Text="{Binding InstructorEN}" x:Name="lblProfessor"
+                                       LineBreakMode="NoWrap" 
+                                       Style="{DynamicResource ListItemDetailTextStyle}"
+                                       FontSize="13"
+                                       TextColor="Maroon"/>
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentView.Content>
+</ContentPage>

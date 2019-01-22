@@ -43,6 +43,28 @@
           "lib/Xamarin.iOS10/Plugin.Calendars.dll": {}
         }
       },
+      "EPPlus/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Json": "2.2.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Data.Common": "4.3.0",
+          "System.Drawing.Common": "4.5.1",
+          "System.Reflection": "4.3.0",
+          "System.Security.Claims": "4.3.0",
+          "System.Security.Cryptography.Pkcs": "4.5.1",
+          "System.Security.Cryptography.X509Certificates": "4.3.2",
+          "System.Text.Encoding.CodePages": "4.5.0",
+          "System.Xml.XPath.XmlDocument": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/EPPlus.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/EPPlus.dll": {}
+        }
+      },
       "HtmlAgilityPack/1.8.13": {
         "type": "package",
         "dependencies": {
@@ -56,6 +78,113 @@
         },
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.FileExtensions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.2.0",
+          "Microsoft.Extensions.FileProviders.Physical": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Json/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.2.0",
+          "Microsoft.Extensions.Configuration.FileExtensions": "2.2.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Physical/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.2.0",
+          "Microsoft.Extensions.FileSystemGlobbing": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileSystemGlobbing/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Plugin.Permissions/3.0.0.12": {
@@ -115,6 +244,55 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
         }
       },
+      "System.Buffers/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
+      "System.ComponentModel.TypeConverter/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Drawing.Common/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Memory/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
       "System.Net.Http/4.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -144,6 +322,86 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Reflection/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Security.Claims/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Security.Cryptography.Pkcs/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Memory": "4.5.1"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Security.Cryptography.Pkcs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Security.Cryptography.X509Certificates/4.3.2": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
         }
       },
       "System.Xml.XmlDocument/4.3.0": {
@@ -319,17 +577,32 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.DataGrid/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.0.0.446417"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
+        }
+      },
       "APUToki/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Acr.UserDialogs": "7.0.1",
           "CClarke.Plugin.Calendars": "1.0.0",
+          "EPPlus": "4.5.3",
           "HtmlAgilityPack": "1.8.13",
           "Plugin.Permissions": "3.0.0.12",
+          "System.Buffers": "4.5.0",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.3.0.967583",
+          "Xamarin.Forms.DataGrid": "3.1.0",
           "sqlite-net-pcl": "1.5.231"
         },
         "compile": {
@@ -382,6 +655,28 @@
           "lib/Xamarin.iOS10/Plugin.Calendars.dll": {}
         }
       },
+      "EPPlus/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Json": "2.2.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Data.Common": "4.3.0",
+          "System.Drawing.Common": "4.5.1",
+          "System.Reflection": "4.3.0",
+          "System.Security.Claims": "4.3.0",
+          "System.Security.Cryptography.Pkcs": "4.5.1",
+          "System.Security.Cryptography.X509Certificates": "4.3.2",
+          "System.Text.Encoding.CodePages": "4.5.0",
+          "System.Xml.XPath.XmlDocument": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/EPPlus.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/EPPlus.dll": {}
+        }
+      },
       "HtmlAgilityPack/1.8.13": {
         "type": "package",
         "dependencies": {
@@ -395,6 +690,113 @@
         },
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.FileExtensions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.2.0",
+          "Microsoft.Extensions.FileProviders.Physical": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Json/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.2.0",
+          "Microsoft.Extensions.Configuration.FileExtensions": "2.2.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Physical/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.2.0",
+          "Microsoft.Extensions.FileSystemGlobbing": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileSystemGlobbing/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Plugin.Permissions/3.0.0.12": {
@@ -454,6 +856,55 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
         }
       },
+      "System.Buffers/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
+      "System.ComponentModel.TypeConverter/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Drawing.Common/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Memory/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
       "System.Net.Http/4.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -473,6 +924,64 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Reflection/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Security.Claims/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Security.Cryptography.Pkcs/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Memory": "4.5.1"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Security.Cryptography.Pkcs.dll": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll": {}
+        }
+      },
+      "System.Security.Cryptography.X509Certificates/4.3.2": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "System.Xml.XmlDocument/4.3.0": {
@@ -648,17 +1157,32 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.DataGrid/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.0.0.446417"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
+        }
+      },
       "APUToki/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Acr.UserDialogs": "7.0.1",
           "CClarke.Plugin.Calendars": "1.0.0",
+          "EPPlus": "4.5.3",
           "HtmlAgilityPack": "1.8.13",
           "Plugin.Permissions": "3.0.0.12",
+          "System.Buffers": "4.5.0",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.3.0.967583",
+          "Xamarin.Forms.DataGrid": "3.1.0",
           "sqlite-net-pcl": "1.5.231"
         },
         "compile": {
@@ -711,6 +1235,28 @@
           "lib/Xamarin.iOS10/Plugin.Calendars.dll": {}
         }
       },
+      "EPPlus/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Json": "2.2.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Data.Common": "4.3.0",
+          "System.Drawing.Common": "4.5.1",
+          "System.Reflection": "4.3.0",
+          "System.Security.Claims": "4.3.0",
+          "System.Security.Cryptography.Pkcs": "4.5.1",
+          "System.Security.Cryptography.X509Certificates": "4.3.2",
+          "System.Text.Encoding.CodePages": "4.5.0",
+          "System.Xml.XPath.XmlDocument": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/EPPlus.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/EPPlus.dll": {}
+        }
+      },
       "HtmlAgilityPack/1.8.13": {
         "type": "package",
         "dependencies": {
@@ -724,6 +1270,113 @@
         },
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.FileExtensions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.2.0",
+          "Microsoft.Extensions.FileProviders.Physical": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Json/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.2.0",
+          "Microsoft.Extensions.Configuration.FileExtensions": "2.2.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Physical/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.2.0",
+          "Microsoft.Extensions.FileSystemGlobbing": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileSystemGlobbing/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Plugin.Permissions/3.0.0.12": {
@@ -783,6 +1436,55 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
         }
       },
+      "System.Buffers/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
+      "System.ComponentModel.TypeConverter/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Drawing.Common/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Memory/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
       "System.Net.Http/4.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -796,6 +1498,64 @@
         }
       },
       "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Reflection/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Security.Claims/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Security.Cryptography.Pkcs/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Memory": "4.5.1"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Security.Cryptography.Pkcs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll": {}
+        }
+      },
+      "System.Security.Cryptography.X509Certificates/4.3.2": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -977,17 +1737,32 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.DataGrid/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.0.0.446417"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
+        }
+      },
       "APUToki/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Acr.UserDialogs": "7.0.1",
           "CClarke.Plugin.Calendars": "1.0.0",
+          "EPPlus": "4.5.3",
           "HtmlAgilityPack": "1.8.13",
           "Plugin.Permissions": "3.0.0.12",
+          "System.Buffers": "4.5.0",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.3.0.967583",
+          "Xamarin.Forms.DataGrid": "3.1.0",
           "sqlite-net-pcl": "1.5.231"
         },
         "compile": {
@@ -1040,6 +1815,28 @@
           "lib/Xamarin.iOS10/Plugin.Calendars.dll": {}
         }
       },
+      "EPPlus/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Json": "2.2.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Data.Common": "4.3.0",
+          "System.Drawing.Common": "4.5.1",
+          "System.Reflection": "4.3.0",
+          "System.Security.Claims": "4.3.0",
+          "System.Security.Cryptography.Pkcs": "4.5.1",
+          "System.Security.Cryptography.X509Certificates": "4.3.2",
+          "System.Text.Encoding.CodePages": "4.5.0",
+          "System.Xml.XPath.XmlDocument": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/EPPlus.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/EPPlus.dll": {}
+        }
+      },
       "HtmlAgilityPack/1.8.13": {
         "type": "package",
         "dependencies": {
@@ -1053,6 +1850,113 @@
         },
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.FileExtensions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.2.0",
+          "Microsoft.Extensions.FileProviders.Physical": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Json/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.2.0",
+          "Microsoft.Extensions.Configuration.FileExtensions": "2.2.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Physical/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.2.0",
+          "Microsoft.Extensions.FileSystemGlobbing": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll": {}
+        }
+      },
+      "Microsoft.Extensions.FileSystemGlobbing/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Plugin.Permissions/3.0.0.12": {
@@ -1112,6 +2016,55 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
         }
       },
+      "System.Buffers/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
+      "System.ComponentModel.TypeConverter/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Drawing.Common/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Memory/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
       "System.Net.Http/4.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1125,6 +2078,64 @@
         }
       },
       "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Reflection/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Security.Claims/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Security.Cryptography.Pkcs/4.5.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Memory": "4.5.1"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Security.Cryptography.Pkcs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll": {}
+        }
+      },
+      "System.Security.Cryptography.X509Certificates/4.3.2": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Text.Encoding.CodePages/4.5.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -1306,17 +2317,32 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.DataGrid/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.0.0.446417"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
+        }
+      },
       "APUToki/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Acr.UserDialogs": "7.0.1",
           "CClarke.Plugin.Calendars": "1.0.0",
+          "EPPlus": "4.5.3",
           "HtmlAgilityPack": "1.8.13",
           "Plugin.Permissions": "3.0.0.12",
+          "System.Buffers": "4.5.0",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.3.0.967583",
+          "Xamarin.Forms.DataGrid": "3.1.0",
           "sqlite-net-pcl": "1.5.231"
         },
         "compile": {
@@ -1394,6 +2420,23 @@
         "lib/netstandard1.0/Plugin.Calendars.xml"
       ]
     },
+    "EPPlus/4.5.3": {
+      "sha512": "SfgIo0vmrIEavrkB4eOvalT5kIQiz8ma3VLtxHZfoBiRzdrqMPzjeeCNsVxjX2suNOjtcW604fSm1HuFO68Wsw==",
+      "type": "package",
+      "path": "epplus/4.5.3",
+      "files": [
+        ".signature.p7s",
+        "epplus.4.5.3.nupkg.sha512",
+        "epplus.nuspec",
+        "lib/net35/EPPlus.dll",
+        "lib/net35/EPPlus.xml",
+        "lib/net40/EPPlus.dll",
+        "lib/net40/EPPlus.xml",
+        "lib/netstandard2.0/EPPlus.dll",
+        "lib/netstandard2.0/EPPlus.xml",
+        "readme.txt"
+      ]
+    },
     "HtmlAgilityPack/1.8.13": {
       "sha512": "+GKFnnRGwm+Upz+qGXvVevIWPCSxNSww252uGKeBHz0R5ZQcgCi4HlyjAOAHseV627Gm45w/DJ4imN6NAKoePg==",
       "type": "package",
@@ -1439,6 +2482,130 @@
         "lib/uap10.0/HtmlAgilityPack.dll",
         "lib/uap10.0/HtmlAgilityPack.pdb",
         "lib/uap10.0/HtmlAgilityPack.pri"
+      ]
+    },
+    "Microsoft.Extensions.Configuration/2.2.0": {
+      "sha512": "0MtJgCZ5tIw7LoxOlXlifwVTwfMd4YdMJ9+DVZyX/fqqXO9zseZ8hH2WxbJzDbBDp45nA8rwHlL4JH/6Z98B4w==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration/2.2.0",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.xml",
+        "microsoft.extensions.configuration.2.2.0.nupkg.sha512",
+        "microsoft.extensions.configuration.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
+      "sha512": "M6u4cMWXxPtqyJJ03oezyqTORmSgTPpa2gZRKkEGCXXHhyGnM1cHjPTzq5sevYS1VJEMb2TZj60mAc+hDoPPcQ==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.abstractions/2.2.0",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "microsoft.extensions.configuration.abstractions.2.2.0.nupkg.sha512",
+        "microsoft.extensions.configuration.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.FileExtensions/2.2.0": {
+      "sha512": "BnkmTopJ7m+p0/EBshdJmoWroUvMlu+oA+bDvzEWh3WA9rOYdnTZueQ7Ap1oSfUnHnPBnuWae/ED8hHlM/sQxA==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.fileextensions/2.2.0",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.xml",
+        "microsoft.extensions.configuration.fileextensions.2.2.0.nupkg.sha512",
+        "microsoft.extensions.configuration.fileextensions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Json/2.2.0": {
+      "sha512": "CqqFzpFuW9rOWOHI9c3JrGrOOogfLRrGTWVU2AIFkxXRQ/bAg5lL3WabkVEywmTRo58AI3p6sT0ACNy9s279VA==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.json/2.2.0",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.xml",
+        "microsoft.extensions.configuration.json.2.2.0.nupkg.sha512",
+        "microsoft.extensions.configuration.json.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.FileProviders.Abstractions/2.2.0": {
+      "sha512": "33vTyijzAVEfbuNFts68R7bW02cJMiw21MFgMBk+XL+thcbv335PVD1+DdMSvN6e5DeAR4OmPSRsKIr86Yk4qg==",
+      "type": "package",
+      "path": "microsoft.extensions.fileproviders.abstractions/2.2.0",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
+        "microsoft.extensions.fileproviders.abstractions.2.2.0.nupkg.sha512",
+        "microsoft.extensions.fileproviders.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.FileProviders.Physical/2.2.0": {
+      "sha512": "Qt6sUa56/XbLxYshrCzwJYhHO9TkVa9Adch1qVqr7PGuLCxRs3K7nGMv3I6msUvAJqiJE33Oexz6KrT4hcUHgA==",
+      "type": "package",
+      "path": "microsoft.extensions.fileproviders.physical/2.2.0",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.xml",
+        "microsoft.extensions.fileproviders.physical.2.2.0.nupkg.sha512",
+        "microsoft.extensions.fileproviders.physical.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.FileSystemGlobbing/2.2.0": {
+      "sha512": "WGASE48sldx5PHrmxpmW0qFJ0M0mZXhF9IgdBDTSNmnys7Qfw7xTuHs/nmbA1Wo8Y8XFI7K2cJKf9Ql/nBK4Rw==",
+      "type": "package",
+      "path": "microsoft.extensions.filesystemglobbing/2.2.0",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
+        "microsoft.extensions.filesystemglobbing.2.2.0.nupkg.sha512",
+        "microsoft.extensions.filesystemglobbing.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Primitives/2.2.0": {
+      "sha512": "vpH+o7f8obVx65PiEtBXxTwL5RosK60fNIMy/y8WGE4/r4IvAqQGukOzMhxsp//Accvd7kmukyQTVkqVYdaDyA==",
+      "type": "package",
+      "path": "microsoft.extensions.primitives/2.2.0",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+        "microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+        "microsoft.extensions.primitives.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/11.0.2": {
+      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "type": "package",
+      "path": "newtonsoft.json/11.0.2",
+      "files": [
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.11.0.2.nupkg.sha512",
+        "newtonsoft.json.nuspec"
       ]
     },
     "Plugin.Permissions/3.0.0.12": {
@@ -1560,6 +2727,192 @@
         "sqlitepclraw.provider.sqlite3.ios_unified.nuspec"
       ]
     },
+    "System.Buffers/4.5.0": {
+      "sha512": "09yL/QiPEDZI9JLg0R0OcGe/0ycFm69QN16DCvXkqkIorCC1Y2EKwk5KvSlfMmGse+LcKkD3H+Cra7fFkxHXEg==",
+      "type": "package",
+      "path": "system.buffers/4.5.0",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net45/System.Buffers.dll",
+        "ref/net45/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "ref/uap10.0.16299/_._",
+        "system.buffers.4.5.0.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.ComponentModel.TypeConverter/4.3.0": {
+      "sha512": "CisvPCXeSmQpxsufuzdAnoYWiSHqcexYiJkSdC454bZ/XL52Sv/DWAqg7xZ8f3OlUzKgq/ewQ+iRhSkwKdiwhw==",
+      "type": "package",
+      "path": "system.componentmodel.typeconverter/4.3.0",
+      "files": [
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/System.ComponentModel.TypeConverter.dll",
+        "lib/net462/System.ComponentModel.TypeConverter.dll",
+        "lib/netstandard1.0/System.ComponentModel.TypeConverter.dll",
+        "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.ComponentModel.TypeConverter.dll",
+        "ref/net462/System.ComponentModel.TypeConverter.dll",
+        "ref/netstandard1.0/System.ComponentModel.TypeConverter.dll",
+        "ref/netstandard1.0/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/de/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/es/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/fr/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/it/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/ja/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/ko/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/ru/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/zh-hans/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/zh-hant/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/System.ComponentModel.TypeConverter.dll",
+        "ref/netstandard1.5/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/de/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/es/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/fr/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/it/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/ja/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/ko/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/ru/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/zh-hans/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/zh-hant/System.ComponentModel.TypeConverter.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
+        "system.componentmodel.typeconverter.nuspec"
+      ]
+    },
+    "System.Data.Common/4.3.0": {
+      "sha512": "OGX4ifHI67s/2KRrXGMmEjmszCptbhWS4BieBdiBPl/8pn0A1xPMx0Gn0dKK0zKtEaelYNh5M7M5lCZL0EA4eA==",
+      "type": "package",
+      "path": "system.data.common/4.3.0",
+      "files": [
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net451/System.Data.Common.dll",
+        "lib/netstandard1.2/System.Data.Common.dll",
+        "lib/portable-net451+win8+wp8+wpa81/System.Data.Common.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net451/System.Data.Common.dll",
+        "ref/netstandard1.2/System.Data.Common.dll",
+        "ref/netstandard1.2/System.Data.Common.xml",
+        "ref/netstandard1.2/de/System.Data.Common.xml",
+        "ref/netstandard1.2/es/System.Data.Common.xml",
+        "ref/netstandard1.2/fr/System.Data.Common.xml",
+        "ref/netstandard1.2/it/System.Data.Common.xml",
+        "ref/netstandard1.2/ja/System.Data.Common.xml",
+        "ref/netstandard1.2/ko/System.Data.Common.xml",
+        "ref/netstandard1.2/ru/System.Data.Common.xml",
+        "ref/netstandard1.2/zh-hans/System.Data.Common.xml",
+        "ref/netstandard1.2/zh-hant/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/System.Data.Common.dll",
+        "ref/portable-net451+win8+wp8+wpa81/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/de/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/es/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/fr/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/it/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/ja/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/ko/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/ru/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/zh-hans/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/zh-hant/System.Data.Common.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.data.common.4.3.0.nupkg.sha512",
+        "system.data.common.nuspec"
+      ]
+    },
+    "System.Drawing.Common/4.5.1": {
+      "sha512": "m3c7Fe/CS/jZ/nLBrxCCh52dYiC33GPbGfcF4CiVukb8+p121XUTHxs6sYKbWfvDVD8JssHcM+HVFLtzl3X3Xw==",
+      "type": "package",
+      "path": "system.drawing.common/4.5.1",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.Drawing.Common.dll",
+        "ref/netstandard2.0/System.Drawing.Common.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "system.drawing.common.4.5.1.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Memory/4.5.1": {
+      "sha512": "oonnLQPZAGD21qtNMG4EtVmbYOInk2jV7M+g108B6OHOb67ZOaWnA/K8P5oQ6uK9wxKzB1iEXSChQOi2scKOqA==",
+      "type": "package",
+      "path": "system.memory/4.5.1",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "ref/netstandard1.1/System.Memory.dll",
+        "ref/netstandard1.1/System.Memory.xml",
+        "ref/netstandard2.0/System.Memory.dll",
+        "ref/netstandard2.0/System.Memory.xml",
+        "system.memory.4.5.1.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Net.Http/4.3.2": {
       "sha512": "6ZdOhw05Y7Da+nYKz7QFtBVeRTCrHd4wBxO0g45hETj1wI2hJEcU4d0dDUxmyHO9/5KXE/qZLtCHen6gBcT2cA==",
       "type": "package",
@@ -1643,6 +2996,260 @@
         "ref/xamarinwatchos10/_._",
         "system.numerics.vectors.4.5.0.nupkg.sha512",
         "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Reflection/4.3.0": {
+      "sha512": "KMiAFoW7MfJGa9nDFNcfu+FpEdiHpWgTcS2HdMpDvt9saK3y/G4GwprPyzqjFH9NTaGPQeWNHU+iDlDILj96aQ==",
+      "type": "package",
+      "path": "system.reflection/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net462/System.Reflection.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net462/System.Reflection.dll",
+        "ref/netcore50/System.Reflection.dll",
+        "ref/netcore50/System.Reflection.xml",
+        "ref/netcore50/de/System.Reflection.xml",
+        "ref/netcore50/es/System.Reflection.xml",
+        "ref/netcore50/fr/System.Reflection.xml",
+        "ref/netcore50/it/System.Reflection.xml",
+        "ref/netcore50/ja/System.Reflection.xml",
+        "ref/netcore50/ko/System.Reflection.xml",
+        "ref/netcore50/ru/System.Reflection.xml",
+        "ref/netcore50/zh-hans/System.Reflection.xml",
+        "ref/netcore50/zh-hant/System.Reflection.xml",
+        "ref/netstandard1.0/System.Reflection.dll",
+        "ref/netstandard1.0/System.Reflection.xml",
+        "ref/netstandard1.0/de/System.Reflection.xml",
+        "ref/netstandard1.0/es/System.Reflection.xml",
+        "ref/netstandard1.0/fr/System.Reflection.xml",
+        "ref/netstandard1.0/it/System.Reflection.xml",
+        "ref/netstandard1.0/ja/System.Reflection.xml",
+        "ref/netstandard1.0/ko/System.Reflection.xml",
+        "ref/netstandard1.0/ru/System.Reflection.xml",
+        "ref/netstandard1.0/zh-hans/System.Reflection.xml",
+        "ref/netstandard1.0/zh-hant/System.Reflection.xml",
+        "ref/netstandard1.3/System.Reflection.dll",
+        "ref/netstandard1.3/System.Reflection.xml",
+        "ref/netstandard1.3/de/System.Reflection.xml",
+        "ref/netstandard1.3/es/System.Reflection.xml",
+        "ref/netstandard1.3/fr/System.Reflection.xml",
+        "ref/netstandard1.3/it/System.Reflection.xml",
+        "ref/netstandard1.3/ja/System.Reflection.xml",
+        "ref/netstandard1.3/ko/System.Reflection.xml",
+        "ref/netstandard1.3/ru/System.Reflection.xml",
+        "ref/netstandard1.3/zh-hans/System.Reflection.xml",
+        "ref/netstandard1.3/zh-hant/System.Reflection.xml",
+        "ref/netstandard1.5/System.Reflection.dll",
+        "ref/netstandard1.5/System.Reflection.xml",
+        "ref/netstandard1.5/de/System.Reflection.xml",
+        "ref/netstandard1.5/es/System.Reflection.xml",
+        "ref/netstandard1.5/fr/System.Reflection.xml",
+        "ref/netstandard1.5/it/System.Reflection.xml",
+        "ref/netstandard1.5/ja/System.Reflection.xml",
+        "ref/netstandard1.5/ko/System.Reflection.xml",
+        "ref/netstandard1.5/ru/System.Reflection.xml",
+        "ref/netstandard1.5/zh-hans/System.Reflection.xml",
+        "ref/netstandard1.5/zh-hant/System.Reflection.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.reflection.4.3.0.nupkg.sha512",
+        "system.reflection.nuspec"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+      "sha512": "9r+hFzL5qRJfAzR6AuccmYYtxTneKJTr+9aSf+A2G5EZloSG3FsAUZBOJMAAhNnhfP6mwCGpUwzTjaOjv4b5FA==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.5.1",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Security.Claims/4.3.0": {
+      "sha512": "q3K5CAH2wFGisxZFRI7r/KdGQrPPodUfgOIaDQ161E0zZt6hOTR+KFJ4G387roIN8Ww+sYiiyWJE3wU5Ttcshg==",
+      "type": "package",
+      "path": "system.security.claims/4.3.0",
+      "files": [
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Security.Claims.dll",
+        "lib/netstandard1.3/System.Security.Claims.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Security.Claims.dll",
+        "ref/netstandard1.3/System.Security.Claims.dll",
+        "ref/netstandard1.3/System.Security.Claims.xml",
+        "ref/netstandard1.3/de/System.Security.Claims.xml",
+        "ref/netstandard1.3/es/System.Security.Claims.xml",
+        "ref/netstandard1.3/fr/System.Security.Claims.xml",
+        "ref/netstandard1.3/it/System.Security.Claims.xml",
+        "ref/netstandard1.3/ja/System.Security.Claims.xml",
+        "ref/netstandard1.3/ko/System.Security.Claims.xml",
+        "ref/netstandard1.3/ru/System.Security.Claims.xml",
+        "ref/netstandard1.3/zh-hans/System.Security.Claims.xml",
+        "ref/netstandard1.3/zh-hant/System.Security.Claims.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.security.claims.4.3.0.nupkg.sha512",
+        "system.security.claims.nuspec"
+      ]
+    },
+    "System.Security.Cryptography.Pkcs/4.5.1": {
+      "sha512": "m3kFZEfxYY6qlOo+ws3thClNqClm3gFDnnphzZpfsQtKS6104WJZAPeu6rTdjDdgOEU5LcKcaYErapwr21OSDw==",
+      "type": "package",
+      "path": "system.security.cryptography.pkcs/4.5.1",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.Security.Cryptography.Pkcs.dll",
+        "lib/net461/System.Security.Cryptography.Pkcs.dll",
+        "lib/netcoreapp2.1/System.Security.Cryptography.Pkcs.dll",
+        "lib/netstandard1.3/System.Security.Cryptography.Pkcs.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll",
+        "ref/net46/System.Security.Cryptography.Pkcs.dll",
+        "ref/net461/System.Security.Cryptography.Pkcs.dll",
+        "ref/net461/System.Security.Cryptography.Pkcs.xml",
+        "ref/netcoreapp2.1/System.Security.Cryptography.Pkcs.dll",
+        "ref/netcoreapp2.1/System.Security.Cryptography.Pkcs.xml",
+        "ref/netstandard1.3/System.Security.Cryptography.Pkcs.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.Pkcs.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/net46/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net461/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/netcoreapp2.1/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll",
+        "system.security.cryptography.pkcs.4.5.1.nupkg.sha512",
+        "system.security.cryptography.pkcs.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Security.Cryptography.X509Certificates/4.3.2": {
+      "sha512": "uwlfOnvJd7rXRvP3aV126Q9XebIIEGEaZ245Rd5/ZwOg7U7AU+AmpE0vRh2F0DFjfOTuk7MAexv4nYiNP/RYnQ==",
+      "type": "package",
+      "path": "system.security.cryptography.x509certificates/4.3.2",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Security.Cryptography.X509Certificates.dll",
+        "lib/net461/System.Security.Cryptography.X509Certificates.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Security.Cryptography.X509Certificates.dll",
+        "ref/net461/System.Security.Cryptography.X509Certificates.dll",
+        "ref/netstandard1.3/System.Security.Cryptography.X509Certificates.dll",
+        "ref/netstandard1.4/System.Security.Cryptography.X509Certificates.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll",
+        "runtimes/win/lib/net46/System.Security.Cryptography.X509Certificates.dll",
+        "runtimes/win/lib/net461/System.Security.Cryptography.X509Certificates.dll",
+        "runtimes/win/lib/netcore50/System.Security.Cryptography.X509Certificates.dll",
+        "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll",
+        "system.security.cryptography.x509certificates.4.3.2.nupkg.sha512",
+        "system.security.cryptography.x509certificates.nuspec"
+      ]
+    },
+    "System.Text.Encoding.CodePages/4.5.0": {
+      "sha512": "aQnlUgT+JK/81iv62zE7hR7FZJOgKbMNuxlK5l6u3CchtZ2FG5LIMnedmvVgT1phTnX4qWCUIoyfGTQlxrLNog==",
+      "type": "package",
+      "path": "system.text.encoding.codepages/4.5.0",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Text.Encoding.CodePages.dll",
+        "lib/net461/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "ref/netstandard1.3/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/de/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/es/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/fr/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/it/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/ja/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/ko/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/ru/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/zh-hans/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard1.3/zh-hant/System.Text.Encoding.CodePages.xml",
+        "ref/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "ref/netstandard2.0/System.Text.Encoding.CodePages.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "system.text.encoding.codepages.4.5.0.nupkg.sha512",
+        "system.text.encoding.codepages.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -2005,6 +3612,17 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
         "xamarin.forms.3.4.0.1009999.nupkg.sha512",
         "xamarin.forms.nuspec"
+      ]
+    },
+    "Xamarin.Forms.DataGrid/3.1.0": {
+      "sha512": "I33C4WokkK4ELSPd3ejHJ+PY0MoeO92TQ0I102sLnSzlk6JnVbsNW7JBQ4ICTPDyGAPjAe+iHLyF5PTRPJ2cVg==",
+      "type": "package",
+      "path": "xamarin.forms.datagrid/3.1.0",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll",
+        "xamarin.forms.datagrid.3.1.0.nupkg.sha512",
+        "xamarin.forms.datagrid.nuspec"
       ]
     },
     "APUToki/1.0.0": {

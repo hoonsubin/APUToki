@@ -27,7 +27,7 @@ namespace APUToki.Views
             ItemsListView.ItemsSource = viewModel.ItemGrouped;
 
         }
-
+        /*
         //execute when an item is selected
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
@@ -41,6 +41,7 @@ namespace APUToki.Views
             //Manually deselect item after the page shows
             ItemsListView.SelectedItem = null;
         }
+        */
         /*
         //execute when the AddItem button is touched
         async void AddItem_Clicked(object sender, EventArgs e)
@@ -74,6 +75,7 @@ namespace APUToki.Views
             //only scroll when the item is more than 1 in the list
             if (viewModel.ScrollToEvent && viewModel.Items.Count > 0)
             {
+                //make sure the event is toggled once
                 viewModel.ScrollToEvent = false;
                 //get the index of the event that is later than today
                 int todaysEvent = viewModel.Items.IndexOf(viewModel.Items

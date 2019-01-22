@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{C1477615-B0B2-4DBB-AE28-2420006A17C7}|Default">
+  <MonoDevelop.Ide.ItemProperties.APUToki.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.ECD95214-13BD-4E7C-B41C-DC2A7EBBB7F6" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/Views/LectureSearchPage.xaml">
+    <Files>
+      <File FileName="APUToki/Views/ItemsPage.xaml" Line="29" Column="55" />
+      <File FileName="APUToki/Views/ItemsPage.xaml.cs" Line="39" Column="91" />
+      <File FileName="APUToki/ViewModels/ItemsViewModel.cs" Line="11" Column="21" />
+      <File FileName="APUToki/Views/LectureSearchPage.xaml" Line="14" Column="52" />
+      <File FileName="APUToki/Views/LectureSearchPage.xaml.cs" Line="31" Column="83" />
+      <File FileName="APUToki/ViewModels/LectureSearchViewModel.cs" Line="12" Column="63" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="APUToki" expanded="True">
+            <Node name="APUToki" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="LectureSearchPage.xaml" expanded="True" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.APUToki.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.pixel_phone" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
