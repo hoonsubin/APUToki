@@ -35,6 +35,8 @@
                                        Style="{DynamicResource ListItemDetailTextStyle}"
                                        FontSize="13"
                                        TextColor="Green"/>
+                                <Label Text="{Binding Curriculum}" FontSize="Small" 
+                                       TextColor="Purple"/>
                                 
                             </StackLayout>
                         </ViewCell>

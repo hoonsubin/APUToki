@@ -4,8 +4,6 @@
              x:Class="APUToki.Views.LectureDetailPage" 
              Title="{Binding Title}">
     <StackLayout Spacing="20" Padding="15">
-        <Label Text="Subject Name:" 
-               FontSize="Medium" />
         <Label Text="{Binding LectureItem.SubjectNameEN}" 
                FontSize="Large" XAlign="Center"/>
         <Label Text="Instructor" FontSize="Medium"/>
@@ -18,7 +16,6 @@
                         <Span Text="{Binding LectureItem.Period}" />
                         <Span Text=" " />
                         <Span Text="{Binding LectureItem.DayOfWeek}" />
-                        <Span Text="." />
                     </FormattedString.Spans>
                 </FormattedString>
             </Label.FormattedText>
@@ -27,14 +24,25 @@
             <Label.FormattedText>
                 <FormattedString>
                     <FormattedString.Spans>
-                        <Span Text="{Binding LectureItem.Classroom}" />
+                        <Span Text="Classroom:" />
                         <Span Text=" " />
-                        <Span Text="{Binding LectureItem.BuildingFloor}" />
-                        <Span Text="." />
+                        <Span Text="{Binding LectureItem.Classroom}" />
                     </FormattedString.Spans>
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Building:" />
+                        <Span Text=" " />
+                        <Span Text="{Binding LectureItem.BuildingFloor}" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        
         <Label Text="{Binding LectureItem.Curriculum}" FontSize="Small"/>
         
     </StackLayout>

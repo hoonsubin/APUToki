@@ -209,9 +209,9 @@ namespace APUToki.Services
                     string emailBody = $"Device model: {device}\nManufacturer: {manufacturer}\nOS version: {platform} - {version}\nDevice type: {deviceType}\nError Message: {message}";
 
                     List<string> sendTo = new List<string>
-                {
-                    "hoonki16@apu.ac.jp"
-                };
+                    {
+                        "hoonki16@apu.ac.jp"
+                    };
 
                     var emailContent = new EmailMessage
                     {
@@ -241,36 +241,27 @@ namespace APUToki.Services
         /// <returns>The course list async</returns>
         public static async Task UpdateLectureListAsync()
         {
+            //currently this is a mockup data
             var dbItems = await App.Database.GetLecturesAsync();
 
-            //only get the list of lectures online, but are not in the db
-            //the LectureItem model interface will only compare the EventName and StartDateTime, and add to the list only if they are the same
-            var newOnlineItems = ApuBot.LecturesList().Except(dbItems).ToList();
-
-            //sync if there are new items
-            if (newOnlineItems.Count > 0)
+            //sync if there are any items in the database
+            if (dbItems.Count <= 0)
             {
-                var answer = await Application.Current.MainPage.DisplayAlert("Notice", "Found " + newOnlineItems.Count + " new lectures, wish to update database?", "Yes", "No");
-                Debug.WriteLine("[SyncEvents]Found new lectures");
+                var onlineLectures = ApuBot.LecturesList();
+                Debug.WriteLine("[SyncEvents]There are " + onlineLectures.Count + " items online");
+
+                var answer = await Application.Current.MainPage.DisplayAlert("Notice", "Found " + onlineLectures.Count + " new lectures, wish to update database?", "Yes", "No");
 
                 if (answer)
                 {
-                    foreach (var i in newOnlineItems)
+                    foreach (var i in onlineLectures)
                     {
-                        //get the lecture with the name subject name, different period, or different classroom
-                        var changedEvent = dbItems.FirstOrDefault(db => db.SubjectNameEN == i.SubjectNameEN && db.Curriculum == i.Curriculum
-                                                                        && db.Period != i.Period || db.Classroom != i.Classroom);
-
-                        if (changedEvent != null)
-                        {
-                            //delete the old one
-                            await App.Database.DeleteLectureAsync(changedEvent);
-                        }
 
                         //add the new item to the database
                         await App.Database.SaveLectureAsync(i);
                     }
                     Debug.WriteLine("[SyncEvents]The lectures database has been updated");
+                    await Application.Current.MainPage.DisplayAlert("Notice", "Updated the database", "Dismiss");
                 }
             }
         }

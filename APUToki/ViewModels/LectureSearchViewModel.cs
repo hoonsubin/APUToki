@@ -33,6 +33,7 @@ namespace APUToki.ViewModels
         {
             //load saved lectures from the database
             var database = await App.Database.SortByLectureName();
+            Debug.WriteLine("[ExecuteLoadItemsCommand]There are " + database.Count + " lectures in the database");
 
             SearchResults.Clear();
 
@@ -45,15 +46,19 @@ namespace APUToki.ViewModels
                     //loop through the tags of the item
                     foreach (var tag in i.SearchTags)
                     {
+                        if (SearchResults.Contains(i))
+                        {
+                            continue;
+                        }
                         //add the item to the list if it contains the word
                         //this will be the main search algorithm
-                        if (!SearchResults.Contains(i) && tag.Contains(query.ToLower()))
+                        if (tag.Contains(query.ToLower()))
                         {
                             SearchResults.Add(i);
                         }
-
                     }
                 }
+                Debug.WriteLine("[LectureSearch]Got " + SearchResults.Count + " results");
 
             }
 
@@ -68,7 +73,7 @@ namespace APUToki.ViewModels
                 return;
             //make is busy ture so that the user can't run this twice while it is runnig
             IsBusy = true;
-            Debug.WriteLine("[ExecuteLoadItemsCommand]Start loading items...");
+            Debug.WriteLine("[ExecuteLoadLecturesCommand]Start loading lectures...");
 
             try
             {
@@ -89,7 +94,8 @@ namespace APUToki.ViewModels
             {
                 //set the IsBusy to false after the program finishes
                 IsBusy = false;
-                //Debug.WriteLine("[ExecuteLoadItemsCommand]There are " + lec.Count + " items in the database");
+                Debug.WriteLine("[ExecuteLoadLecturesCommand]Finished loading");
+
             }
         }
 
