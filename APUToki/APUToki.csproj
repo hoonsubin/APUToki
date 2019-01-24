@@ -21,6 +21,7 @@
     <PackageReference Include="EPPlus" Version="4.5.3" />
     <PackageReference Include="Xamarin.Forms.DataGrid" Version="3.1.0" />
     <PackageReference Include="System.Buffers" Version="4.5.0" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />

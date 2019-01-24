@@ -241,27 +241,43 @@ namespace APUToki.Services
         /// <returns>The course list async</returns>
         public static async Task UpdateLectureListAsync()
         {
-            //currently this is a mockup data
-            var dbItems = await App.Database.GetLecturesAsync();
+            //get the current lecture database version
+            string currentVer = UserSettings.LastTimetableUpdate;
 
-            //sync if there are any items in the database
-            if (dbItems.Count <= 0)
+            //get the online lecture database version
+            string currentOnlineVer = ApuBot.GetOnlineTimetableLastDate();
+
+            //check if they match, if not, run the update
+            if (currentVer != currentOnlineVer)
             {
-                var onlineLectures = ApuBot.LecturesList();
-                Debug.WriteLine("[SyncEvents]There are " + onlineLectures.Count + " items online");
+                Debug.WriteLine("[SyncEvents]There is a updated timetable last update " + currentOnlineVer);
 
-                var answer = await Application.Current.MainPage.DisplayAlert("Notice", "Found " + onlineLectures.Count + " new lectures, wish to update database?", "Yes", "No");
+                //ask user if they want to update
+                var answer = await Application.Current.MainPage.DisplayAlert("Notice", "There is a updated timetable\nOnline version updated " + currentOnlineVer, "Yes", "No");
 
                 if (answer)
                 {
+                    //get all the lectures online
+                    var onlineLectures = ApuBot.LecturesList();
+
+                    //empty the local database to not make duplicates
+                    var database = await App.Database.GetLecturesAsync();
+                    foreach (var dbItem in database)
+                    {
+                        await App.Database.DeleteLectureAsync(dbItem);
+                    }
+
+                    //add the new lectures to the database
                     foreach (var i in onlineLectures)
                     {
-
                         //add the new item to the database
                         await App.Database.SaveLectureAsync(i);
                     }
+
                     Debug.WriteLine("[SyncEvents]The lectures database has been updated");
                     await Application.Current.MainPage.DisplayAlert("Notice", "Updated the database", "Dismiss");
+                    //update the last update date
+                    UserSettings.LastTimetableUpdate = currentOnlineVer;
                 }
             }
         }

@@ -7,6 +7,7 @@ using System.Net;
 using APUToki.Models;
 using OfficeOpenXml;
 using System.IO;
+using System.Linq;
 
 //don't forget to change the namespace and the using libraries when implementing this to the app
 namespace APUToki.Services
@@ -257,6 +258,57 @@ namespace APUToki.Services
         }
 
         /// <summary>
+        /// Check if the given string of date matches the last update date online
+        /// </summary>
+        /// <returns><c>true</c>, if lecture update matches one online, <c>false</c> otherwise.</returns>
+        /// <param name="dbLastUpdate">Db last update.</param>
+        public static bool IsDbLecturesUpdate(string dbLastUpdate)
+        {
+            //check if the database date is the same as the online date
+            //date format in yyyy/MM/dd
+            if (dbLastUpdate == GetOnlineTimetableLastDate())
+            {
+                return true;
+            }
+            //return false if the online and offline date does not match
+            return false;
+        }
+
+        /// <summary>
+        /// Gets the online lecture timetable's last updated date
+        /// </summary>
+        /// <returns>The online timetable last date.</returns>
+        public static string GetOnlineTimetableLastDate()
+        {
+            string timetablePageUri = GetLinksFromMainPage("03")[0];
+
+            string lastDate = "";
+
+            string xpath = $"//div[contains(@class, 'entry')]";
+
+            try
+            {
+                //load the html document from the given link
+                HtmlWeb web = new HtmlWeb();
+                var document = web.Load(timetablePageUri);
+                var currentUri = new Uri(timetablePageUri);
+                //define the xlsx links in the html document, the ancestor of the element using the defined XPath
+                var pageBody = document.DocumentNode.SelectSingleNode(xpath);
+
+                string[] links = pageBody.SelectNodes("./ul/li")[0].InnerText.Split(' ');
+
+                lastDate = pageBody.SelectNodes("./ul/li")[0].InnerText;
+
+                //returns the last updated date as yyyy/MM/dd
+                return links[links.Length - 1].Replace(")", "");
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
         /// Downloads the timetables from the academic office website
         /// </summary>
         /// <param name="timetablePageUri">Timetable page URI</param>
@@ -271,12 +323,12 @@ namespace APUToki.Services
 
             try
             {
-                //it loads the html document from the given link
+                //load the html document from the given link
                 HtmlWeb web = new HtmlWeb();
                 var document = web.Load(timetablePageUri);
                 var currentUri = new Uri(timetablePageUri);
 
-                //this defines the xlsx links in the html document, the ancestor of the element using the defined XPath
+                //define the xlsx links in the html document, the ancestor of the element using the defined XPath
                 var pageBody = document.DocumentNode.SelectSingleNode(xpath);
 
                 //follow the sibling of the current node div with the given class
@@ -303,7 +355,6 @@ namespace APUToki.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
                 return null;
             }
         }
@@ -462,7 +513,6 @@ namespace APUToki.Services
                     }
                 }
             }
-
             return lectures;
         }
 

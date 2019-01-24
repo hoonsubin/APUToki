@@ -3,6 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="APUToki.Views.LectureDetailPage" 
              Title="{Binding Title}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--Page Level Resources: Compatibile with Xamarin Live Player-->
+            <Color x:Key="Primary">#ab003e</Color>
+            <Color x:Key="Accent">#8f8f8f</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <StackLayout Spacing="20" Padding="15">
         <Label Text="{Binding LectureItem.SubjectNameEN}" 
                FontSize="Large" XAlign="Center"/>
@@ -44,6 +53,12 @@
         </Label>
         
         <Label Text="{Binding LectureItem.Curriculum}" FontSize="Small"/>
+        
+        <Button Margin="0,10,0,0" 
+                Text="Open Course Syllabus" 
+                Command="{Binding OpenWebCommand}" 
+                BackgroundColor="{StaticResource Primary}" 
+                TextColor="White" />
         
     </StackLayout>
 </ContentPage>
