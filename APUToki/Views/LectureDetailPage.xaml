@@ -15,20 +15,54 @@
     <StackLayout Spacing="20" Padding="15">
         <Label Text="{Binding LectureItem.SubjectNameEN}" 
                FontSize="Large" XAlign="Center"/>
-        <Label Text="Instructor" FontSize="Medium"/>
-        <Label Text="{Binding LectureItem.InstructorEN}"
-               FontSize="Medium"/>
         <Label>
             <Label.FormattedText>
                 <FormattedString>
                     <FormattedString.Spans>
-                        <Span Text="{Binding LectureItem.Period}" />
+                        <Span Text="Instructor:" />
                         <Span Text=" " />
-                        <Span Text="{Binding LectureItem.DayOfWeek}" />
+                        <Span Text="{Binding LectureItem.InstructorEN}" TextColor="Green"/>
                     </FormattedString.Spans>
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+        
+        <Label FontSize="Small">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="{Binding LectureItem.Grade}" />
+                        <Span Text=" " />
+                        <Span Text="{Binding LectureItem.Field}" TextColor="Maroon"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="{Binding LectureItem.DayOfWeek}" />
+                        <Span Text=" " />
+                        <Span Text="{Binding LectureItem.Period}" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        
+        <!--<ListView ItemsSource="" HeightRequest="0.5">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout x:Name="cellBackground" Padding="10">
+                            
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+        
         <Label>
             <Label.FormattedText>
                 <FormattedString>
@@ -52,13 +86,14 @@
             </Label.FormattedText>
         </Label>
         
-        <Label Text="{Binding LectureItem.Curriculum}" FontSize="Small"/>
         
         <Button Margin="0,10,0,0" 
                 Text="Open Course Syllabus" 
                 Command="{Binding OpenWebCommand}" 
                 BackgroundColor="{StaticResource Primary}" 
                 TextColor="White" />
+        
+        <Button Text="Add to timetable"/>
         
     </StackLayout>
 </ContentPage>

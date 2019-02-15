@@ -16,7 +16,6 @@ namespace APUToki
 
         public App()
         {
-            Xamarin.Forms.DataGrid.DataGridComponent.Init();
             InitializeComponent();
 
             //the first page the app will enter in ius MainPage.xaml

@@ -28,15 +28,18 @@ namespace APUToki.Views
             InitializeComponent();
 
             //declare the temp item information that'll be shown
+            //todo: find a way to display and select multiple periods and day of weeks
             var lectureItem = new LectureItem
             {
-                SubjectNameEN = "Empty Lecture",
-                InstructorEN = "Professor",
-                Period = "5th Period",
-                Classroom = "classroom",
-                DayOfWeek = "Monday",
-                Curriculum = "curriculum",
-                BuildingFloor = "A building 3rd floor"
+                SubjectNameEN = "[Lecture Name]",
+                InstructorEN = "[Professor Name]",
+                Period = "[Class Period]",
+                Classroom = "[Classroom]",
+                DayOfWeek = "[Class Day of Week]",
+                Curriculum = "[Curriculum]",
+                BuildingFloor = "[Lecture building and floor]",
+                Grade = "[Student Year]",
+                Field = "[Major]"
             };
 
             //set a new view model page

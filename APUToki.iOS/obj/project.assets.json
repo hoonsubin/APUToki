@@ -465,7 +465,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.4.0.1009999": {
+      "Xamarin.Forms/3.4.0.1029999": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -588,18 +588,6 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.DataGrid/3.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "3.0.0.446417"
-        },
-        "compile": {
-          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
-        }
-      },
       "APUToki/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -614,7 +602,6 @@
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.3.0.967583",
-          "Xamarin.Forms.DataGrid": "3.1.0",
           "sqlite-net-pcl": "1.5.231"
         },
         "compile": {
@@ -1057,7 +1044,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.4.0.1009999": {
+      "Xamarin.Forms/3.4.0.1029999": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1180,18 +1167,6 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.DataGrid/3.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "3.0.0.446417"
-        },
-        "compile": {
-          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
-        }
-      },
       "APUToki/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1206,7 +1181,6 @@
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.3.0.967583",
-          "Xamarin.Forms.DataGrid": "3.1.0",
           "sqlite-net-pcl": "1.5.231"
         },
         "compile": {
@@ -1649,7 +1623,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.4.0.1009999": {
+      "Xamarin.Forms/3.4.0.1029999": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1772,18 +1746,6 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.DataGrid/3.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "3.0.0.446417"
-        },
-        "compile": {
-          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
-        }
-      },
       "APUToki/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1798,7 +1760,6 @@
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.3.0.967583",
-          "Xamarin.Forms.DataGrid": "3.1.0",
           "sqlite-net-pcl": "1.5.231"
         },
         "compile": {
@@ -2241,7 +2202,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.4.0.1009999": {
+      "Xamarin.Forms/3.4.0.1029999": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -2364,18 +2325,6 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.DataGrid/3.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Forms": "3.0.0.446417"
-        },
-        "compile": {
-          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
-        }
-      },
       "APUToki/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -2390,7 +2339,6 @@
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.0.1",
           "Xamarin.Forms": "3.3.0.967583",
-          "Xamarin.Forms.DataGrid": "3.1.0",
           "sqlite-net-pcl": "1.5.231"
         },
         "compile": {
@@ -3582,10 +3530,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/3.4.0.1009999": {
-      "sha512": "pgqRxgD23FJHG2B7zOxf4Fm+KYgoWctUJp8hNtdZgAt43RIiK3VgM11wJf3S0SkMIsXQCUL0yYQmR8gR/njltA==",
+    "Xamarin.Forms/3.4.0.1029999": {
+      "sha512": "qupCyyDo1x3c0BfroaTOhkc6wjeBXQnRLkUhvlgfVmZAcBjSEOaPRsa5/HWShtnkgqnySrkwzYEu3N0dG0pn7Q==",
       "type": "package",
-      "path": "xamarin.forms/3.4.0.1009999",
+      "path": "xamarin.forms/3.4.0.1029999",
       "files": [
         ".signature.p7s",
         "build/Xamarin.Forms.DefaultItems.props",
@@ -3725,19 +3673,8 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.3.4.0.1009999.nupkg.sha512",
+        "xamarin.forms.3.4.0.1029999.nupkg.sha512",
         "xamarin.forms.nuspec"
-      ]
-    },
-    "Xamarin.Forms.DataGrid/3.1.0": {
-      "sha512": "I33C4WokkK4ELSPd3ejHJ+PY0MoeO92TQ0I102sLnSzlk6JnVbsNW7JBQ4ICTPDyGAPjAe+iHLyF5PTRPJ2cVg==",
-      "type": "package",
-      "path": "xamarin.forms.datagrid/3.1.0",
-      "files": [
-        ".signature.p7s",
-        "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll",
-        "xamarin.forms.datagrid.3.1.0.nupkg.sha512",
-        "xamarin.forms.datagrid.nuspec"
       ]
     },
     "APUToki/1.0.0": {
@@ -3751,7 +3688,7 @@
       "APUToki >= 1.0.0",
       "Xam.Plugins.Settings >= 3.1.1",
       "Xamarin.Essentials >= 1.0.1",
-      "Xamarin.Forms >= 3.4.0.1009999"
+      "Xamarin.Forms >= 3.4.0.1029999"
     ]
   },
   "packageFolders": {
@@ -3798,7 +3735,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[3.4.0.1009999, )"
+            "version": "[3.4.0.1029999, )"
           }
         }
       }

@@ -246,28 +246,27 @@ namespace APUToki.Services
 
             //get the online lecture database version
             string currentOnlineVer = ApuBot.GetOnlineTimetableLastDate();
+            Debug.WriteLine("[SyncEvents]Lasted update: " + currentOnlineVer);
 
             //check if they match, if not, run the update
             if (currentVer != currentOnlineVer)
             {
-                Debug.WriteLine("[SyncEvents]There is a updated timetable last update " + currentOnlineVer);
-
                 //ask user if they want to update
                 var answer = await Application.Current.MainPage.DisplayAlert("Notice", "There is a updated timetable\nOnline version updated " + currentOnlineVer, "Yes", "No");
 
                 if (answer)
                 {
+                    //todo: add progress bar feature
                     //get all the lectures online
                     var onlineLectures = ApuBot.LecturesList();
 
-                    //empty the local database to not make duplicates
+                    //empty the current local database to not make duplicates
                     var database = await App.Database.GetLecturesAsync();
                     foreach (var dbItem in database)
                     {
                         await App.Database.DeleteLectureAsync(dbItem);
                     }
 
-                    //add the new lectures to the database
                     foreach (var i in onlineLectures)
                     {
                         //add the new item to the database
@@ -276,9 +275,13 @@ namespace APUToki.Services
 
                     Debug.WriteLine("[SyncEvents]The lectures database has been updated");
                     await Application.Current.MainPage.DisplayAlert("Notice", "Updated the database", "Dismiss");
-                    //update the last update date
+                    //update the last updated version date to a persistant setting
                     UserSettings.LastTimetableUpdate = currentOnlineVer;
                 }
+            }
+            else
+            {
+                Debug.WriteLine("[SyncEvents]No updates found");
             }
         }
 

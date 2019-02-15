@@ -31,7 +31,7 @@ namespace APUToki.Services
         /// </summary>
         /// <returns>The links from page.</returns>
         /// <param name="menu">Menu.</param>
-        public static List<string> GetLinksFromMainPage(string menu = "01")
+        private static List<string> GetLinksFromMainPage(string menu = "01")
         {
 
             //Link of the Academic Office homepage, this will be the starting location=
@@ -84,7 +84,7 @@ namespace APUToki.Services
         /// </summary>
         /// <returns>The value from table.</returns>
         /// <param name="uri">URI.</param>
-        public static List<string> GetValueFromTable(string uri)
+        private static List<string> GetValueFromTable(string uri)
         {
             try
             {
@@ -172,7 +172,7 @@ namespace APUToki.Services
         /// </summary>
         /// <returns>The to date time.</returns>
         /// <param name="inputEvent">Input.</param>
-        public static string ChangeDateFormat(string inputEvent)
+        private static string ChangeDateFormat(string inputEvent)
         {
             Dictionary<string, string> monthToNumber = new Dictionary<string, string>
             {
@@ -258,23 +258,6 @@ namespace APUToki.Services
         }
 
         /// <summary>
-        /// Check if the given string of date matches the last update date online
-        /// </summary>
-        /// <returns><c>true</c>, if lecture update matches one online, <c>false</c> otherwise.</returns>
-        /// <param name="dbLastUpdate">Db last update.</param>
-        public static bool IsDbLecturesUpdate(string dbLastUpdate)
-        {
-            //check if the database date is the same as the online date
-            //date format in yyyy/MM/dd
-            if (dbLastUpdate == GetOnlineTimetableLastDate())
-            {
-                return true;
-            }
-            //return false if the online and offline date does not match
-            return false;
-        }
-
-        /// <summary>
         /// Gets the online lecture timetable's last updated date
         /// </summary>
         /// <returns>The online timetable last date.</returns>
@@ -299,10 +282,11 @@ namespace APUToki.Services
 
                 lastDate = pageBody.SelectNodes("./ul/li")[0].InnerText;
 
-                //returns the last updated date as yyyy/MM/dd
+                //return lastDate;
+
                 return links[links.Length - 1].Replace(")", "");
             }
-            catch (Exception)
+            catch(Exception)
             {
                 return null;
             }
@@ -312,7 +296,7 @@ namespace APUToki.Services
         /// Downloads the timetables from the academic office website
         /// </summary>
         /// <param name="timetablePageUri">Timetable page URI</param>
-        public static List<Stream> GetTimetableAsMemStream(string timetablePageUri)
+        private static List<Stream> GetTimetableAsMemStream(string timetablePageUri)
         {
             //xpath for finding the div element with the class entry
             string xpath = $"//div[contains(@class, 'entry')]";
@@ -355,6 +339,7 @@ namespace APUToki.Services
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex);
                 return null;
             }
         }
@@ -364,7 +349,7 @@ namespace APUToki.Services
         /// </summary>
         /// <returns>The string list of raw xlsx cells</returns>
         /// <param name="xlsxStream">File path.</param>
-        public static List<string> ReadRawXlsxFileStream(Stream xlsxStream)
+        private static List<string> ReadRawXlsxFileStream(Stream xlsxStream)
         {
             var rawStringData = new List<string>();
 
@@ -482,7 +467,7 @@ namespace APUToki.Services
                         dayOfWeekFull[lectureArray[1].Replace(".", "").Remove(0, 2)];
 
                         string classPeriod = lectureArray[2].Contains("T.B.A.") ? "T.B.A." :
-                             OrderedNumber(lectureArray[2].Normalize(System.Text.NormalizationForm.FormKC)) + " Period";
+                             OrderedNumber(lectureArray[2].Normalize(System.Text.NormalizationForm.FormKC)) + " Period" ;
 
                         //todo: organize a single lecture with multiple periods and day of weeks
                         //warning: a single lecture may have multiple periods in one day, and the same periods with multiple days
@@ -494,7 +479,7 @@ namespace APUToki.Services
                             Term = lectureArray[0],
                             DayOfWeek = dayOfWeek,
                             Period = classPeriod,
-                            Classroom = lectureArray[3].Replace("Ⅱ", "II "),
+                            Classroom = lectureArray[3].Replace("Ⅱ","II "),
                             BuildingFloor = buildingFloor,
                             SubjectId = lectureArray[5],
                             SubjectNameJP = lectureArray[6],
@@ -521,7 +506,7 @@ namespace APUToki.Services
         /// </summary>
         /// <returns>Byte array of Stream</returns>
         /// <param name="input">Input.</param>
-        public static byte[] ReadFully(Stream input)
+        private static byte[] ReadFully(Stream input)
         {
             byte[] buffer = new byte[16 * 1024];
             using (MemoryStream ms = new MemoryStream())
@@ -540,10 +525,10 @@ namespace APUToki.Services
         /// </summary>
         /// <returns>Ordered number in string</returns>
         /// <param name="inNumber">In number.</param>
-        public static string OrderedNumber(string inNumber)
+        private static string OrderedNumber(string inNumber)
         {
             string outNumber = "";
-
+            
             switch (inNumber)
             {
                 case "1":

@@ -51,12 +51,49 @@ namespace APUToki.Models
 
         public string StartTime { get; set; }
 
+        public int TimetableCol
+        {
+            get
+            {
+                //convert the DayOfWeek value to a number, missing value is 99
+                var dayOfWeekToInt = new Dictionary<string, int>
+                {
+                    {"Monday", 1},
+                    {"Tuesday", 2},
+                    {"Wednesday", 3},
+                    {"Thursday", 4},
+                    {"Friday", 5},
+                    {"Session", 99},
+                    {"T.B.A.", 99}
+                };
+
+                return dayOfWeekToInt[DayOfWeek];
+            }
+        }
+
+        public int TimetableRow
+        {
+            get
+            {
+                //convert the first char of the Period attribute to int, missing value is 99
+                int periodVal = (int)char.GetNumericValue(Period[0]);
+
+                //the timetable row max number is 6, anything else will be considered missing
+                if (periodVal == -1)
+                {
+                    return 99;
+                }
+                return periodVal;
+            }
+        }
+
         public string EndTime
         {
             get
             {
                 //return the StartTime value, but added 1 hour and 35 minutes to it
-                return StartTime.Contains("T.B.A.") ? "T.B.A." : DateTime.ParseExact(StartTime, "HH:mm", null).AddHours(1).AddMinutes(35).ToString("HH:mm");
+                return StartTime.Contains("T.B.A.") ? "T.B.A." : 
+                DateTime.ParseExact(StartTime, "HH:mm", null).AddHours(1).AddMinutes(35).ToString("HH:mm");
             }
         }
 
@@ -99,6 +136,7 @@ namespace APUToki.Models
         {
             if (other is null)
                 return false;
+            //todo: find a way for the program to check for different periods on a single lecture
             return SubjectNameEN == other.SubjectNameEN && Semester == other.Semester && Curriculum == other.Curriculum;
         }
 

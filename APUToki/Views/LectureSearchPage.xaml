@@ -35,6 +35,19 @@
                                        Style="{DynamicResource ListItemDetailTextStyle}"
                                        FontSize="13"
                                        TextColor="Green"/>
+                                
+                                <Label FontSize="Small">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <FormattedString.Spans>
+                                                <Span Text="{Binding Grade}" />
+                                                <Span Text=" " />
+                                                <Span Text="{Binding Field}" TextColor="Maroon"/>
+                                            </FormattedString.Spans>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                
                                 <Label Text="{Binding Curriculum}" FontSize="Small" 
                                        TextColor="Purple"/>
                                 

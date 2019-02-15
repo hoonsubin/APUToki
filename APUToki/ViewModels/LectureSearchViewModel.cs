@@ -13,7 +13,7 @@ namespace APUToki.ViewModels
     public class LectureSearchViewModel : ContentPage
     {
         public ObservableCollection<LectureItem> SearchResults { get; set; }
-        public ObservableCollection<LectureItem> LectureDatabase { get; set; }
+        //public ObservableCollection<LectureItem> LectureDatabase { get; set; }
         public Command LoadItemsCommand { get; set; }
 
         public LectureSearchViewModel()
@@ -48,6 +48,7 @@ namespace APUToki.ViewModels
                     {
                         if (SearchResults.Contains(i))
                         {
+                            //continue to the next interation if the item is already there
                             continue;
                         }
                         //add the item to the list if it contains the word
@@ -60,6 +61,10 @@ namespace APUToki.ViewModels
                 }
                 Debug.WriteLine("[LectureSearch]Got " + SearchResults.Count + " results");
 
+                if (SearchResults.Count <= 0)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Notice", "No results found", "Dismiss");
+                }
             }
 
         }
