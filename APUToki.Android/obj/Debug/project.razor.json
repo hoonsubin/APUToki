@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/APUToki.Android.csproj",
+  "TargetFramework": "v8.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}

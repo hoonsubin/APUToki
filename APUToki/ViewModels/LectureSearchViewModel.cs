@@ -12,14 +12,14 @@ namespace APUToki.ViewModels
 {
     public class LectureSearchViewModel : ContentPage
     {
-        public ObservableCollection<LectureItem> SearchResults { get; set; }
+        public ObservableCollection<Lecture> SearchResults { get; set; }
         //public ObservableCollection<LectureItem> LectureDatabase { get; set; }
         public Command LoadItemsCommand { get; set; }
 
         public LectureSearchViewModel()
         {
             Title = "Lecture Search";
-            SearchResults = new ObservableCollection<LectureItem>();
+            SearchResults = new ObservableCollection<Lecture>();
 
             //load the items from the database
             //set the load items command to Execute load items command
@@ -33,12 +33,16 @@ namespace APUToki.ViewModels
         {
             //load saved lectures from the database
             var database = await App.Database.SortByLectureName();
-            Debug.WriteLine("[ExecuteLoadItemsCommand]There are " + database.Count + " lectures in the database");
+
+            Debug.WriteLine("[SearchLecturesAsync]There are " + database.Count + " lectures in the database");
 
             SearchResults.Clear();
 
-            if (query != "")
+            if (!string.IsNullOrEmpty(query))
             {
+                Debug.WriteLine("[SearchLecturesAsync]User searched for " + query);
+
+                /*
                 //the search algorithm starts here, currently it's just a simple linear filtering
                 //loop through the database
                 foreach (var i in database)
@@ -59,9 +63,25 @@ namespace APUToki.ViewModels
                         }
                     }
                 }
-                Debug.WriteLine("[LectureSearch]Got " + SearchResults.Count + " results");
+                */
+                var searchedLectures = SearchEngine.SearchLecture(query, database);
+                if (searchedLectures != null)
+                {
+                    foreach (var i in searchedLectures)
+                    {
+                        SearchResults.Add(i);
+                    }
+                }
 
-                if (SearchResults.Count <= 0)
+
+                int resultsCount = SearchResults.Count;
+
+
+                Debug.WriteLine("[SearchLecturesAsync]Got " + resultsCount + " results");
+                Debug.WriteLine("[SearchLecturesAsync]Took " + SearchEngine.LastSearchTime + " ms to search");
+
+
+                if (resultsCount <= 0)
                 {
                     await Application.Current.MainPage.DisplayAlert("Notice", "No results found", "Dismiss");
                 }
@@ -93,7 +113,7 @@ namespace APUToki.ViewModels
             }
             catch (Exception ex)
             {
-                await SyncEvents.SendErrorEmail(ex.Message);
+                await SyncEvents.SendErrorEmail(ex.ToString());
             }
             finally
             {

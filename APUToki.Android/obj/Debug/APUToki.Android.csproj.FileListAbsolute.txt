@@ -39,6 +39,7 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Mono.Android.pdb
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Plugin.Calendars.Abstractions.pdb
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Plugin.Connectivity.Abstractions.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/SQLiteNetExtensions.pdb
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Xamarin.Forms.Core.pdb
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Xamarin.Forms.Xaml.pdb
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/APUToki.Android.pdb
@@ -47,6 +48,7 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Mono.Android.pdb
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Plugin.Calendars.Abstractions.pdb
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Plugin.Connectivity.Abstractions.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/SQLiteNetExtensions.pdb
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Xamarin.Forms.Core.pdb
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Xamarin.Forms.Xaml.pdb
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/FormsViewGroup.dll.mdb

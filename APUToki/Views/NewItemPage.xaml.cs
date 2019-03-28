@@ -10,14 +10,14 @@ namespace APUToki.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewItemPage : ContentPage
     {
-        public Item Item { get; set; }
+        public AcademicEvent Item { get; set; }
 
         public NewItemPage()
         {
             InitializeComponent();
 
             //populate the new item page with these values
-            Item = new Item
+            Item = new AcademicEvent
             {
                 EventName = "New event name",
                 StartDateTime = DateTime.Now.ToString("yyyy/MM/dd")

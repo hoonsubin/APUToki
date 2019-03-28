@@ -16,34 +16,35 @@ namespace APUToki.Services
         {
             database = new SQLiteAsyncConnection(dbPath);
             //keep the database open so we don't have to re-open or close everytime we do something to it
-            database.CreateTableAsync<Item>().Wait();
+            database.CreateTableAsync<AcademicEvent>().Wait();
 
             //create the lecture database
-            database.CreateTableAsync<LectureItem>().Wait();
+            database.CreateTableAsync<Lecture>().Wait();
         }
 
+        #region Academic Calendar controls
         //get all the items in the database, it will return the result as a list
-        public Task<List<Item>> GetItemsAsync()
+        public Task<List<AcademicEvent>> GetItemsAsync()
         {
             Debug.WriteLine("[DataStore]Getting items from database");
-            return database.Table<Item>().ToListAsync();
+            return database.Table<AcademicEvent>().ToListAsync();
         }
 
-        public Task<List<Item>> SortListByDate()
+        public Task<List<AcademicEvent>> SortListByDate()
         {
             Debug.WriteLine("[DataStore]Getting sorted items list");
-            return database.QueryAsync<Item>("SELECT * FROM [Item] ORDER BY [StartDateTime] ASC");
+            return database.QueryAsync<AcademicEvent>("SELECT * FROM [AcademicEvent] ORDER BY [StartDateTime] ASC");
         }
 
         //return the item from the database with the given id
-        public Task<Item> GetItemAsync(int id)
+        public Task<AcademicEvent> GetItemAsync(int id)
         {
             Debug.WriteLine("[DataStore]Getting item with the ID " + id);
-            return database.Table<Item>().Where(i => i.Id == id).FirstOrDefaultAsync();
+            return database.Table<AcademicEvent>().Where(i => i.Id == id).FirstOrDefaultAsync();
         }
 
         //save the given item to the database
-        public Task<int> SaveItemAsync(Item item)
+        public Task<int> SaveItemAsync(AcademicEvent item)
         {
             if (item.Id != 0)
             {
@@ -57,36 +58,37 @@ namespace APUToki.Services
         }
 
         //delete the given item from the database
-        public Task<int> DeleteItemAsync(Item item)
+        public Task<int> DeleteItemAsync(AcademicEvent item)
         {
             Debug.WriteLine("[DataStore]Deleting item " + item.EventName + " ID: " + item.Id);
             return database.DeleteAsync(item);
         }
+        #endregion
 
-        //################################Lecture Items#################################
-
+        #region Lecture controls
         //get all the lectures in the database, it will return the result as a list
-        public Task<List<LectureItem>> GetLecturesAsync()
+        public Task<List<Lecture>> GetLecturesAsync()
         {
             Debug.WriteLine("[DataStore]Getting lectures from database");
-            return database.Table<LectureItem>().ToListAsync();
+            return database.Table<Lecture>().ToListAsync();
         }
 
-        public Task<List<LectureItem>> SortByLectureName()
+        //sort the database list by it English lecture name
+        public Task<List<Lecture>> SortByLectureName()
         {
             Debug.WriteLine("[DataStore]Getting sorted items list");
-            return database.QueryAsync<LectureItem>("SELECT * FROM [LectureItem] ORDER BY [SubjectNameEN] ASC");
+            return database.QueryAsync<Lecture>("SELECT * FROM [Lecture] ORDER BY [SubjectNameEN] ASC");
         }
 
         //return the item from the database with the given id
-        public Task<LectureItem> GetLectureByIdAsync(int id)
+        public Task<Lecture> GetLectureByIdAsync(int id)
         {
             Debug.WriteLine("[DataStore]Getting item with the ID " + id);
-            return database.Table<LectureItem>().Where(i => i.Id == id).FirstOrDefaultAsync();
+            return database.Table<Lecture>().Where(i => i.Id == id).FirstOrDefaultAsync();
         }
 
         //save the given item to the database
-        public Task<int> SaveLectureAsync(LectureItem lecture)
+        public Task<int> SaveLectureAsync(Lecture lecture)
         {
             if (lecture.Id != 0)
             {
@@ -100,11 +102,13 @@ namespace APUToki.Services
         }
 
         //delete the given item from the database
-        public Task<int> DeleteLectureAsync(LectureItem lecture)
+        public Task<int> DeleteLectureAsync(Lecture lecture)
         {
             Debug.WriteLine("[DataStore]Deleting item " + lecture.SubjectNameEN + " ID: " + lecture.Id);
             return database.DeleteAsync(lecture);
         }
+
+        #endregion
 
     }
 }

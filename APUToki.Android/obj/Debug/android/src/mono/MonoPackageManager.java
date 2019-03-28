@@ -131,6 +131,7 @@ class MonoPackageManager_Resources {
 		"Plugin.Settings.Abstractions.dll",
 		"Plugin.Settings.dll",
 		"SQLite-net.dll",
+		"SQLiteNetExtensions.dll",
 		"SQLitePCLRaw.batteries_green.dll",
 		"SQLitePCLRaw.batteries_v2.dll",
 		"SQLitePCLRaw.core.dll",

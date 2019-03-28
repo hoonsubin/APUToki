@@ -10,12 +10,12 @@ namespace APUToki.ViewModels
 {
     public class TimetableViewModel : BaseViewModel
     {
-        public ObservableCollection<LectureItem> LectureItems { get; set; }
+        public ObservableCollection<Lecture> LectureItems { get; set; }
 
         public TimetableViewModel()
         {
             Title = "Timetable";
-            LectureItems = new ObservableCollection<LectureItem>();
+            LectureItems = new ObservableCollection<Lecture>();
         }
     }
 }

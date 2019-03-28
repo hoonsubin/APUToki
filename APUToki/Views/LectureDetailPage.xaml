@@ -39,17 +39,6 @@
             </Label.FormattedText>
         </Label>
         
-        <Label>
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="{Binding LectureItem.DayOfWeek}" />
-                        <Span Text=" " />
-                        <Span Text="{Binding LectureItem.Period}" />
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
         
         <!--<ListView ItemsSource="" HeightRequest="0.5">
             <ListView.ItemTemplate>
@@ -93,7 +82,8 @@
                 BackgroundColor="{StaticResource Primary}" 
                 TextColor="White" />
         
-        <Button Text="Add to timetable"/>
+        <Button Text="Add to timetable"
+                Command="{Binding AddToTimetableCommand}"/>
         
     </StackLayout>
 </ContentPage>

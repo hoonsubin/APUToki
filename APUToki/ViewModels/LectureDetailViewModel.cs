@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 using System.Collections.Generic;
-
+using System.Diagnostics;
 using APUToki.Models;
 using Xamarin.Forms;
 
@@ -9,13 +9,15 @@ namespace APUToki.ViewModels
 {
     public class LectureDetailViewModel : BaseViewModel
     {
-        public LectureItem LectureItem { get; set; }
+        public Lecture LectureItem { get; set; }
         public List<string> LecturePeriods { get; set; }
 
         //open the uri to the devices default browser
         public ICommand OpenWebCommand { get; }
 
-        public LectureDetailViewModel(LectureItem lectureItem = null)
+        public ICommand AddToTimetableCommand { get; }
+
+        public LectureDetailViewModel(Lecture lectureItem = null)
         {
             //set the title to the name of the event
             Title = lectureItem?.SubjectNameEN;
@@ -27,6 +29,14 @@ namespace APUToki.ViewModels
             (new Uri("https://portal2.apu.ac.jp/campusp/slbssbdr.do?value%28risyunen%29=2018&value%28semekikn%29=2&value%28kougicd%29="
             + lectureItem.SubjectId)));
 
+            AddToTimetableCommand = new Command(() => AddLecture(lectureItem));
+
+        }
+
+        private void AddLecture(Lecture lecture)
+        {
+            //todo: implement add to timetable function
+            Debug.WriteLine("[LectureDetailVM]Adding " + lecture.SubjectNameEN + " to timetable");
         }
 
     }

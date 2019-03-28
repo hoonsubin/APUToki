@@ -26,6 +26,7 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Plugin.Settings.Abstractions.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Plugin.Settings.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLite-net.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLiteNetExtensions.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLitePCLRaw.batteries_green.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLitePCLRaw.batteries_v2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLitePCLRaw.core.dll
@@ -89,5 +90,7 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Linq.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Reflection.Extensions.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Globalization.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Resources.ResourceManager.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.ObjectModel.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Mono.Security.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.ServiceModel.Internals.dll

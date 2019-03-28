@@ -16,6 +16,7 @@ namespace APUToki.Services
 {
     public static class SyncEvents
     {
+        #region Academic Calendar
         /// <summary>
         /// Gets the required permissions for getting and writting the system calendar information
         /// </summary>
@@ -101,7 +102,7 @@ namespace APUToki.Services
         /// <returns>The events to device.</returns>
         /// <param name="calendars">List of system calendars</param>
         /// <param name="eventSource">Event source</param>
-        public static async Task AddEventsToDevice(IList<Calendar> calendars, List<Item> eventSource)
+        public static async Task AddEventsToDevice(IList<Calendar> calendars, List<AcademicEvent> eventSource)
         {
             using (IProgressDialog progress = UserDialogs.Instance.Progress("Progress", null, null, true, MaskType.Black))
             {
@@ -132,11 +133,11 @@ namespace APUToki.Services
 
                 progress.PercentComplete = 50;
                 //create a new list for converting Calendar Events to databse items
-                var convertedEventsFromCal = new List<Item>();
+                var convertedEventsFromCal = new List<AcademicEvent>();
 
                 foreach (var i in rawEventsOfThisCal)
                 {
-                    convertedEventsFromCal.Add(new Item
+                    convertedEventsFromCal.Add(new AcademicEvent
                     {
                         EventName = i.Name,
                         StartDateTime = i.Start.ToString("yyyy/MM/dd")
@@ -186,10 +187,12 @@ namespace APUToki.Services
             }
         }
 
+        #endregion
+
         public static async Task SendErrorEmail(string message)
         {
-            var reportBug = await Application.Current.MainPage.DisplayAlert("Error", "There was an error, do you wish the send the error report to the developer?", "Yes", "No");
-
+            var reportBug = await Application.Current.MainPage.DisplayAlert("Error", "There was an error, do you wish the send the error report to the developer?\n" + message, "Yes", "No");
+            Debug.WriteLine("[Error]"+ message);
             if (reportBug)
             {
                 try
@@ -235,6 +238,7 @@ namespace APUToki.Services
 
         }
 
+        #region Lectures Database
         /// <summary>
         /// Updates the course database to the ones online
         /// </summary>
@@ -284,6 +288,7 @@ namespace APUToki.Services
                 Debug.WriteLine("[SyncEvents]No updates found");
             }
         }
+        #endregion
 
     }
 }

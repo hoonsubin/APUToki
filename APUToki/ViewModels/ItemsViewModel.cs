@@ -15,8 +15,8 @@ namespace APUToki.ViewModels
     public class ItemsViewModel : BaseViewModel
     {
         //represents a dynamic data collection that provides notifications when items get added, removed, or when the whole list is refreshed.
-        public ObservableCollection<Item> Items { get; set; }
-        public ObservableCollection<ItemGroup> ItemGrouped { get; set; }
+        public ObservableCollection<AcademicEvent> Items { get; set; }
+        public ObservableCollection<AcademicEventGroup> ItemGrouped { get; set; }
         public Command LoadItemsCommand { get; set; }
 
         //used for invoking the scroll to event in the ItemsPage
@@ -27,9 +27,9 @@ namespace APUToki.ViewModels
             //the title of the page
             Title = "Academic Calendar";
             //make and assign the List that'll contain the items
-            Items = new ObservableCollection<Item>();
+            Items = new ObservableCollection<AcademicEvent>();
 
-            ItemGrouped = new ObservableCollection<ItemGroup>();
+            ItemGrouped = new ObservableCollection<AcademicEventGroup>();
 
             //load the items from the database
             //set the load items command to Execute load items command
@@ -50,10 +50,10 @@ namespace APUToki.ViewModels
         }
 
         //setup and group the given list into a grouped list
-        void SetupGroup(ObservableCollection<Item> items)
+        void SetupGroup(ObservableCollection<AcademicEvent> items)
         {
             //setup the list of groups
-            var allListItemGroups = new ObservableCollection<ItemGroup>();
+            var allListItemGroups = new ObservableCollection<AcademicEventGroup>();
 
             //loop through all the items (ungroupped)
             foreach (var item in items)
@@ -66,7 +66,7 @@ namespace APUToki.ViewModels
                 if (listItemGroup == null)
                 {
                     //create a new small list (group)
-                    listItemGroup = new ItemGroup(item.GroupDate)
+                    listItemGroup = new AcademicEventGroup(item.GroupDate)
                     {
                         item
                     };
@@ -134,7 +134,7 @@ namespace APUToki.ViewModels
             }
             catch (Exception ex)
             {
-                await SyncEvents.SendErrorEmail(ex.Message);
+                await SyncEvents.SendErrorEmail(ex.ToString());
             }
             finally
             {

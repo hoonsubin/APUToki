@@ -17,14 +17,55 @@ namespace APUToki.Services
     /// </summary>
     public static class ApuBot
     {
-
+        #region fields
         //the delimiter for dividing the cells
         public const char delimiter = '|';
 
-        //link for english academic calendar
-        const string enAcademicCalendarUri = "http://en.apu.ac.jp/academic/top/curriculum_17.html/?c=17";
+        //the uri for the academic office homepage
+        const string enAcademicPageUri = "http://en.apu.ac.jp/academic/";
+        const string jpAcademicPageUri = "http://www.apu.ac.jp/academic/";
 
+        //the search API for getting the syllabus information
         const string syllabusSearchUri = "https://portal2.apu.ac.jp/campusp/slbssbdr.do?value%28risyunen%29=2018&value%28semekikn%29=2&value%28kougicd%29=";
+        #endregion
+
+        /// <summary>
+        /// Returns a list of all the curriculum top pages in the Academic Office page in URIs
+        /// </summary>
+        /// <returns>curriculum top pages URIs</returns>
+        private static List<string> GetCurriculums()
+        {
+            var curriculums = new List<string>();
+
+            string uri = enAcademicPageUri;
+
+            string xpath = $"//div[starts-with(@class, 'panel')]";
+
+            string outLink;
+
+            HtmlWeb web = new HtmlWeb();
+            var document = web.Load(uri);
+            var currentUri = new Uri(uri);
+
+            //this defines the tables in the html document, the ancestor of the element using the defined XPath
+            var pageBody = document.DocumentNode.SelectNodes(xpath);
+
+            //iterate through all the panels in the page
+            foreach (var panel in pageBody)
+            {
+                foreach (var a in panel.SelectNodes("./a"))
+                {
+                    //get the value of href in the current node
+                    outLink = "http://" + currentUri.Host + a.Attributes["href"].Value;
+
+                    //add the uri to the list that is going to get returned
+                    curriculums.Add(outLink);
+                }
+
+            }
+            return curriculums;
+
+        }
 
         /// <summary>
         /// Get all the links found in the Academic Office menu as a string
@@ -34,8 +75,8 @@ namespace APUToki.Services
         private static List<string> GetLinksFromMainPage(string menu = "01")
         {
 
-            //Link of the Academic Office homepage, this will be the starting location=
-            string uri = enAcademicCalendarUri;
+            //Link of the Academic Office homepage, this will be the starting location
+            string uri = GetCurriculums()[0];
 
             //XPath syntax for searching the Academic Office page menus
             string xpath = $"//div[contains(@class, 'menu_title curriculum{menu}')]";
@@ -43,42 +84,35 @@ namespace APUToki.Services
             //the url that will be outputted
             string outLink;
 
-            //declare a list that will contain all the uris found in the menj
+            //declare a list that will contain all the uris found in the main page
             var uriList = new List<string>();
 
-            try
+            //it loads the html document from the given link
+            HtmlWeb web = new HtmlWeb();
+            var document = web.Load(uri);
+            var currentUri = new Uri(uri);
+
+
+            //this defines the tables in the html document, the ancestor of the element using the defined XPath
+            var pageBody = document.DocumentNode.SelectSingleNode(xpath);
+
+            //follow the sibliing of the current node div with the given class
+            foreach (var ul in pageBody.SelectNodes("following-sibling::ul"))
             {
-                //it loads the html document from the given link
-                HtmlWeb web = new HtmlWeb();
-                var document = web.Load(uri);
-                var currentUri = new Uri(uri);
-
-                //this defines the tables in the html document, the ancestor of the element using the defined XPath
-                var pageBody = document.DocumentNode.SelectSingleNode(xpath);
-
-                //follow the sibliing of the current node div with the given class
-                foreach (var ul in pageBody.SelectNodes("following-sibling::ul"))
+                //go throught the list node and get the href and the inner text
+                foreach (var li in ul.SelectNodes("./li/a"))
                 {
-                    //go throught the list node and get the href and the inner text
-                    foreach (var li in ul.SelectNodes("./li/a"))
-                    {
-                        //get the value of href in the current node
-                        outLink = "http://" + currentUri.Host + li.Attributes["href"].Value;
+                    //get the value of href in the current node
+                    outLink = "http://" + currentUri.Host + li.Attributes["href"].Value;
 
-                        //add the uri to the list that is going to get returned
-                        uriList.Add(outLink);
-                    }
+                    //add the uri to the list that is going to get returned
+                    uriList.Add(outLink);
                 }
-                return uriList;
             }
-            catch (Exception)
-            {
-
-                //if there is no link, or some other problem comes up, output an
-                return null;
-            }
+            return uriList;
         }
 
+        #region Academic Calendar
         /// <summary>
         /// Scrape all the text from the calendar table. This will only scrape the table for content.
         /// </summary>
@@ -91,7 +125,7 @@ namespace APUToki.Services
                 //the xpath expression for defining the elements
                 string xpath = "//table[contains(@class, 'fcktable')]/tbody";
 
-                //load the entire html document from the given uri
+                //load the entire html document from the given uri, and assign it to document variable
                 var web = new HtmlWeb();
                 var document = web.Load(uri);
 
@@ -224,10 +258,10 @@ namespace APUToki.Services
         /// Return the list of all academic events from the academic calendar
         /// </summary>
         /// <returns>The event list</returns>
-        public static ObservableCollection<Item> AcademicEventList()
+        public static ObservableCollection<AcademicEvent> AcademicEventList()
         {
             //this method will output the list of items
-            ObservableCollection<Item> items = new ObservableCollection<Item>();
+            ObservableCollection<AcademicEvent> items = new ObservableCollection<AcademicEvent>();
 
             //menu number 1 represents the Academic Calendar
             //iterate through all the links in the menu
@@ -246,7 +280,7 @@ namespace APUToki.Services
                     string[] calendarItems = rowFixed.Split(delimiter);
 
                     //add the item with the given parameters
-                    items.Add(new Item
+                    items.Add(new AcademicEvent
                     {
                         //Id = Guid.NewGuid().ToString(),
                         EventName = calendarItems[2],
@@ -257,39 +291,30 @@ namespace APUToki.Services
             return items;
         }
 
+        #endregion
+
+        #region Course Timetable
         /// <summary>
         /// Gets the online lecture timetable's last updated date
         /// </summary>
         /// <returns>The online timetable last date.</returns>
         public static string GetOnlineTimetableLastDate()
         {
+            //open course timetable page from the academic office website
             string timetablePageUri = GetLinksFromMainPage("03")[0];
-
-            string lastDate = "";
 
             string xpath = $"//div[contains(@class, 'entry')]";
 
-            try
-            {
-                //load the html document from the given link
-                HtmlWeb web = new HtmlWeb();
-                var document = web.Load(timetablePageUri);
-                var currentUri = new Uri(timetablePageUri);
-                //define the xlsx links in the html document, the ancestor of the element using the defined XPath
-                var pageBody = document.DocumentNode.SelectSingleNode(xpath);
+            //load the html document from the given link
+            HtmlWeb web = new HtmlWeb();
+            var document = web.Load(timetablePageUri);
 
-                string[] links = pageBody.SelectNodes("./ul/li")[0].InnerText.Split(' ');
+            //define the xlsx links in the html document, the ancestor of the element using the defined XPath
+            var pageBody = document.DocumentNode.SelectSingleNode(xpath);
 
-                lastDate = pageBody.SelectNodes("./ul/li")[0].InnerText;
+            string[] links = pageBody.SelectNodes("./ul/li")[0].InnerText.Split(' ');
 
-                //return lastDate;
-
-                return links[links.Length - 1].Replace(")", "");
-            }
-            catch(Exception)
-            {
-                return null;
-            }
+            return links[links.Length - 1].Replace(")", "");
         }
 
         /// <summary>
@@ -305,43 +330,34 @@ namespace APUToki.Services
 
             var timetableStreams = new List<Stream>();
 
-            try
+            //load the html document from the given link
+            HtmlWeb web = new HtmlWeb();
+            var document = web.Load(timetablePageUri);
+            var currentUri = new Uri(timetablePageUri);
+
+            //define the xlsx links in the html document, the ancestor of the element using the defined XPath
+            var pageBody = document.DocumentNode.SelectSingleNode(xpath);
+
+            //follow the sibling of the current node div with the given class
+            foreach (var a in pageBody.SelectNodes("./ul/li/a"))
             {
-                //load the html document from the given link
-                HtmlWeb web = new HtmlWeb();
-                var document = web.Load(timetablePageUri);
-                var currentUri = new Uri(timetablePageUri);
+                //get all the xlsx download links
+                string xlsxDownloadUri = "http://" + currentUri.Host + a.Attributes["href"].Value;
 
-                //define the xlsx links in the html document, the ancestor of the element using the defined XPath
-                var pageBody = document.DocumentNode.SelectSingleNode(xpath);
+                //create a http request and response
+                var req = WebRequest.Create(xlsxDownloadUri);
+                var response = req.GetResponse();
 
-                //follow the sibling of the current node div with the given class
-                foreach (var a in pageBody.SelectNodes("./ul/li/a"))
-                {
-                    //where the xlsx file is
-                    string xlsxDownloadUri = "http://" + currentUri.Host + a.Attributes["href"].Value;
+                //get the web response into stream
+                Stream stream = response.GetResponseStream();
 
-                    //create a http request and response
-                    var req = WebRequest.Create(xlsxDownloadUri);
-                    var response = req.GetResponse();
-
-                    //get the web response into stream
-                    Stream stream = response.GetResponseStream();
-
-                    timetableStreams.Add(stream);
-                    //timetablePaths.Add(downloadPath + a.InnerText + ".xlsx");
-                    //downloadedTimetables.Add(xlsxUri);
-                }
-
-                //return the list of byte streams for all the timetables
-                return timetableStreams;
-
+                timetableStreams.Add(stream);
+                //timetablePaths.Add(downloadPath + a.InnerText + ".xlsx");
+                //downloadedTimetables.Add(xlsxUri);
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-                return null;
-            }
+
+            //return the list of byte streams for all the timetables
+            return timetableStreams;
         }
 
         /// <summary>
@@ -397,7 +413,6 @@ namespace APUToki.Services
                     }
                 }
             }
-
             return rawStringData;
         }
 
@@ -405,9 +420,11 @@ namespace APUToki.Services
         /// Return the List of Lecture Items from the Academic Office website xlsx file. This is where the cleanup of the streamed data happends
         /// </summary>
         /// <returns>Lecture Items List</returns>
-        public static ObservableCollection<LectureItem> LecturesList()
+        public static ObservableCollection<Lecture> LecturesList()
         {
-            var lectures = new ObservableCollection<LectureItem>();
+            var lectures = new ObservableCollection<Lecture>();
+
+            var timeTableCells = new List<TimetableCell>();
 
             //get the uri that has the lecture timetables in xlsx file
             var lectureTimetableuri = GetLinksFromMainPage("03")[0];
@@ -417,11 +434,11 @@ namespace APUToki.Services
 
             var dayOfWeekFull = new Dictionary<string, string>
             {
-                {"Mon", "Monday"},
-                {"Tue", "Tuesday"},
-                {"Wed", "Wednesday"},
-                {"Thu", "Thursday"},
-                {"Fri", "Friday"}
+                {"月/Mon.", "Monday"},
+                {"火/Tue.", "Tuesday"},
+                {"水/Wed.", "Wednesday"},
+                {"木/Thu.", "Thursday"},
+                {"金/Fri.", "Friday"}
             };
 
             var periodStartTime = new Dictionary<string, string>
@@ -447,13 +464,14 @@ namespace APUToki.Services
                     //only add the items that has a proper subject id
                     if (lectureArray[5] != "NA" && lectureArray[5] != "講義CD/Subject CD")
                     {
-                        //split the semester and curriculum string into two
-                        string[] semesterOrCurr = lectureArray[15].Split('(');
-                        semesterOrCurr[0] = semesterOrCurr[0].Replace("Timetable", "").Trim();
-                        semesterOrCurr[1] = semesterOrCurr[1].Replace(")", "");
+                        //split the semester and curriculum string into two and declare them
+                        string[] semesterOrCurr = lectureArray[lectureArray.Length - 1].Split('(');
+                        string semester = semesterOrCurr[0].Replace("Timetable", "").Replace(" Semester", "").Trim();
+                        string curriculum = semesterOrCurr[1].Replace("For ", "").Replace(" Curriculum students)", "");
 
                         string buildingFloor = lectureArray[4];
-                        //change building format
+
+                        //change building format to a more readable one
                         if (lectureArray[4] != "T.B.A.")
                         {
                             buildingFloor = lectureArray[4].Replace("-", " building ").Replace("Ⅱ", "II");
@@ -464,42 +482,170 @@ namespace APUToki.Services
 
                         //change day of week format only if it's not "Session"
                         string dayOfWeek = lectureArray[1].Contains("Session") ? "Session" :
-                        dayOfWeekFull[lectureArray[1].Replace(".", "").Remove(0, 2)];
+                        dayOfWeekFull[lectureArray[1]];
 
                         string classPeriod = lectureArray[2].Contains("T.B.A.") ? "T.B.A." :
-                             OrderedNumber(lectureArray[2].Normalize(System.Text.NormalizationForm.FormKC)) + " Period" ;
+                             OrderedNumber(lectureArray[2].Normalize(System.Text.NormalizationForm.FormKC)) + " Period";
 
-                        //todo: organize a single lecture with multiple periods and day of weeks
-                        //warning: a single lecture may have multiple periods in one day, and the same periods with multiple days
-                        //ex: Lecture A, 2st period, Monday, Thursday/Lecture B, 4th period, 5th period, Tuesday
+                        string grade = OrderedNumber(lectureArray[12].Remove(1, 2)) + " Year";
 
-                        //add the lecture item to the list
-                        lectures.Add(new LectureItem
+                        string term = lectureArray[0];
+
+                        if (lectureArray[0].Contains("Session"))
                         {
-                            Term = lectureArray[0],
-                            DayOfWeek = dayOfWeek,
-                            Period = classPeriod,
-                            Classroom = lectureArray[3].Replace("Ⅱ","II "),
+                            term = "Session";
+                        }
+                        else if (lectureArray[0].Contains("Semester"))
+                        {
+                            term = "Semester";
+                        }
+                        else
+                        {
+                            term = lectureArray[0].Contains("2Q") ? "2nd Quarter" : "1st Quarter";
+                        }
+
+                        //setup the current lecture item
+                        var thisLecture = new Lecture 
+                        {
+                            Term = term,
+                            Classroom = lectureArray[3].Replace("Ⅱ", "II "),
                             BuildingFloor = buildingFloor,
                             SubjectId = lectureArray[5],
                             SubjectNameJP = lectureArray[6],
                             SubjectNameEN = lectureArray[7],
                             InstructorJP = lectureArray[8],
                             InstructorEN = lectureArray[9],
-                            Language = lectureArray[10],
-                            Grade = OrderedNumber(lectureArray[11].Remove(1, 2)) + " Year",
-                            Field = lectureArray[12],
-                            APS = lectureArray[13],
-                            APM = lectureArray[14],
-                            Semester = semesterOrCurr[0].Replace(" Semester", ""),
-                            Curriculum = semesterOrCurr[1].Remove(0, 4).Replace(" students", ""),
-                            StartTime = periodStartTime[classPeriod]
-                        });
+                            GradeEval = lectureArray[10],
+                            Language = lectureArray[11],
+                            Grade = grade,
+                            Field = lectureArray[13],
+                            APS = lectureArray[14],
+                            APM = lectureArray[15],
+                            Semester = semester,
+                            Curriculum = curriculum
+                        };
+
+                        //start instantiating objects. Add all the time cells without filtering
+                        if (!lectureArray[0].Contains("Session"))
+                        {
+                            timeTableCells.Add(TimetableCell.Parse(thisLecture, dayOfWeek, classPeriod, periodStartTime[classPeriod]));
+                        }
+
+                        //check if the list already has this lecture
+                        if (!lectures.Contains(thisLecture))
+                        {
+                            //thisLecture.SetSearchTags();
+
+                            lectures.Add(thisLecture);
+
+                            /*
+                            //detrmine if the current lecture item's term, and assign it accordingly
+                            if (lectureArray[0].Contains("Semester"))
+                            {
+                                var thisSemesterLecture = new SemesterCourse
+                                {
+                                    Classroom = thisLecture.Classroom,
+                                    BuildingFloor = thisLecture.BuildingFloor,
+                                    SubjectId = thisLecture.SubjectId,
+                                    SubjectNameJP = thisLecture.SubjectNameJP,
+                                    SubjectNameEN = thisLecture.SubjectNameEN,
+                                    InstructorJP = thisLecture.InstructorJP,
+                                    InstructorEN = thisLecture.InstructorEN,
+                                    GradeEval = thisLecture.GradeEval,
+                                    Language = thisLecture.Language,
+                                    Grade = thisLecture.Grade,
+                                    Field = thisLecture.Field,
+                                    APS = thisLecture.APS,
+                                    APM = thisLecture.APM,
+                                    Semester = thisLecture.Semester,
+                                    Curriculum = thisLecture.Curriculum
+                                };
+                                thisSemesterLecture.SetSearchTags();
+                                lectures.Add(thisSemesterLecture);
+                            }
+                            else if (lectureArray[0].Contains("Q"))
+                            {
+                                var thisQuarterLecture = new QuarterCourse
+                                {
+                                    Term = lectureArray[0].Contains("2Q") ? "2nd Quarter" : "1st Quarter",
+                                    Classroom = thisLecture.Classroom,
+                                    BuildingFloor = thisLecture.BuildingFloor,
+                                    SubjectId = thisLecture.SubjectId,
+                                    SubjectNameJP = thisLecture.SubjectNameJP,
+                                    SubjectNameEN = thisLecture.SubjectNameEN,
+                                    InstructorJP = thisLecture.InstructorJP,
+                                    InstructorEN = thisLecture.InstructorEN,
+                                    GradeEval = thisLecture.GradeEval,
+                                    Language = thisLecture.Language,
+                                    Grade = thisLecture.Grade,
+                                    Field = thisLecture.Field,
+                                    APS = thisLecture.APS,
+                                    APM = thisLecture.APM,
+                                    Semester = thisLecture.Semester,
+                                    Curriculum = thisLecture.Curriculum
+                                };
+                                thisQuarterLecture.SetSearchTags();
+                                thisQuarterLecture.SearchTags.Add(thisQuarterLecture.Term.ToLower());
+                                lectures.Add(thisQuarterLecture);
+                            }
+                            else if (lectureArray[0].Contains("Session"))
+                            {
+                                var thisSessionLecture = new SessionCourse
+                                {
+                                    Classroom = thisLecture.Classroom,
+                                    BuildingFloor = thisLecture.BuildingFloor,
+                                    SubjectId = thisLecture.SubjectId,
+                                    SubjectNameJP = thisLecture.SubjectNameJP,
+                                    SubjectNameEN = thisLecture.SubjectNameEN,
+                                    InstructorJP = thisLecture.InstructorJP,
+                                    InstructorEN = thisLecture.InstructorEN,
+                                    GradeEval = thisLecture.GradeEval,
+                                    Language = thisLecture.Language,
+                                    Grade = thisLecture.Grade,
+                                    Field = thisLecture.Field,
+                                    APS = thisLecture.APS,
+                                    APM = thisLecture.APM,
+                                    Semester = thisLecture.Semester,
+                                    Curriculum = thisLecture.Curriculum
+                                };
+                                thisSessionLecture.SetSearchTags();
+                                lectures.Add(thisSessionLecture);
+                            }
+                            */
+
+                        }
+                    }
+
+                }
+            }
+            //add all the timetable cells to all the lectures
+            AddTimetableCellsToList(lectures, timeTableCells);
+
+
+            return lectures;
+        }
+
+        /// <summary>
+        /// Loop through boths lists and add the timetable cell to the corrisponding lecture
+        /// </summary>
+        /// <param name="lectureList">Lecture list.</param>
+        /// <param name="timetableCells">Timetable cells.</param>
+        private static void AddTimetableCellsToList(ObservableCollection<Lecture> lectureList, List<TimetableCell> timetableCells)
+        {
+            foreach (var lecture in lectureList)
+            {
+                foreach (var cell in timetableCells)
+                {
+                    if (cell.ParentLecture.Equals(lecture))
+                    {
+                        lecture.AddCell(cell);
                     }
                 }
             }
-            return lectures;
         }
+
+
+        #endregion
 
         /// <summary>
         /// Read the input Stream and convert that into a Byte array
@@ -547,5 +693,8 @@ namespace APUToki.Services
             return outNumber;
 
         }
+
+
+
     }
 }

@@ -22,6 +22,7 @@ Plugin.Permissions
 Plugin.Settings.Abstractions
 Plugin.Settings
 SQLite-net
+SQLiteNetExtensions
 SQLitePCLRaw.batteries_green
 SQLitePCLRaw.batteries_v2
 SQLitePCLRaw.core
@@ -61,3 +62,4 @@ Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
 netstandard
 System.Reflection.Extensions
+System.Resources.ResourceManager

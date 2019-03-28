@@ -21,7 +21,7 @@ namespace APUToki.Views
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             //if the selected item is not an item, exit out of the block
-            if (!(args.SelectedItem is LectureItem lectureItem))
+            if (!(args.SelectedItem is Lecture lectureItem))
                 return;
 
             //show a new page which is the ItemDetailViewModel

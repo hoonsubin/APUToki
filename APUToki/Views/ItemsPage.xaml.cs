@@ -32,7 +32,7 @@ namespace APUToki.Views
         void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
             //if the selected item is not an item, exit out of the block
-            if (!(args.SelectedItem is Item item))
+            if (!(args.SelectedItem is AcademicEvent item))
                 return;
 
             //show a new page which is the ItemDetailViewModel
@@ -64,7 +64,7 @@ namespace APUToki.Views
                 }
                 catch (Exception ex)
                 {
-                    await SyncEvents.SendErrorEmail(ex.Message);
+                    await SyncEvents.SendErrorEmail(ex.ToString());
                 }
             }
 

@@ -27,7 +27,7 @@
                                 <Label Text="{Binding SubjectNameEN}" x:Name="lblLectureName"
                                        LineBreakMode="NoWrap"
                                        Style="{DynamicResource ListItemTextStyle}"
-                                       TextColor="{Binding TextColor}"
+                                       TextColor="Black"
                                        FontSize="16" />
                                 
                                 <Label Text="{Binding InstructorEN}" x:Name="lblProfessor"
