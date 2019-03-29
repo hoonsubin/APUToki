@@ -262,20 +262,23 @@ namespace APUToki.Services
                 {
                     //todo: add progress bar feature
                     //get all the lectures online
-                    var onlineLectures = ApuBot.LecturesList();
+                    var newLectures = ApuBot.LecturesList();
 
+                    var oldDatabase = await App.Database.GetAllLecturesAsync();
+
+                    if (oldDatabase.Count > 0)
+                    {
+                        foreach (var i in oldDatabase)
+                        {
+                            await App.Database.DeleteLectureAsync(i);
+                        }
+                    }
                     //empty the current local database to not make duplicates
-                    var database = await App.Database.GetLecturesAsync();
-                    foreach (var dbItem in database)
-                    {
-                        await App.Database.DeleteLectureAsync(dbItem);
-                    }
+                    //await App.Database.DeleteAllLecturesAsync(oldDatabase);
 
-                    foreach (var i in onlineLectures)
-                    {
-                        //add the new item to the database
-                        await App.Database.SaveLectureAsync(i);
-                    }
+                    //add all the new lectures to the database
+                    await App.Database.SaveAllLecturesAsync(newLectures);
+
 
                     Debug.WriteLine("[SyncEvents]The lectures database has been updated");
                     await Application.Current.MainPage.DisplayAlert("Notice", "Updated the database", "Dismiss");

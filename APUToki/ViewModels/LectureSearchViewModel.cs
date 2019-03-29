@@ -32,7 +32,7 @@ namespace APUToki.ViewModels
         public async Task SearchLecturesAsync(string query)
         {
             //load saved lectures from the database
-            var database = await App.Database.SortByLectureName();
+            var database = await App.Database.GetAllLecturesAsync();
 
             Debug.WriteLine("[SearchLecturesAsync]There are " + database.Count + " lectures in the database");
 

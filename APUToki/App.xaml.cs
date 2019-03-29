@@ -28,8 +28,9 @@ namespace APUToki
             {
                 if (database == null)
                 {
-                    database = new DataStore(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "database.db3"));
+                    database = new DataStore();
                 }
+
                 return database;
             }
         }

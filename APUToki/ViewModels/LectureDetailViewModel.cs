@@ -12,6 +12,8 @@ namespace APUToki.ViewModels
         public Lecture LectureItem { get; set; }
         public List<string> LecturePeriods { get; set; }
 
+        public List<TimetableCell> TimetableCells { get; set; }
+
         //open the uri to the devices default browser
         public ICommand OpenWebCommand { get; }
 
@@ -23,6 +25,8 @@ namespace APUToki.ViewModels
             Title = lectureItem?.SubjectNameEN;
             //load the item contents
             LectureItem = lectureItem;
+
+            TimetableCells = lectureItem.TimetableCells;
 
             //define what the button is going to do, in this case open the syllabus of the given lecture id
             OpenWebCommand = new Command(() => Device.OpenUri
@@ -36,7 +40,12 @@ namespace APUToki.ViewModels
         private void AddLecture(Lecture lecture)
         {
             //todo: implement add to timetable function
-            Debug.WriteLine("[LectureDetailVM]Adding " + lecture.SubjectNameEN + " to timetable");
+            string cells = "";
+            foreach (var i in TimetableCells)
+            {
+                cells += i.DayOfWeek + "-" + i.Period + "|";
+            }
+            Debug.WriteLine("[LectureDetailVM]Adding " + lecture.SubjectNameEN + " to timetable " + cells);
         }
 
     }
