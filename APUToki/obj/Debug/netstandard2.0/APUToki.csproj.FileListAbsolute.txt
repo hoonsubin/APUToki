@@ -15,4 +15,3 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/APUToki.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/APUToki.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/APUToki.csprojAssemblyReference.cache

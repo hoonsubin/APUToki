@@ -221,6 +221,19 @@
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
+      "SQLiteNetExtensions.Async/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLiteNetExtensions": "2.0.0",
+          "sqlite-net-pcl": "1.4.118"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        }
+      },
       "SQLitePCLRaw.bundle_green/1.1.11": {
         "type": "package",
         "dependencies": {
@@ -466,11 +479,14 @@
           "lib/Xamarin.iOS10/Plugin.Settings.dll": {}
         }
       },
-      "Xamarin.Essentials/1.0.1": {
+      "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
+        "frameworkAssemblies": [
+          "OpenTK-1.0"
+        ],
         "compile": {
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         },
@@ -478,7 +494,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.4.0.1029999": {
+      "Xamarin.Forms/3.6.0.264807": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -611,6 +627,7 @@
           "HtmlAgilityPack": "1.8.13",
           "Plugin.Permissions": "3.0.0.12",
           "SQLiteNetExtensions": "2.1.0",
+          "SQLiteNetExtensions.Async": "2.1.0",
           "System.Buffers": "4.5.0",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
@@ -846,6 +863,19 @@
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
+      "SQLiteNetExtensions.Async/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLiteNetExtensions": "2.0.0",
+          "sqlite-net-pcl": "1.4.118"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        }
+      },
       "SQLitePCLRaw.bundle_green/1.1.11": {
         "type": "package",
         "dependencies": {
@@ -1059,11 +1089,14 @@
           "lib/Xamarin.iOS10/Plugin.Settings.dll": {}
         }
       },
-      "Xamarin.Essentials/1.0.1": {
+      "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
+        "frameworkAssemblies": [
+          "OpenTK-1.0"
+        ],
         "compile": {
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         },
@@ -1071,7 +1104,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.4.0.1029999": {
+      "Xamarin.Forms/3.6.0.264807": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1204,6 +1237,7 @@
           "HtmlAgilityPack": "1.8.13",
           "Plugin.Permissions": "3.0.0.12",
           "SQLiteNetExtensions": "2.1.0",
+          "SQLiteNetExtensions.Async": "2.1.0",
           "System.Buffers": "4.5.0",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
@@ -1439,6 +1473,19 @@
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
+      "SQLiteNetExtensions.Async/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLiteNetExtensions": "2.0.0",
+          "sqlite-net-pcl": "1.4.118"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        }
+      },
       "SQLitePCLRaw.bundle_green/1.1.11": {
         "type": "package",
         "dependencies": {
@@ -1652,11 +1699,14 @@
           "lib/Xamarin.iOS10/Plugin.Settings.dll": {}
         }
       },
-      "Xamarin.Essentials/1.0.1": {
+      "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
+        "frameworkAssemblies": [
+          "OpenTK-1.0"
+        ],
         "compile": {
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         },
@@ -1664,7 +1714,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.4.0.1029999": {
+      "Xamarin.Forms/3.6.0.264807": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1797,6 +1847,7 @@
           "HtmlAgilityPack": "1.8.13",
           "Plugin.Permissions": "3.0.0.12",
           "SQLiteNetExtensions": "2.1.0",
+          "SQLiteNetExtensions.Async": "2.1.0",
           "System.Buffers": "4.5.0",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
@@ -2032,6 +2083,19 @@
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
+      "SQLiteNetExtensions.Async/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLiteNetExtensions": "2.0.0",
+          "sqlite-net-pcl": "1.4.118"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        }
+      },
       "SQLitePCLRaw.bundle_green/1.1.11": {
         "type": "package",
         "dependencies": {
@@ -2245,11 +2309,14 @@
           "lib/Xamarin.iOS10/Plugin.Settings.dll": {}
         }
       },
-      "Xamarin.Essentials/1.0.1": {
+      "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
+        "frameworkAssemblies": [
+          "OpenTK-1.0"
+        ],
         "compile": {
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         },
@@ -2257,7 +2324,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.4.0.1029999": {
+      "Xamarin.Forms/3.6.0.264807": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -2390,6 +2457,7 @@
           "HtmlAgilityPack": "1.8.13",
           "Plugin.Permissions": "3.0.0.12",
           "SQLiteNetExtensions": "2.1.0",
+          "SQLiteNetExtensions.Async": "2.1.0",
           "System.Buffers": "4.5.0",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
@@ -2707,6 +2775,34 @@
         "lib/netstandard1.1/SQLiteNetExtensions.pdb",
         "sqlitenetextensions.2.1.0.nupkg.sha512",
         "sqlitenetextensions.nuspec",
+        "src/SQLiteNetExtensions/Attributes/CascadeOperation.cs",
+        "src/SQLiteNetExtensions/Attributes/ForeignKeyAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/ManyToManyAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/ManyToOneAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/OneToManyAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/OneToOneAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/TextBlobAttribute.cs",
+        "src/SQLiteNetExtensions/Exceptions/IncorrectRelationshipException.cs",
+        "src/SQLiteNetExtensions/Extensions/ReadOperations.cs",
+        "src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs",
+        "src/SQLiteNetExtensions/Extensions/TextBlob/ITextBlobSerializer.cs",
+        "src/SQLiteNetExtensions/Extensions/TextBlob/Serializers/JsonBlobSerializer.cs",
+        "src/SQLiteNetExtensions/Extensions/TextBlob/TextBlobOperations.cs",
+        "src/SQLiteNetExtensions/Extensions/WriteOperations.cs",
+        "src/SQLiteNetExtensions/Properties/AssemblyInfo.cs"
+      ]
+    },
+    "SQLiteNetExtensions.Async/2.1.0": {
+      "sha512": "f375b/KuTVE4F1LnuCldYqU/TL5qdxWvzNZKZPZQ4Oli3bcq1Ne5okobL9xoISJD2pMpMTjF2JT/lIlxpORusA==",
+      "type": "package",
+      "path": "sqlitenetextensions.async/2.1.0",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll",
+        "lib/netstandard1.1/SQLiteNetExtensionsAsync.pdb",
+        "sqlitenetextensions.async.2.1.0.nupkg.sha512",
+        "sqlitenetextensions.async.nuspec",
         "src/SQLiteNetExtensions/Attributes/CascadeOperation.cs",
         "src/SQLiteNetExtensions/Attributes/ForeignKeyAttribute.cs",
         "src/SQLiteNetExtensions/Attributes/ManyToManyAttribute.cs",
@@ -3581,12 +3677,18 @@
         "xam.plugins.settings.nuspec"
       ]
     },
-    "Xamarin.Essentials/1.0.1": {
-      "sha512": "TUsMSXqdLEZlx0O3EcWMwOF5e8X3Gh0GX28FlH3q8iyKAQBYd8tV+Ja7tHMplf7D8V4NVCG9ELqx2nk/jPWPew==",
+    "Xamarin.Essentials/1.1.0": {
+      "sha512": "AGismQb55pszEQ/ZIv9O1U2YyaF2gHdBdAUO79+biHf1s7AL2R++DIvmf7Z+wtfhZrB9wxhXAkOUuYHgpY6oTw==",
       "type": "package",
-      "path": "xamarin.essentials/1.0.1",
+      "path": "xamarin.essentials/1.1.0",
       "files": [
         ".signature.p7s",
+        "lib/monoandroid60/Xamarin.Essentials.dll",
+        "lib/monoandroid60/Xamarin.Essentials.pdb",
+        "lib/monoandroid60/Xamarin.Essentials.xml",
+        "lib/monoandroid70/Xamarin.Essentials.dll",
+        "lib/monoandroid70/Xamarin.Essentials.pdb",
+        "lib/monoandroid70/Xamarin.Essentials.xml",
         "lib/monoandroid71/Xamarin.Essentials.dll",
         "lib/monoandroid71/Xamarin.Essentials.pdb",
         "lib/monoandroid71/Xamarin.Essentials.xml",
@@ -3594,8 +3696,12 @@
         "lib/monoandroid80/Xamarin.Essentials.pdb",
         "lib/monoandroid80/Xamarin.Essentials.xml",
         "lib/monoandroid81/Xamarin.Essentials.dll",
+        "lib/monoandroid81/Xamarin.Essentials.dll.mdb",
         "lib/monoandroid81/Xamarin.Essentials.pdb",
         "lib/monoandroid81/Xamarin.Essentials.xml",
+        "lib/monoandroid90/Xamarin.Essentials.dll",
+        "lib/monoandroid90/Xamarin.Essentials.pdb",
+        "lib/monoandroid90/Xamarin.Essentials.xml",
         "lib/netstandard1.0/Xamarin.Essentials.dll",
         "lib/netstandard1.0/Xamarin.Essentials.pdb",
         "lib/netstandard1.0/Xamarin.Essentials.xml",
@@ -3610,16 +3716,17 @@
         "lib/xamarinios10/Xamarin.Essentials.pdb",
         "lib/xamarinios10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.0.1.nupkg.sha512",
+        "xamarin.essentials.1.1.0.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/3.4.0.1029999": {
-      "sha512": "qupCyyDo1x3c0BfroaTOhkc6wjeBXQnRLkUhvlgfVmZAcBjSEOaPRsa5/HWShtnkgqnySrkwzYEu3N0dG0pn7Q==",
+    "Xamarin.Forms/3.6.0.264807": {
+      "sha512": "T7gYS3PoGNtp6D7GAX7fF4QzR7NC36NNQSiuEb5TXO8rEqkZGwpC4u/6S62rH0wL3dabWNVpJPPnL5jZvWeoVg==",
       "type": "package",
-      "path": "xamarin.forms/3.4.0.1029999",
+      "path": "xamarin.forms/3.6.0.264807",
       "files": [
         ".signature.p7s",
+        "build/MonoAndroid10/proguard.cfg",
         "build/Xamarin.Forms.DefaultItems.props",
         "build/Xamarin.Forms.DefaultItems.targets",
         "build/Xamarin.Forms.props",
@@ -3640,19 +3747,32 @@
         "build/netstandard2.0/Xamarin.Forms.Build.Tasks.dll",
         "build/netstandard2.0/Xamarin.Forms.Core.dll",
         "build/netstandard2.0/Xamarin.Forms.Xaml.dll",
-        "lib/MonoAndroid10/Design/Xamarin.Forms.Core.Design.dll",
-        "lib/MonoAndroid10/Design/Xamarin.Forms.Xaml.Design.dll",
-        "lib/MonoAndroid10/FormsViewGroup.dll",
-        "lib/MonoAndroid10/FormsViewGroup.pdb",
-        "lib/MonoAndroid10/Xamarin.Forms.Core.dll",
-        "lib/MonoAndroid10/Xamarin.Forms.Core.pdb",
-        "lib/MonoAndroid10/Xamarin.Forms.Core.xml",
-        "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll",
-        "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.pdb",
-        "lib/MonoAndroid10/Xamarin.Forms.Platform.dll",
-        "lib/MonoAndroid10/Xamarin.Forms.Xaml.dll",
-        "lib/MonoAndroid10/Xamarin.Forms.Xaml.pdb",
-        "lib/MonoAndroid10/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid81/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/MonoAndroid81/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/MonoAndroid81/FormsViewGroup.dll",
+        "lib/MonoAndroid81/FormsViewGroup.pdb",
+        "lib/MonoAndroid81/Xamarin.Forms.Core.dll",
+        "lib/MonoAndroid81/Xamarin.Forms.Core.pdb",
+        "lib/MonoAndroid81/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid81/Xamarin.Forms.Platform.Android.dll",
+        "lib/MonoAndroid81/Xamarin.Forms.Platform.Android.pdb",
+        "lib/MonoAndroid81/Xamarin.Forms.Platform.dll",
+        "lib/MonoAndroid81/Xamarin.Forms.Xaml.dll",
+        "lib/MonoAndroid81/Xamarin.Forms.Xaml.pdb",
+        "lib/MonoAndroid81/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid90/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/MonoAndroid90/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/MonoAndroid90/FormsViewGroup.dll",
+        "lib/MonoAndroid90/FormsViewGroup.pdb",
+        "lib/MonoAndroid90/Xamarin.Forms.Core.dll",
+        "lib/MonoAndroid90/Xamarin.Forms.Core.pdb",
+        "lib/MonoAndroid90/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid90/Xamarin.Forms.Platform.Android.dll",
+        "lib/MonoAndroid90/Xamarin.Forms.Platform.Android.pdb",
+        "lib/MonoAndroid90/Xamarin.Forms.Platform.dll",
+        "lib/MonoAndroid90/Xamarin.Forms.Xaml.dll",
+        "lib/MonoAndroid90/Xamarin.Forms.Xaml.pdb",
+        "lib/MonoAndroid90/Xamarin.Forms.Xaml.xml",
         "lib/Xamarin.Mac/Design/Xamarin.Forms.Core.Design.dll",
         "lib/Xamarin.Mac/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/Xamarin.Mac/Xamarin.Forms.Core.dll",
@@ -3739,6 +3859,7 @@
         "lib/uap10.0/Xamarin.Forms.Core.pdb",
         "lib/uap10.0/Xamarin.Forms.Core.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP.pdb",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.pri",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/AutoSuggestStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsCommandBarStyle.xbf",
@@ -3746,18 +3867,20 @@
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsFlyout.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsProgressBarStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsTextBoxStyle.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/Items/ItemsViewStyles.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/MasterDetailControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/PageControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Resources.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/SliderStyle.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/StepperControl.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/TabbedPageStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Xamarin.Forms.Platform.UAP.xr.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.3.4.0.1029999.nupkg.sha512",
+        "xamarin.forms.3.6.0.264807.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -3770,9 +3893,10 @@
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
       "APUToki >= 1.0.0",
+      "SQLiteNetExtensions.Async >= 2.1.0",
       "Xam.Plugins.Settings >= 3.1.1",
-      "Xamarin.Essentials >= 1.0.1",
-      "Xamarin.Forms >= 3.4.0.1029999"
+      "Xamarin.Essentials >= 1.1.0",
+      "Xamarin.Forms >= 3.6.0.264807"
     ]
   },
   "packageFolders": {
@@ -3809,17 +3933,21 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "SQLiteNetExtensions.Async": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
           "Xam.Plugins.Settings": {
             "target": "Package",
             "version": "[3.1.1, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.0.1, )"
+            "version": "[1.1.0, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[3.4.0.1029999, )"
+            "version": "[3.6.0.264807, )"
           }
         }
       }

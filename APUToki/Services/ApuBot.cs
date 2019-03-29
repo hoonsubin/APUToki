@@ -420,9 +420,9 @@ namespace APUToki.Services
         /// Return the List of Lecture Items from the Academic Office website xlsx file. This is where the cleanup of the streamed data happends
         /// </summary>
         /// <returns>Lecture Items List</returns>
-        public static ObservableCollection<Lecture> LecturesList()
+        public static List<Lecture> LecturesList()
         {
-            var lectures = new ObservableCollection<Lecture>();
+            var lectures = new List<Lecture>();
 
             var timeTableCells = new List<TimetableCell>();
 
@@ -505,7 +505,7 @@ namespace APUToki.Services
                         }
 
                         //setup the current lecture item
-                        var thisLecture = new Lecture 
+                        var thisLecture = new Lecture
                         {
                             Term = term,
                             Classroom = lectureArray[3].Replace("Ⅱ", "II "),
@@ -524,100 +524,20 @@ namespace APUToki.Services
                             Semester = semester,
                             Curriculum = curriculum
                         };
-
-                        //start instantiating objects. Add all the time cells without filtering
-                        if (!lectureArray[0].Contains("Session"))
-                        {
-                            timeTableCells.Add(TimetableCell.Parse(thisLecture, dayOfWeek, classPeriod, periodStartTime[classPeriod]));
-                        }
-
                         //check if the list already has this lecture
                         if (!lectures.Contains(thisLecture))
                         {
-                            //thisLecture.SetSearchTags();
-
                             lectures.Add(thisLecture);
 
-                            /*
-                            //detrmine if the current lecture item's term, and assign it accordingly
-                            if (lectureArray[0].Contains("Semester"))
-                            {
-                                var thisSemesterLecture = new SemesterCourse
-                                {
-                                    Classroom = thisLecture.Classroom,
-                                    BuildingFloor = thisLecture.BuildingFloor,
-                                    SubjectId = thisLecture.SubjectId,
-                                    SubjectNameJP = thisLecture.SubjectNameJP,
-                                    SubjectNameEN = thisLecture.SubjectNameEN,
-                                    InstructorJP = thisLecture.InstructorJP,
-                                    InstructorEN = thisLecture.InstructorEN,
-                                    GradeEval = thisLecture.GradeEval,
-                                    Language = thisLecture.Language,
-                                    Grade = thisLecture.Grade,
-                                    Field = thisLecture.Field,
-                                    APS = thisLecture.APS,
-                                    APM = thisLecture.APM,
-                                    Semester = thisLecture.Semester,
-                                    Curriculum = thisLecture.Curriculum
-                                };
-                                thisSemesterLecture.SetSearchTags();
-                                lectures.Add(thisSemesterLecture);
-                            }
-                            else if (lectureArray[0].Contains("Q"))
-                            {
-                                var thisQuarterLecture = new QuarterCourse
-                                {
-                                    Term = lectureArray[0].Contains("2Q") ? "2nd Quarter" : "1st Quarter",
-                                    Classroom = thisLecture.Classroom,
-                                    BuildingFloor = thisLecture.BuildingFloor,
-                                    SubjectId = thisLecture.SubjectId,
-                                    SubjectNameJP = thisLecture.SubjectNameJP,
-                                    SubjectNameEN = thisLecture.SubjectNameEN,
-                                    InstructorJP = thisLecture.InstructorJP,
-                                    InstructorEN = thisLecture.InstructorEN,
-                                    GradeEval = thisLecture.GradeEval,
-                                    Language = thisLecture.Language,
-                                    Grade = thisLecture.Grade,
-                                    Field = thisLecture.Field,
-                                    APS = thisLecture.APS,
-                                    APM = thisLecture.APM,
-                                    Semester = thisLecture.Semester,
-                                    Curriculum = thisLecture.Curriculum
-                                };
-                                thisQuarterLecture.SetSearchTags();
-                                thisQuarterLecture.SearchTags.Add(thisQuarterLecture.Term.ToLower());
-                                lectures.Add(thisQuarterLecture);
-                            }
-                            else if (lectureArray[0].Contains("Session"))
-                            {
-                                var thisSessionLecture = new SessionCourse
-                                {
-                                    Classroom = thisLecture.Classroom,
-                                    BuildingFloor = thisLecture.BuildingFloor,
-                                    SubjectId = thisLecture.SubjectId,
-                                    SubjectNameJP = thisLecture.SubjectNameJP,
-                                    SubjectNameEN = thisLecture.SubjectNameEN,
-                                    InstructorJP = thisLecture.InstructorJP,
-                                    InstructorEN = thisLecture.InstructorEN,
-                                    GradeEval = thisLecture.GradeEval,
-                                    Language = thisLecture.Language,
-                                    Grade = thisLecture.Grade,
-                                    Field = thisLecture.Field,
-                                    APS = thisLecture.APS,
-                                    APM = thisLecture.APM,
-                                    Semester = thisLecture.Semester,
-                                    Curriculum = thisLecture.Curriculum
-                                };
-                                thisSessionLecture.SetSearchTags();
-                                lectures.Add(thisSessionLecture);
-                            }
-                            */
-
                         }
+
+                        //start instantiating objects. Add all the time cells without filtering
+                        timeTableCells.Add(TimetableCell.Parse(thisLecture, dayOfWeek, classPeriod, periodStartTime[classPeriod]));
                     }
 
                 }
             }
+
             //add all the timetable cells to all the lectures
             AddTimetableCellsToList(lectures, timeTableCells);
 
@@ -630,17 +550,20 @@ namespace APUToki.Services
         /// </summary>
         /// <param name="lectureList">Lecture list.</param>
         /// <param name="timetableCells">Timetable cells.</param>
-        private static void AddTimetableCellsToList(ObservableCollection<Lecture> lectureList, List<TimetableCell> timetableCells)
+        private static void AddTimetableCellsToList(List<Lecture> lectureList, List<TimetableCell> timetableCells)
         {
             foreach (var lecture in lectureList)
             {
+
                 foreach (var cell in timetableCells)
                 {
                     if (cell.ParentLecture.Equals(lecture))
                     {
+
                         lecture.AddCell(cell);
                     }
                 }
+
             }
         }
 
@@ -674,7 +597,7 @@ namespace APUToki.Services
         private static string OrderedNumber(string inNumber)
         {
             string outNumber = "";
-            
+
             switch (inNumber)
             {
                 case "1":

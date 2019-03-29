@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{87EA89BB-A0C3-4431-BF08-4BDF4A947D04}|Default">
   <MonoDevelop.Ide.ItemProperties.APUToki.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.FA2351C0-C17D-40B3-AF34-0E4EDF9EAA5A" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/Views/LectureSearchPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/Services/SearchEngine.cs">
     <Files>
-      <File FileName="APUToki/Models/Lecture.cs" Line="15" Column="47" />
-      <File FileName="APUToki/Models/TimetableCell.cs" Line="2" Column="34" />
+      <File FileName="APUToki/Models/Lecture.cs" Line="6" Column="18" />
+      <File FileName="APUToki/Models/TimetableCell.cs" Line="6" Column="18" />
       <File FileName="APUToki/ViewModels/LectureSearchViewModel.cs" Line="74" Column="18" />
       <File FileName="APUToki/Views/LectureSearchPage.xaml.cs" Line="5" Column="21" />
       <File FileName="APUToki/Views/LectureSearchPage.xaml" Line="32" Column="33" />
       <File FileName="APUToki/ViewModels/LectureDetailViewModel.cs" Line="21" Column="10" />
       <File FileName="APUToki/Views/LectureDetailPage.xaml" Line="87" Column="9" />
+      <File FileName="APUToki/Services/SearchEngine.cs" Line="8" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.APUToki.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.pixel_phone" />

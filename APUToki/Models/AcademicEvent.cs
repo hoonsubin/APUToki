@@ -5,11 +5,11 @@ using Xamarin.Forms;
 
 namespace APUToki.Models
 {
-
+    [Table("AcademicEvents")]
     public class AcademicEvent : IEquatable<AcademicEvent>
     {
         //id for the item
-        [PrimaryKey, AutoIncrement, Column("_id")]
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         //name of the event, which should be descriptive
         public string EventName { get; set; }

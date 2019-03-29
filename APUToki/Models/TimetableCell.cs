@@ -1,19 +1,66 @@
 ﻿using System;
 using System.Collections.Generic;
+using SQLite;
+using SQLiteNetExtensions.Attributes;
 
 namespace APUToki.Models
 {
+    [Table("TimetableCells")]
     public class TimetableCell
     {
         public TimetableCell()
         {
         }
 
+        #region Properties
+
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+
+        [ForeignKey(typeof(Lecture))]
+        public int LectureId { get; set; }
+
+        [ManyToOne(CascadeOperations = CascadeOperation.All)]
         public Lecture ParentLecture { get; set; }
 
-        public int Row { get; private set; }
+        public int Row
+        {
+            get
+            {
+                //convert the first char of the Period attribute to int, missing value is 99
+                int row = (int)char.GetNumericValue(Period[0]);
 
-        public int Column { get; private set; }
+                //the timetable row max number is 6, anything above 6 will be considered missing
+                if (ParentLecture.Term.Contains("Session"))
+                {
+                    row = 99;
+                }
+
+                return row;
+            }
+        }
+
+        public int Column
+        {
+            get
+            {
+                //convert the DayOfWeek value to a number, missing value is 99
+                var dayOfWeekToInt = new Dictionary<string, int>
+                {
+                    {"Monday", 1},
+                    {"Tuesday", 2},
+                    {"Wednesday", 3},
+                    {"Thursday", 4},
+                    {"Friday", 5},
+                    {"T.B.A.", 99},
+                    {"Session", 99}
+                };
+
+                int col = dayOfWeekToInt[DayOfWeek];
+
+                return col;
+            }
+        }
 
         public string DayOfWeek { get; set; }
 
@@ -22,6 +69,8 @@ namespace APUToki.Models
         public string ClassStartTime { get; set; }
 
         public string ClassEndTime { get; private set; }
+
+        #endregion
 
         /// <summary>
         /// Parse and return a timetable cell
@@ -33,40 +82,28 @@ namespace APUToki.Models
         /// <param name="classStartTime">Class start time.</param>
         public static TimetableCell Parse(Lecture lecture, string dayOfWeek, string period, string classStartTime)
         {
-            //convert the DayOfWeek value to a number, missing value is 99
-            var dayOfWeekToInt = new Dictionary<string, int>
+            if (lecture.Term.Contains("Session"))
             {
-                {"Monday", 1},
-                {"Tuesday", 2},
-                {"Wednesday", 3},
-                {"Thursday", 4},
-                {"Friday", 5},
-                {"T.B.A.", 99}
-            };
-
-            int col = dayOfWeekToInt[dayOfWeek];
-
-            //convert the first char of the Period attribute to int, missing value is 99
-            int row = (int)char.GetNumericValue(period[0]);
-
-            //the timetable row max number is 6, anything above 6 will be considered missing
-            if (row == -1)
-            {
-                row = 99;
+                //sessions have a different start and end time
+                //so manually add them
+                return new TimetableCell
+                {
+                    ParentLecture = lecture,
+                    ClassStartTime = "T.B.A.",
+                    DayOfWeek = dayOfWeek,
+                    Period = period,
+                    ClassEndTime = "T.B.A"
+                };
             }
 
-            var timetableCell = new TimetableCell
+            return new TimetableCell
             {
                 ParentLecture = lecture,
-                Row = row,
-                Column = col,
                 DayOfWeek = dayOfWeek,
                 Period = period,
                 ClassStartTime = classStartTime,
                 ClassEndTime = classStartTime.Contains("T.B.A.") ? "T.B.A." : DateTime.ParseExact(classStartTime, "HH:mm", null).AddHours(1).AddMinutes(35).ToString("HH:mm")
             };
-
-            return timetableCell;
         }
 
         /// <summary>

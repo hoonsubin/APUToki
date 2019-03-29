@@ -23,6 +23,7 @@ Plugin.Settings.Abstractions
 Plugin.Settings
 SQLite-net
 SQLiteNetExtensions
+SQLiteNetExtensionsAsync
 SQLitePCLRaw.batteries_green
 SQLitePCLRaw.batteries_v2
 SQLitePCLRaw.core

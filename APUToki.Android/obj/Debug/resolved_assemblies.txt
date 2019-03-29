@@ -27,6 +27,7 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Plugin.Settings.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLite-net.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLiteNetExtensions.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLiteNetExtensionsAsync.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLitePCLRaw.batteries_green.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLitePCLRaw.batteries_v2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLitePCLRaw.core.dll

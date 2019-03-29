@@ -3,10 +3,9 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using APUToki.Models;
-using System.Diagnostics;
 
 
-namespace APUToki
+namespace APUToki.Services
 {
     public static class SearchEngine
     {
@@ -32,7 +31,7 @@ namespace APUToki
             if (!string.IsNullOrEmpty(query))
             {
                 //start counting
-                var searchTime = Stopwatch.StartNew();
+                var searchTime = System.Diagnostics.Stopwatch.StartNew();
 
                 //iterate through the lecture database
                 foreach (var lecture in database)
@@ -43,7 +42,6 @@ namespace APUToki
                         //add the resulting lecture of the tg matches the given query
                         if (searchTag.Contains(query))
                         {
-                            //Debug.WriteLine("[SearchEngine]matching tag " + searchTag);
                             results.Add(lecture);
                         }
                     }
