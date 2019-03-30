@@ -21,7 +21,9 @@ namespace APUToki.Views
 
             //set the binding context for the front-end part
             BindingContext = this.viewModel = viewModel;
-            TimetablesListView.ItemsSource = viewModel.TimetableCells;
+            //TimetablesListView.ItemsSource = viewModel.TimetableCells;
+
+            UpdateTimetableGrid();
         }
 
         //this runs if the item has no information in it
@@ -50,6 +52,24 @@ namespace APUToki.Views
             viewModel = new LectureDetailViewModel(lectureItem);
 
             BindingContext = viewModel;
+        }
+
+        void UpdateTimetableGrid()
+        {
+            //loop through the list timetable cells from the view model
+            foreach (var i in viewModel.TimetableCells)
+            {
+                //create all new label
+                var cell = new BoxView
+                {
+                    VerticalOptions = LayoutOptions.Center,
+                    HorizontalOptions = LayoutOptions.Center,
+                    BackgroundColor = Color.Gray
+                };
+
+                //add the label to the grid layout with a dynamic row and column
+                gridLayout.Children.Add(cell, i.Column, i.Row);
+            }
         }
     }
 }

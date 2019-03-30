@@ -6,7 +6,7 @@ using SQLiteNetExtensions.Attributes;
 namespace APUToki.Models
 {
     [Table("TimetableCells")]
-    public class TimetableCell
+    public class TimetableCell : IEquatable<TimetableCell>
     {
         public TimetableCell()
         {
@@ -106,6 +106,17 @@ namespace APUToki.Models
             };
         }
 
+        public bool Equals(TimetableCell other)
+        {
+            if (other is null)
+                return false;
+            return Row == other.Row && Column == other.Column;
+        }
+
+        public override bool Equals(object obj) => Equals(obj as TimetableCell);
+        public override int GetHashCode() => (Row, Column).GetHashCode();
+
+        /*
         /// <summary>
         /// Check if the timetable is conflicting
         /// </summary>
@@ -118,6 +129,6 @@ namespace APUToki.Models
 
             return Row == other.Row && Column == other.Column;
         }
-
+        */
     }
 }

@@ -12,7 +12,7 @@ namespace APUToki.ViewModels
 {
     public class TimetableViewModel : BaseViewModel
     {
-        public ObservableCollection<TimetableCell> TimetableItems { get; set; }
+        public List<TimetableCell> TimetableItems { get; set; }
 
         public TimetableViewModel()
         {
@@ -20,12 +20,9 @@ namespace APUToki.ViewModels
             if (TimetableItems == null)
             {
                 Debug.WriteLine("No Timetable items found, making a new list");
-                TimetableItems = new ObservableCollection<TimetableCell>();
+                TimetableItems = new List<TimetableCell>();
             }
-
-
         }
-
 
 
 

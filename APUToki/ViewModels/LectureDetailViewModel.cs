@@ -38,13 +38,8 @@ namespace APUToki.ViewModels
 
         private void AddLecture(Lecture lecture)
         {
-            //todo: pass the lecture data to the timetable cell list
-            foreach (var i in TimetableCells)
-            {
-
-                MessagingCenter.Send(this, "AddTimetableCell", i);
-                Debug.WriteLine("[LectureDetailVM]Sending " + i.Period + "-" + i.DayOfWeek + " to timetable page");
-            }
+            MessagingCenter.Send(this, "AddTimetableCell", lecture.TimetableCells);
+            Debug.WriteLine("Sent message to TimetablePage.xaml.cs");
         }
 
     }

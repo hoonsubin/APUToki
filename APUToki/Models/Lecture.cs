@@ -125,7 +125,7 @@ namespace APUToki.Models
         public override int GetHashCode() => (SubjectNameEN, Semester, Curriculum).GetHashCode();
 
         #endregion
-
+        /*
         /// <summary>
         /// Check if the two lectures' times are conflicting
         /// </summary>
@@ -152,5 +152,6 @@ namespace APUToki.Models
             //this will return true even if there's only one conflicting item
             return hasConflict;
         }
+        */
     }
 }

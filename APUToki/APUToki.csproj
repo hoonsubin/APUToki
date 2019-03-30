@@ -30,5 +30,6 @@
   <ItemGroup>
     <Compile Remove="Services\SearchCourse.cs" />
     <Compile Remove="Models\LectureItem.cs" />
+    <Compile Remove="Views\NewItemPage.xaml.cs" />
   </ItemGroup>
 </Project>

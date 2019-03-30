@@ -7,7 +7,6 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/Views/LectureDetailPage.xaml.g.cs
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/Views/LectureSearchPage.xaml.g.cs
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/Views/MainPage.xaml.g.cs
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/Views/NewItemPage.xaml.g.cs
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/Views/TimetablePage.xaml.g.cs
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/APUToki.csproj.CoreCompileInputs.cache
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/APUToki.AssemblyInfoInputs.cache

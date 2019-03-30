@@ -82,32 +82,78 @@
                 BackgroundColor="{StaticResource Primary}" 
                 TextColor="White" />
         
-        <ListView x:Name="TimetablesListView"
-                      x:FieldModifier="public"
-                      VerticalOptions="FillAndExpand" 
-                      HasUnevenRows="true"
-                      CachingStrategy="RecycleElement"
-                  >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell >
-                            <StackLayout Padding="10">
-                                
-                                <Label Text="{Binding DayOfWeek}"
-                                       LineBreakMode="NoWrap"
-                                       TextColor="Black"
-                                       FontSize="13" />
-                                
-                                <Label Text="{Binding Period}"
-                                       LineBreakMode="NoWrap"
-                                       FontSize="11"
-                                       TextColor="Maroon"/>
-                                
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+        <Grid ColumnSpacing="1" RowSpacing="1" BackgroundColor="Black" x:Name="gridLayout">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="0"/>
+            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Mon" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="2"/>
+            <Label Text="Tue" Grid.Row="0" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="3"/>
+            <Label Text="Wed" Grid.Row="0" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="4"/>
+            <Label Text="Thu" Grid.Row="0" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="5"/>
+            <Label Text="Fri" Grid.Row="0" Grid.Column="5" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+            
+            <BoxView Color="Maroon" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="1" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+            <BoxView Color="Maroon" Grid.Row="2" Grid.Column="0"/>
+            <Label Text="2" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+            <BoxView Color="Maroon" Grid.Row="3" Grid.Column="0"/>
+            <Label Text="3" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+            <BoxView Color="Maroon" Grid.Row="4" Grid.Column="0"/>
+            <Label Text="4" Grid.Row="4" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+            <BoxView Color="Maroon" Grid.Row="5" Grid.Column="0"/>
+            <Label Text="5" Grid.Row="5" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+            <BoxView Color="Maroon" Grid.Row="6" Grid.Column="0"/>
+            <Label Text="6" Grid.Row="6" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+            
+            <BoxView Color="White" Grid.Row="1" Grid.Column="1"/>
+            <BoxView Color="White" Grid.Row="1" Grid.Column="2"/>
+            <BoxView Color="White" Grid.Row="1" Grid.Column="3"/>
+            <BoxView Color="White" Grid.Row="1" Grid.Column="4"/>
+            <BoxView Color="White" Grid.Row="1" Grid.Column="5"/>
+            
+            <BoxView Color="White" Grid.Row="2" Grid.Column="1"/>
+            <BoxView Color="White" Grid.Row="2" Grid.Column="2"/>
+            <BoxView Color="White" Grid.Row="2" Grid.Column="3"/>
+            <BoxView Color="White" Grid.Row="2" Grid.Column="4"/>
+            <BoxView Color="White" Grid.Row="2" Grid.Column="5"/>
+            
+            <BoxView Color="White" Grid.Row="3" Grid.Column="1"/>
+            <BoxView Color="White" Grid.Row="3" Grid.Column="2"/>
+            <BoxView Color="White" Grid.Row="3" Grid.Column="3"/>
+            <BoxView Color="White" Grid.Row="3" Grid.Column="4"/>
+            <BoxView Color="White" Grid.Row="3" Grid.Column="5"/>
+            
+            <BoxView Color="White" Grid.Row="4" Grid.Column="1"/>
+            <BoxView Color="White" Grid.Row="4" Grid.Column="2"/>
+            <BoxView Color="White" Grid.Row="4" Grid.Column="3"/>
+            <BoxView Color="White" Grid.Row="4" Grid.Column="4"/>
+            <BoxView Color="White" Grid.Row="4" Grid.Column="5"/>
+            
+            <BoxView Color="White" Grid.Row="5" Grid.Column="1"/>
+            <BoxView Color="White" Grid.Row="5" Grid.Column="2"/>
+            <BoxView Color="White" Grid.Row="5" Grid.Column="3"/>
+            <BoxView Color="White" Grid.Row="5" Grid.Column="4"/>
+            <BoxView Color="White" Grid.Row="5" Grid.Column="5"/>
+            
+            <BoxView Color="White" Grid.Row="6" Grid.Column="1"/>
+            <BoxView Color="White" Grid.Row="6" Grid.Column="2"/>
+            <BoxView Color="White" Grid.Row="6" Grid.Column="3"/>
+            <BoxView Color="White" Grid.Row="6" Grid.Column="4"/>
+            <BoxView Color="White" Grid.Row="6" Grid.Column="5"/>
+            
+        </Grid>
         
         <Button Text="Add to timetable"
                 Command="{Binding AddToTimetableCommand}"/>

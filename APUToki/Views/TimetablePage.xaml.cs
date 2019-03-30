@@ -6,6 +6,7 @@ using APUToki.Models;
 using APUToki.Services;
 using System.Diagnostics;
 using Xamarin.Forms;
+using System.Linq;
 
 namespace APUToki.Views
 {
@@ -20,28 +21,29 @@ namespace APUToki.Views
             //set the binding context for the front-end part
             BindingContext = viewModel = new TimetableViewModel();
 
-            UpdateTimetableCells();
+            //add the existing timetable items to the grid
+            AddTimetableCells(viewModel.TimetableItems);
 
-            MessagingCenter.Subscribe<LectureDetailViewModel, TimetableCell>(this, "AddTimetableCell", (sender, arg) => {
-
-                Debug.WriteLine("Getting a message " + arg.Period);
+            MessagingCenter.Subscribe<LectureDetailViewModel, List<TimetableCell>>(this, "AddTimetableCell", (sender, arg) => {
                 AddCellToTimetable(arg);
+                Debug.WriteLine("Got message from LectureDetailViewModel" + arg);
             });
 
         }
 
-        void UpdateTimetableCells()
+        void AddTimetableCells(List<TimetableCell> cellsToDisplay)
         {
 
             //loop through the list timetable cells from the view model
-            foreach (var i in viewModel.TimetableItems)
+            foreach (var i in cellsToDisplay)
             {
                 //create all new label
-                var cell = new Label
+                var cell = new BoxView
                 {
-                    Text = "X",
+                    //Text = "X",
                     VerticalOptions = LayoutOptions.Center,
                     HorizontalOptions = LayoutOptions.Center,
+                    BackgroundColor = Color.Gray
                 };
 
                 //add the label to the grid layout with a dynamic row and column
@@ -49,10 +51,25 @@ namespace APUToki.Views
             }
         }
 
-        public void AddCellToTimetable(TimetableCell cellToAdd)
+        public void AddCellToTimetable(List<TimetableCell> cellsToAdd)
         {
-            viewModel.TimetableItems.Add(cellToAdd);
-            UpdateTimetableCells();
+            var intersectingList = viewModel.TimetableItems.Intersect(cellsToAdd);
+
+            if (intersectingList.Any())
+            {
+                Application.Current.MainPage.DisplayAlert("Alert", "Lecture is conflicting", "Dismiss");
+            }
+            else
+            {
+                foreach (var i in cellsToAdd)
+                {
+                    //add the item to the timetable list
+                    viewModel.TimetableItems.Add(i);
+                }
+            }
+
+
+            AddTimetableCells(cellsToAdd);
         }
 
         async void Search_ClickedAsync(object sender, EventArgs e)
