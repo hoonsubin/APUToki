@@ -36,21 +36,10 @@ namespace APUToki.Views
                 return;
 
             //show a new page which is the ItemDetailViewModel
-            //await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
 
             //Manually deselect item after the page shows
             ItemsListView.SelectedItem = null;
         }
-
-        /*
-        //execute when the AddItem button is touched
-        async void AddItem_Clicked(object sender, EventArgs e)
-        {
-            //show a new page called NewItemPage
-            await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
-            
-        }
-        */
 
         async void ExportItem_Clicked(object sender, EventArgs e)
         {

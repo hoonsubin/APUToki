@@ -90,6 +90,12 @@ namespace APUToki.Services
             return _database.GetAllWithChildrenAsync<Lecture>();
         }
 
+        public Task<List<TimetableCell>> GetAllTimetableCellsAsync()
+        {
+            Debug.WriteLine("[Datastore]Getting all timetable cells from the database");
+            return _database.GetAllWithChildrenAsync<TimetableCell>();
+        }
+
         public Task SaveAllLecturesAsync(List<Lecture> lectures)
         {
             //Console.WriteLine("[DataStore]Saving all the lectures from the list");

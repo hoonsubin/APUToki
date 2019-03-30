@@ -2,6 +2,7 @@
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Collections.Generic;
 
 using APUToki.Models;
 using APUToki.ViewModels;
@@ -20,6 +21,7 @@ namespace APUToki.Views
 
             //set the binding context for the front-end part
             BindingContext = this.viewModel = viewModel;
+            TimetablesListView.ItemsSource = viewModel.TimetableCells;
         }
 
         //this runs if the item has no information in it
@@ -36,11 +38,17 @@ namespace APUToki.Views
                 Curriculum = "[Curriculum]",
                 BuildingFloor = "[Lecture building and floor]",
                 Grade = "[Student Year]",
-                Field = "[Major]"
+                Field = "[Major]",
+                TimetableCells = new List<TimetableCell>
+                {
+                    new TimetableCell{DayOfWeek = "Friday", Period = "1st Period"},
+                    new TimetableCell{DayOfWeek = "Friday", Period = "2nd Period"}
+                }
             };
 
             //set a new view model page
             viewModel = new LectureDetailViewModel(lectureItem);
+
             BindingContext = viewModel;
         }
     }

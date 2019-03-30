@@ -15,7 +15,7 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <Grid ColumnSpacing="1" RowSpacing="1" BackgroundColor="Gray">
+        <Grid ColumnSpacing="1" RowSpacing="1" BackgroundColor="Gray" x:Name="gridLayout">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -51,40 +51,70 @@
             <Label Text="6" Grid.Row="6" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"/>
             
             <BoxView Color="White" Grid.Row="1" Grid.Column="1"/>
+            
             <BoxView Color="White" Grid.Row="1" Grid.Column="2"/>
+            
             <BoxView Color="White" Grid.Row="1" Grid.Column="3"/>
+            
             <BoxView Color="White" Grid.Row="1" Grid.Column="4"/>
+            
             <BoxView Color="White" Grid.Row="1" Grid.Column="5"/>
             
+            
             <BoxView Color="White" Grid.Row="2" Grid.Column="1"/>
+            
             <BoxView Color="White" Grid.Row="2" Grid.Column="2"/>
+            
             <BoxView Color="White" Grid.Row="2" Grid.Column="3"/>
+            
             <BoxView Color="White" Grid.Row="2" Grid.Column="4"/>
+            
             <BoxView Color="White" Grid.Row="2" Grid.Column="5"/>
             
+            
             <BoxView Color="White" Grid.Row="3" Grid.Column="1"/>
+            
             <BoxView Color="White" Grid.Row="3" Grid.Column="2"/>
+            
             <BoxView Color="White" Grid.Row="3" Grid.Column="3"/>
+            
             <BoxView Color="White" Grid.Row="3" Grid.Column="4"/>
+            
             <BoxView Color="White" Grid.Row="3" Grid.Column="5"/>
             
+            
             <BoxView Color="White" Grid.Row="4" Grid.Column="1"/>
+            
             <BoxView Color="White" Grid.Row="4" Grid.Column="2"/>
+            
             <BoxView Color="White" Grid.Row="4" Grid.Column="3"/>
+            
             <BoxView Color="White" Grid.Row="4" Grid.Column="4"/>
+            
             <BoxView Color="White" Grid.Row="4" Grid.Column="5"/>
             
+            
             <BoxView Color="White" Grid.Row="5" Grid.Column="1"/>
+            
             <BoxView Color="White" Grid.Row="5" Grid.Column="2"/>
+            
             <BoxView Color="White" Grid.Row="5" Grid.Column="3"/>
+            
             <BoxView Color="White" Grid.Row="5" Grid.Column="4"/>
+            
             <BoxView Color="White" Grid.Row="5" Grid.Column="5"/>
             
+            
             <BoxView Color="White" Grid.Row="6" Grid.Column="1"/>
+            
             <BoxView Color="White" Grid.Row="6" Grid.Column="2"/>
+            
             <BoxView Color="White" Grid.Row="6" Grid.Column="3"/>
+            
             <BoxView Color="White" Grid.Row="6" Grid.Column="4"/>
+            
             <BoxView Color="White" Grid.Row="6" Grid.Column="5"/>
+            
             
             
         </Grid>

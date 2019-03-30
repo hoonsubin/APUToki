@@ -10,7 +10,6 @@ namespace APUToki.ViewModels
     public class LectureDetailViewModel : BaseViewModel
     {
         public Lecture LectureItem { get; set; }
-        public List<string> LecturePeriods { get; set; }
 
         public List<TimetableCell> TimetableCells { get; set; }
 
@@ -30,7 +29,7 @@ namespace APUToki.ViewModels
 
             //define what the button is going to do, in this case open the syllabus of the given lecture id
             OpenWebCommand = new Command(() => Device.OpenUri
-            (new Uri("https://portal2.apu.ac.jp/campusp/slbssbdr.do?value%28risyunen%29=2018&value%28semekikn%29=2&value%28kougicd%29="
+            (new Uri("https://portal2.apu.ac.jp/campusp/slbssbdr.do?value%28risyunen%29=2019&value%28semekikn%29=1&value%28kougicd%29="
             + lectureItem.SubjectId)));
 
             AddToTimetableCommand = new Command(() => AddLecture(lectureItem));
@@ -39,13 +38,13 @@ namespace APUToki.ViewModels
 
         private void AddLecture(Lecture lecture)
         {
-            //todo: implement add to timetable function
-            string cells = "";
+            //todo: pass the lecture data to the timetable cell list
             foreach (var i in TimetableCells)
             {
-                cells += i.DayOfWeek + "-" + i.Period + "|";
+
+                MessagingCenter.Send(this, "AddTimetableCell", i);
+                Debug.WriteLine("[LectureDetailVM]Sending " + i.Period + "-" + i.DayOfWeek + " to timetable page");
             }
-            Debug.WriteLine("[LectureDetailVM]Adding " + lecture.SubjectNameEN + " to timetable " + cells);
         }
 
     }

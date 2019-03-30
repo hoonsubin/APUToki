@@ -632,7 +632,7 @@
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.0.1",
-          "Xamarin.Forms": "3.3.0.967583",
+          "Xamarin.Forms": "3.6.0.264807",
           "sqlite-net-pcl": "1.5.231"
         },
         "compile": {
@@ -1242,7 +1242,7 @@
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.0.1",
-          "Xamarin.Forms": "3.3.0.967583",
+          "Xamarin.Forms": "3.6.0.264807",
           "sqlite-net-pcl": "1.5.231"
         },
         "compile": {
@@ -1852,7 +1852,7 @@
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.0.1",
-          "Xamarin.Forms": "3.3.0.967583",
+          "Xamarin.Forms": "3.6.0.264807",
           "sqlite-net-pcl": "1.5.231"
         },
         "compile": {
@@ -2462,7 +2462,7 @@
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.0.1",
-          "Xamarin.Forms": "3.3.0.967583",
+          "Xamarin.Forms": "3.6.0.264807",
           "sqlite-net-pcl": "1.5.231"
         },
         "compile": {

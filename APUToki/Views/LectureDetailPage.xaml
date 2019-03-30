@@ -12,7 +12,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     
-    <StackLayout Spacing="20" Padding="15">
+    <StackLayout Spacing="10" Padding="15">
         <Label Text="{Binding LectureItem.SubjectNameEN}" 
                FontSize="Large" XAlign="Center"/>
         <Label>
@@ -81,6 +81,33 @@
                 Command="{Binding OpenWebCommand}" 
                 BackgroundColor="{StaticResource Primary}" 
                 TextColor="White" />
+        
+        <ListView x:Name="TimetablesListView"
+                      x:FieldModifier="public"
+                      VerticalOptions="FillAndExpand" 
+                      HasUnevenRows="true"
+                      CachingStrategy="RecycleElement"
+                  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout Padding="10">
+                                
+                                <Label Text="{Binding DayOfWeek}"
+                                       LineBreakMode="NoWrap"
+                                       TextColor="Black"
+                                       FontSize="13" />
+                                
+                                <Label Text="{Binding Period}"
+                                       LineBreakMode="NoWrap"
+                                       FontSize="11"
+                                       TextColor="Maroon"/>
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         
         <Button Text="Add to timetable"
                 Command="{Binding AddToTimetableCommand}"/>

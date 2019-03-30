@@ -31,7 +31,7 @@ namespace APUToki.Models
                 int row = (int)char.GetNumericValue(Period[0]);
 
                 //the timetable row max number is 6, anything above 6 will be considered missing
-                if (ParentLecture.Term.Contains("Session"))
+                if (ParentLecture != null && ParentLecture.Term.Contains("Session"))
                 {
                     row = 99;
                 }

@@ -41,29 +41,7 @@ namespace APUToki.ViewModels
             if (!string.IsNullOrEmpty(query))
             {
                 Debug.WriteLine("[SearchLecturesAsync]User searched for " + query);
-
-                /*
-                //the search algorithm starts here, currently it's just a simple linear filtering
-                //loop through the database
-                foreach (var i in database)
-                {
-                    //loop through the tags of the item
-                    foreach (var tag in i.SearchTags)
-                    {
-                        if (SearchResults.Contains(i))
-                        {
-                            //continue to the next interation if the item is already there
-                            continue;
-                        }
-                        //add the item to the list if it contains the word
-                        //this will be the main search algorithm
-                        if (tag.Contains(query.ToLower()))
-                        {
-                            SearchResults.Add(i);
-                        }
-                    }
-                }
-                */
+                //search with the given query
                 var searchedLectures = SearchEngine.SearchLecture(query, database);
                 if (searchedLectures != null)
                 {
@@ -72,10 +50,7 @@ namespace APUToki.ViewModels
                         SearchResults.Add(i);
                     }
                 }
-
-
                 int resultsCount = SearchResults.Count;
-
 
                 Debug.WriteLine("[SearchLecturesAsync]Got " + resultsCount + " results");
                 Debug.WriteLine("[SearchLecturesAsync]Took " + SearchEngine.LastSearchTime + " ms to search");

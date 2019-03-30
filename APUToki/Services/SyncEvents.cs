@@ -291,6 +291,20 @@ namespace APUToki.Services
                 Debug.WriteLine("[SyncEvents]No updates found");
             }
         }
+
+        public static async Task<List<TimetableCell>> GetTimetableContents()
+        {
+            //todo: change this to call timetable list from the database
+            var tempMockupData = new List<TimetableCell>
+            {
+                new TimetableCell{Period = "1st Period", DayOfWeek = "Monday"},
+                new TimetableCell{Period = "2st Period", DayOfWeek = "Monday"},
+                new TimetableCell{Period = "1st Period", DayOfWeek = "Friday"},
+            };
+
+
+            return await App.Database.GetAllTimetableCellsAsync();
+        }
         #endregion
 
     }
