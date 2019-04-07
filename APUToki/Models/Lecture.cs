@@ -10,9 +10,6 @@ namespace APUToki.Models
     {
         public Lecture()
         {
-            //initilize the lists when this object is constructed
-            //TimetableCells = new List<TimetableCell>();
-            //SearchTags = new List<string>();
 
         }
 

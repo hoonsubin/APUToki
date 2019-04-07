@@ -7,23 +7,26 @@ using APUToki.Models;
 using APUToki.Views;
 using Xamarin.Forms;
 using APUToki.Services;
+using System.Windows.Input;
 
 namespace APUToki.ViewModels
 {
     public class TimetableViewModel : BaseViewModel
     {
-        public List<TimetableCell> TimetableItems { get; set; }
+
+        public List<TimetableCell> Q2TimetableItems { get; set; }
+
+        public List<TimetableCell> Q1TimetableItems { get; set; }
 
         public TimetableViewModel()
         {
             Title = "Timetable";
-            if (TimetableItems == null)
-            {
-                Debug.WriteLine("No Timetable items found, making a new list");
-                TimetableItems = new List<TimetableCell>();
-            }
-        }
 
+            Q1TimetableItems = new List<TimetableCell>();
+            Q2TimetableItems = new List<TimetableCell>();
+
+
+        }
 
 
     }

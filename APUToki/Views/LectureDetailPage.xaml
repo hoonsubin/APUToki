@@ -34,23 +34,12 @@
                         <Span Text="{Binding LectureItem.Grade}" />
                         <Span Text=" " />
                         <Span Text="{Binding LectureItem.Field}" TextColor="Maroon"/>
+                        <Span Text=" "/>
+                        <Span Text="{Binding LectureItem.Term}"/>
                     </FormattedString.Spans>
                 </FormattedString>
             </Label.FormattedText>
         </Label>
-        
-        
-        <!--<ListView ItemsSource="" HeightRequest="0.5">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout x:Name="cellBackground" Padding="10">
-                            
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>-->
         
         <Label>
             <Label.FormattedText>
@@ -92,30 +81,30 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             
-            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="0"/>
-            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="1"/>
-            <Label Text="Mon" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="2"/>
-            <Label Text="Tue" Grid.Row="0" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="3"/>
-            <Label Text="Wed" Grid.Row="0" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="4"/>
-            <Label Text="Thu" Grid.Row="0" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="5"/>
-            <Label Text="Fri" Grid.Row="0" Grid.Column="5" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="0" Grid.Column="0"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Mon" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="10"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="0" Grid.Column="2"/>
+            <Label Text="Tue" Grid.Row="0" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="10"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="0" Grid.Column="3"/>
+            <Label Text="Wed" Grid.Row="0" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="10"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="0" Grid.Column="4"/>
+            <Label Text="Thu" Grid.Row="0" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="10"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="0" Grid.Column="5"/>
+            <Label Text="Fri" Grid.Row="0" Grid.Column="5" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="10"/>
             
-            <BoxView Color="Maroon" Grid.Row="1" Grid.Column="0"/>
-            <Label Text="1" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="2" Grid.Column="0"/>
-            <Label Text="2" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="3" Grid.Column="0"/>
-            <Label Text="3" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="4" Grid.Column="0"/>
-            <Label Text="4" Grid.Row="4" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="5" Grid.Column="0"/>
-            <Label Text="5" Grid.Row="5" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="6" Grid.Column="0"/>
-            <Label Text="6" Grid.Row="6" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="1" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="10"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="2" Grid.Column="0"/>
+            <Label Text="2" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="10"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="3" Grid.Column="0"/>
+            <Label Text="3" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="10"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="4" Grid.Column="0"/>
+            <Label Text="4" Grid.Row="4" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="10"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="5" Grid.Column="0"/>
+            <Label Text="5" Grid.Row="5" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="10"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="6" Grid.Column="0"/>
+            <Label Text="6" Grid.Row="6" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="10"/>
             
             <BoxView Color="White" Grid.Row="1" Grid.Column="1"/>
             <BoxView Color="White" Grid.Row="1" Grid.Column="2"/>

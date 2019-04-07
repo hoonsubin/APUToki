@@ -1,16 +1,13 @@
 ﻿<Properties StartupConfiguration="{87EA89BB-A0C3-4431-BF08-4BDF4A947D04}|Default">
-  <MonoDevelop.Ide.ItemProperties.APUToki.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.FA2351C0-C17D-40B3-AF34-0E4EDF9EAA5A" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/Models/Lecture.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/Services/DataStore.cs">
     <Files>
-      <File FileName="APUToki/Views/LectureDetailPage.xaml.cs" Line="23" Column="39" />
-      <File FileName="APUToki/ViewModels/LectureDetailViewModel.cs" Line="14" Column="50" />
-      <File FileName="APUToki/Views/TimetablePage.xaml" Line="28" Column="13" />
-      <File FileName="APUToki/Views/TimetablePage.xaml.cs" Line="30" Column="16" />
-      <File FileName="APUToki/ViewModels/TimetableViewModel.cs" Line="28" Column="9" />
-      <File FileName="APUToki/Services/SyncEvents.cs" Line="235" Column="18" />
-      <File FileName="APUToki/Models/TimetableCell.cs" Line="116" Column="79" />
-      <File FileName="APUToki/Models/AcademicEvent.cs" Line="62" Column="9" />
-      <File FileName="APUToki/Models/Lecture.cs" Line="149" Column="40" />
+      <File FileName="APUToki/Views/TimetablePage.xaml.cs" Line="141" Column="65" />
+      <File FileName="APUToki/ViewModels/TimetableViewModel.cs" Line="1" Column="1" />
+      <File FileName="APUToki/Views/LectureDetailPage.xaml.cs" Line="28" Column="1" />
+      <File FileName="APUToki/ViewModels/LectureSearchViewModel.cs" Line="31" Column="37" />
+      <File FileName="APUToki/Services/SyncEvents.cs" Line="268" Column="21" />
+      <File FileName="APUToki/Views/LectureSearchPage.xaml.cs" Line="37" Column="42" />
+      <File FileName="APUToki/Services/DataStore.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.APUToki.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.pixel_phone" />

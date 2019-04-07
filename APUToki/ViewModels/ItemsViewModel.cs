@@ -3,9 +3,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Linq;
-using Plugin.Connectivity;
 using APUToki.Models;
-using APUToki.Views;
 using APUToki.Services;
 
 using Xamarin.Forms;
@@ -112,12 +110,11 @@ namespace APUToki.ViewModels
                 Debug.WriteLine("[ExecuteLoadItemsCommand]Cleared items list");
 
                 //update the list only if it is connected to the internet
-                if (CrossConnectivity.Current.IsConnected)
+                if (SyncEvents.IsConnectedToInternet())
                 {
                     //get new events online, and add them to the database if there is a new one
                     await SyncEvents.UpdateAcaEventsAsync();
                 }
-                else { Debug.WriteLine("No internet connection"); }
 
                 //load the items in the database
                 var itemsInDb = await App.Database.SortListByDate();

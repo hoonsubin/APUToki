@@ -6,7 +6,6 @@ using APUToki.Models;
 using APUToki.Services;
 using System.Diagnostics;
 using Xamarin.Forms;
-using Plugin.Connectivity;
 
 namespace APUToki.ViewModels
 {
@@ -34,7 +33,7 @@ namespace APUToki.ViewModels
             //load saved lectures from the database
             var database = await App.Database.GetAllLecturesAsync();
 
-            Debug.WriteLine("[SearchLecturesAsync]There are " + database.Count + " lectures in the database");
+            Debug.WriteLine($"[SearchLecturesAsync]There are {database.Count} lectures in the database");
 
             SearchResults.Clear();
 
@@ -78,12 +77,11 @@ namespace APUToki.ViewModels
             try
             {
                 //update the list only if it is connected to the internet
-                if (CrossConnectivity.Current.IsConnected)
+                if (SyncEvents.IsConnectedToInternet())
                 {
                     //get new events online, and add them to the database if there is a new one
                     await SyncEvents.UpdateLectureListAsync();
                 }
-                else { Debug.WriteLine("No internet connection"); }
 
             }
             catch (Exception ex)

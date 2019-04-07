@@ -50,6 +50,8 @@
                                 
                                 <Label Text="{Binding Curriculum}" FontSize="Small" 
                                        TextColor="Purple"/>
+                                <Label Text="{Binding Term}" FontSize="Small" 
+                                       TextColor="Blue"/>
                                 
                             </StackLayout>
                         </ViewCell>

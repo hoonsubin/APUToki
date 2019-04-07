@@ -27,6 +27,13 @@ namespace APUToki.ViewModels
 
             TimetableCells = lectureItem.TimetableCells;
 
+            Debug.WriteLine("[LectureDetailPage]The timetable cell length is " + TimetableCells.Count);
+
+            foreach (var i in TimetableCells)
+            {
+                Debug.WriteLine("[LectureDetailPage]This lecture has " + i.Period);
+            }
+
             //define what the button is going to do, in this case open the syllabus of the given lecture id
             OpenWebCommand = new Command(() => Device.OpenUri
             (new Uri("https://portal2.apu.ac.jp/campusp/slbssbdr.do?value%28risyunen%29=2019&value%28semekikn%29=1&value%28kougicd%29="
@@ -39,7 +46,7 @@ namespace APUToki.ViewModels
         private void AddLecture(Lecture lecture)
         {
             MessagingCenter.Send(this, "AddTimetableCell", lecture.TimetableCells);
-            Debug.WriteLine("Sent message to TimetablePage.xaml.cs");
+            Debug.WriteLine($"Sent {lecture.TimetableCells} to TimetablePage.xaml.cs");
         }
 
     }

@@ -11,6 +11,8 @@ using System.Collections.ObjectModel;
 using APUToki.Models;
 using Acr.UserDialogs;
 using Xamarin.Essentials;
+using System.Net;
+using Plugin.Connectivity;
 
 namespace APUToki.Services
 {
@@ -256,7 +258,7 @@ namespace APUToki.Services
             if (currentVer != currentOnlineVer)
             {
                 //ask user if they want to update
-                var answer = await Application.Current.MainPage.DisplayAlert("Notice", "There is a updated timetable\nOnline version updated " + currentOnlineVer, "Yes", "No");
+                var answer = await Application.Current.MainPage.DisplayAlert("Notice", "There is a timetable online. Wish to update?\nOnline version: " + currentOnlineVer, "Yes", "No");
 
                 if (answer)
                 {
@@ -266,19 +268,23 @@ namespace APUToki.Services
 
                     var oldDatabase = await App.Database.GetAllLecturesAsync();
 
-                    if (oldDatabase.Count > 0)
+                    //empty the current local database to not make duplicates
+                    await App.Database.DeleteAllLecturesAsync(oldDatabase);
+                    /*
+                    foreach (var i in newLectures)
                     {
-                        foreach (var i in oldDatabase)
+                        foreach (var n in i.TimetableCells)
                         {
-                            await App.Database.DeleteLectureAsync(i);
+                            Debug.WriteLine("got timetable cell " + n.ParentLecture.SubjectNameEN + " " + n.Period);
                         }
                     }
-                    //empty the current local database to not make duplicates
-                    //await App.Database.DeleteAllLecturesAsync(oldDatabase);
-
+                    */
+                    foreach (var i in newLectures)
+                    {
+                        await App.Database.SaveLectureAsync(i);
+                    }
                     //add all the new lectures to the database
-                    await App.Database.SaveAllLecturesAsync(newLectures);
-
+                    //await App.Database.SaveAllLecturesAsync(newLectures);
 
                     Debug.WriteLine("[SyncEvents]The lectures database has been updated");
                     await Application.Current.MainPage.DisplayAlert("Notice", "Updated the database", "Dismiss");
@@ -292,20 +298,26 @@ namespace APUToki.Services
             }
         }
 
-        public static async Task<List<TimetableCell>> GetTimetableContents()
-        {
-            //todo: change this to call timetable list from the database
-            var tempMockupData = new List<TimetableCell>
-            {
-                new TimetableCell{Period = "1st Period", DayOfWeek = "Monday"},
-                new TimetableCell{Period = "2st Period", DayOfWeek = "Monday"},
-                new TimetableCell{Period = "1st Period", DayOfWeek = "Friday"},
-            };
-
-
-            return await App.Database.GetAllTimetableCellsAsync();
-        }
         #endregion
+
+        public static bool IsConnectedToInternet()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                using (client.OpenRead("https://www.apu.ac.jp"))
+                {
+                    //return true if the site loads
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
 
     }
 }
