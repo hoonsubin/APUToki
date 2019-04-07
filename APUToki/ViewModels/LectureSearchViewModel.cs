@@ -12,6 +12,8 @@ namespace APUToki.ViewModels
     public class LectureSearchViewModel : ContentPage
     {
         public ObservableCollection<Lecture> SearchResults { get; set; }
+
+        public List<Lecture> SearchDatabase { get; set; }
         //public ObservableCollection<LectureItem> LectureDatabase { get; set; }
         public Command LoadItemsCommand { get; set; }
 
@@ -20,10 +22,29 @@ namespace APUToki.ViewModels
             Title = "Lecture Search";
             SearchResults = new ObservableCollection<Lecture>();
 
+            SearchDatabase = new List<Lecture>();
+
+            //LoadDatabaseToMemory().Wait();
+
             //load the items from the database
             //set the load items command to Execute load items command
             async void execute() => await ExecuteLoadItemsCommand();
             LoadItemsCommand = new Command(execute);
+
+        }
+
+        public async Task LoadDatabaseToMemory()
+        {
+            var db = await App.Database.GetAllLecturesAsync();
+
+            if (db.Count > 0)
+            {
+                foreach (var i in db)
+                {
+                    SearchDatabase.Add(i);
+                    //SearchResults.Add(i);
+                }
+            }
 
         }
 
@@ -32,6 +53,8 @@ namespace APUToki.ViewModels
         {
             //load saved lectures from the database
             var database = await App.Database.GetAllLecturesAsync();
+
+            //var database = SearchDatabase;
 
             Debug.WriteLine($"[SearchLecturesAsync]There are {database.Count} lectures in the database");
 

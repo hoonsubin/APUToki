@@ -14,6 +14,8 @@ namespace APUToki.ViewModels
     public class TimetableViewModel : BaseViewModel
     {
 
+        public ICommand TouchedLectureFromTimetable { get; }
+
         public List<TimetableCell> Q2TimetableItems { get; set; }
 
         public List<TimetableCell> Q1TimetableItems { get; set; }
@@ -25,7 +27,11 @@ namespace APUToki.ViewModels
             Q1TimetableItems = new List<TimetableCell>();
             Q2TimetableItems = new List<TimetableCell>();
 
+        }
 
+        public async Task OpenLectureDetailPage(Lecture lecture)
+        {
+            await Application.Current.MainPage.DisplayAlert("Notice", "Tapped on " + lecture.SubjectNameEN, "Dissmiss");
         }
 
 

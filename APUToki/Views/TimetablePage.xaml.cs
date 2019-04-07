@@ -57,15 +57,18 @@ namespace APUToki.Views
                     VerticalOptions = LayoutOptions.Center,
                     HorizontalOptions = LayoutOptions.Center,
                     FontSize = 8,
-                    BackgroundColor = Color.White
+                    BackgroundColor = Color.White,
                 };
-                
-                //add the label to the grid layout with a dynamic row and column
+                //add button click function which will call the method inside the view model
+                cell.Clicked += async (sender, args) => await viewModel.OpenLectureDetailPage(i.ParentLecture);
+
+                //add the button to the grid layout with a dynamic row and column
                 gridLayout.Children.Add(cell, i.Column, i.Row);
-                Debug.WriteLine("Adding " + i.ParentLecture.SubjectNameEN + " " + i.Period + " to timetable");
+                //add the button to the current cells list which is used to track which element to delete
                 CurrentCells.Add(cell);
             }
         }
+
 
         /// <summary>
         /// Switchs the quarter to be displayed when the button is pressed

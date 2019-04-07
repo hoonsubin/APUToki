@@ -1,13 +1,12 @@
 ﻿<Properties StartupConfiguration="{87EA89BB-A0C3-4431-BF08-4BDF4A947D04}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/Services/DataStore.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/ViewModels/LectureSearchViewModel.cs">
     <Files>
-      <File FileName="APUToki/Views/TimetablePage.xaml.cs" Line="141" Column="65" />
-      <File FileName="APUToki/ViewModels/TimetableViewModel.cs" Line="1" Column="1" />
+      <File FileName="APUToki/Views/TimetablePage.xaml.cs" Line="63" Column="34" />
+      <File FileName="APUToki/ViewModels/TimetableViewModel.cs" Line="35" Column="10" />
       <File FileName="APUToki/Views/LectureDetailPage.xaml.cs" Line="28" Column="1" />
-      <File FileName="APUToki/ViewModels/LectureSearchViewModel.cs" Line="31" Column="37" />
-      <File FileName="APUToki/Services/SyncEvents.cs" Line="268" Column="21" />
-      <File FileName="APUToki/Views/LectureSearchPage.xaml.cs" Line="37" Column="42" />
-      <File FileName="APUToki/Services/DataStore.cs" Line="1" Column="1" />
+      <File FileName="APUToki/ViewModels/LectureSearchViewModel.cs" Line="55" Column="13" />
+      <File FileName="APUToki/Views/LectureSearchPage.xaml.cs" Line="28" Column="92" />
+      <File FileName="APUToki/ViewModels/LectureDetailViewModel.cs" Line="42" Column="69" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.APUToki.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.pixel_phone" />
