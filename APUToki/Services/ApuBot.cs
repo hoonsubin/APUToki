@@ -382,10 +382,12 @@ namespace APUToki.Services
                     //get the semester and curriculum of the xlsx file
                     string semesterAndCurriculum = worksheet.Cells[2, 1].Value.ToString();
 
+
                     //loop all rows
                     for (int y = worksheet.Dimension.Start.Row; y <= worksheet.Dimension.End.Row; y++)
                     {
                         string row = "";
+
                         //loop all columns in a row
                         for (int x = worksheet.Dimension.Start.Column; x <= worksheet.Dimension.End.Column; x++)
                         {

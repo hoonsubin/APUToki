@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using APUToki.ViewModels;
 using APUToki.Models;
-using APUToki.Services;
-using System.Windows.Input;
 using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -20,8 +18,6 @@ namespace APUToki.Views
 
         List<View> CurrentCells;
 
-        //public ICommand SwitchQuarter { get; }
-
         public TimetablePage()
         {
             InitializeComponent();
@@ -34,10 +30,14 @@ namespace APUToki.Views
             //add the existing timetable items to the grid
             DrawCellsToGrid(viewModel.Q1TimetableItems);
 
-
-            MessagingCenter.Subscribe<LectureDetailViewModel, List<TimetableCell>>(this, "AddTimetableCell", (sender, arg) => {
+            MessagingCenter.Subscribe<LectureDetailViewModel, List<TimetableCell>>(this, "AddTimetableCell", (sender, arg) => 
+            {
                 AddCellsToTimetable(arg);
-                Debug.WriteLine($"Got {arg} from LectureDetailViewModel");
+            });
+
+            MessagingCenter.Subscribe<LectureDetailViewModel, List<TimetableCell>>(this, "RemoveTimetableCell", (sender, arg) =>
+            {
+                RemoveCellsFromTimetableAsync(arg);
             });
         }
 
@@ -59,12 +59,15 @@ namespace APUToki.Views
                     FontSize = 8,
                     BackgroundColor = Color.White,
                 };
+
                 //add button click function which will call the method inside the view model
-                cell.Clicked += async (sender, args) => await viewModel.OpenLectureDetailPage(i.ParentLecture);
+                cell.Clicked += async (sender, args) => await Navigation.PushAsync(new LectureDetailPage(new LectureDetailViewModel(i.ParentLecture), true));
 
                 //add the button to the grid layout with a dynamic row and column
                 gridLayout.Children.Add(cell, i.Column, i.Row);
+
                 //add the button to the current cells list which is used to track which element to delete
+                //this will generate the Current Cells list so that we don't have to save it
                 CurrentCells.Add(cell);
             }
         }
@@ -79,7 +82,7 @@ namespace APUToki.Views
         {
             if (btnTermChange.Text.Contains("1st"))
             {
-                //switch 1st quarter to 2nd quarter
+                //switch to 2nd quarter
                 btnTermChange.Text = "2nd Q";
                 ClearAllGridChildrens();
                 DrawCellsToGrid(viewModel.Q2TimetableItems);
@@ -87,7 +90,7 @@ namespace APUToki.Views
             }
             else
             {
-                //switch 2nd quarter to 1st quarter
+                //switch to 1st quarter
                 btnTermChange.Text = "1st Q";
                 ClearAllGridChildrens();
                 DrawCellsToGrid(viewModel.Q1TimetableItems);
@@ -107,25 +110,49 @@ namespace APUToki.Views
             Debug.WriteLine("Clearing all grids");
         }
 
+        /// <summary>
+        /// Removes the given list of cells from timetable.
+        /// </summary>
+        /// <param name="cellsToRemove">List of cells to remove.</param>
+        public async void RemoveCellsFromTimetableAsync(List<TimetableCell> cellsToRemove)
+        {
+            Debug.WriteLine("Removing lecture " + cellsToRemove[0].ParentLecture.SubjectNameEN);
+            foreach (var i in cellsToRemove)
+            {
+                Debug.WriteLine($"and cell {i.Period} - {i.DayOfWeek} from timetable");
+            }
+
+            //remove the current page and go back to the timetable view page
+            await Navigation.PopAsync();
+            //todo: add the remove from timetable function
+        }
+
+        /// <summary>
+        /// Checks the existing list of timetable cells and compare them with the new ones
+        /// If there is no conflicts or same lectures, this will add the element to the list and draw them
+        /// to the right quarter
+        /// </summary>
+        /// <param name="cellsToAdd">Cells to add.</param>
         public void AddCellsToTimetable(List<TimetableCell> cellsToAdd)
         {
             //combine Q1 list and Q2 list
             var allCurrentLectures = viewModel.Q1TimetableItems.Union(viewModel.Q2TimetableItems);
 
-            //check if there are any intersecting items in two lists, and make them into a list of cells with the common period
+            //check if there are any intersecting items in two lists, and make them into a list of cells
             var intersectingLecture = allCurrentLectures.Intersect(cellsToAdd);
 
             if (intersectingLecture.Any())
             {
-                //check if the lecture is the same
+                //check if the lecture is the same. We use the first index of the list because they all have the same parent lecture
                 if (allCurrentLectures.FirstOrDefault(cell => cell.ParentLecture.SubjectNameEN == cellsToAdd[0].ParentLecture.SubjectNameEN) != null)
                 {
                     Application.Current.MainPage.DisplayAlert("Alert", "This lecture is already in the timetable", "Dismiss");
                 }
                 else
                 {
+
                     //todo: get the lecture with the same period in the existing list, and add options to switch with current lecture
-                    Application.Current.MainPage.DisplayAlert("Alert", "Lecture is conflicting with ", "Dismiss");
+                    Application.Current.MainPage.DisplayAlert("Alert", "Lecture is conflicting with existing lecture", "Dismiss");
                 }
             }
             else
@@ -133,17 +160,14 @@ namespace APUToki.Views
                 //add the cells to the timetable
                 foreach (var cell in cellsToAdd)
                 {
-
                     //check if the lecture is either 1st or 2nd period
                     //semester lectures are added to both lists
                     if (cell.ParentLecture.Term.Contains("1"))
                     {
-                        Debug.WriteLine(cell.ParentLecture.SubjectNameEN + " is 1st period");
                         viewModel.Q1TimetableItems.Add(cell);
                     }
                     else if (cell.ParentLecture.Term.Contains("2"))
                     {
-                        Debug.WriteLine(cell.ParentLecture.SubjectNameEN + " is 2nd period");
                         viewModel.Q2TimetableItems.Add(cell);
                     }
                     else
@@ -154,10 +178,19 @@ namespace APUToki.Views
                     }
                 }
 
-                //draw the newly added timetable cells to the grid
-                DrawCellsToGrid(cellsToAdd);
+                //variables to make the code more easy to read
+                string currentPage = btnTermChange.Text;
+                string termOfLecture = cellsToAdd[0].ParentLecture.Term;
+
+                //check if the quarter matches, or it is a semester course
+                if (termOfLecture.Contains(currentPage) || termOfLecture.Contains("Semester"))
+                {
+                    //draw the newly added timetable cells to the grid
+                    DrawCellsToGrid(cellsToAdd);
+                }
 
                 //todo: soft message to notify that the lecture has been added
+                Application.Current.MainPage.DisplayAlert("Message", $"{cellsToAdd[0].ParentLecture.SubjectNameEN} has been added to the timetable", "Ok");
             }
         }
 
@@ -167,7 +200,5 @@ namespace APUToki.Views
             await Navigation.PushAsync(new NavigationPage(new LectureSearchPage()));
 
         }
-
-
     }
 }

@@ -2801,8 +2801,9 @@
       "projectName": "APUToki.Android",
       "projectPath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/APUToki.Android.csproj",
       "packagesPath": "/Users/hoonkim/.nuget/packages/",
-      "outputPath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj",
+      "outputPath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
       "configFilePaths": [
         "/Users/hoonkim/.config/NuGet/NuGet.Config"
       ],

@@ -3909,8 +3909,9 @@
       "projectName": "APUToki.iOS",
       "projectPath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/APUToki.iOS.csproj",
       "packagesPath": "/Users/hoonkim/.nuget/packages/",
-      "outputPath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj",
+      "outputPath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
       "configFilePaths": [
         "/Users/hoonkim/.config/NuGet/NuGet.Config"
       ],

@@ -24,14 +24,10 @@ namespace APUToki.ViewModels
         {
             Title = "Timetable";
 
+            //todo: make a function to save and load these two lists from the database
             Q1TimetableItems = new List<TimetableCell>();
             Q2TimetableItems = new List<TimetableCell>();
 
-        }
-
-        public async Task OpenLectureDetailPage(Lecture lecture)
-        {
-            await Application.Current.MainPage.DisplayAlert("Notice", "Tapped on " + lecture.SubjectNameEN, "Dissmiss");
         }
 
 

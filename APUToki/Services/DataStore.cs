@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using SQLite;
 using APUToki.Models;
 using SQLiteNetExtensionsAsync.Extensions;
-using System.Linq;
 using System.Diagnostics;
 using System.IO;
 using System;
@@ -18,7 +17,7 @@ namespace APUToki.Services
         {
             _database = CreateAsyncConnection();
 
-            //create database table
+            //create database tables
             _database.CreateTableAsync<AcademicEvent>().Wait();
             _database.CreateTableAsync<Lecture>().Wait();
             _database.CreateTableAsync<TimetableCell>().Wait();

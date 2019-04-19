@@ -1,9 +1,7 @@
 ﻿using System;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Collections.Generic;
-
 using APUToki.Models;
 using APUToki.ViewModels;
 using System.Diagnostics;
@@ -16,7 +14,7 @@ namespace APUToki.Views
         LectureDetailViewModel viewModel;
 
         //this runs and calls the information in the item object
-        public LectureDetailPage(LectureDetailViewModel viewModel)
+        public LectureDetailPage(LectureDetailViewModel viewModel, bool isAdded = false)
         {
             InitializeComponent();
 
@@ -25,6 +23,12 @@ namespace APUToki.Views
 
             //display the timetable cells to the grid
             UpdateTimetableGrid();
+
+            if (isAdded)
+            {
+                btnDelete.IsVisible = true;
+                btnAddToTimetable.IsVisible = false;
+            }
 
         }
 
@@ -43,7 +47,12 @@ namespace APUToki.Views
                 BuildingFloor = "[Lecture building and floor]",
                 Grade = "[Student Year]",
                 Field = "[Major]",
-                Term = "[Term]"
+                Term = "[Term]",
+                TimetableCells = new List<TimetableCell> 
+                { 
+                    new TimetableCell { DayOfWeek = "Friday", Period = "1st Period"},
+                    new TimetableCell { DayOfWeek = "Tuesday", Period = "3rd Period"}
+                }
             };
 
             //set a new view model page
@@ -72,6 +81,7 @@ namespace APUToki.Views
                 gridLayout.Children.Add(cell, i.Column, i.Row);
                 Debug.WriteLine("[LectureDetailPage]Drawing preview cell for " + i.Period);
             }
+
         }
     }
 }

@@ -18,6 +18,8 @@ namespace APUToki.ViewModels
 
         public ICommand AddToTimetableCommand { get; }
 
+        public ICommand DeleteLectureCommand { get; }
+
         public LectureDetailViewModel(Lecture lectureItem = null)
         {
             //set the title to the name of the event
@@ -27,26 +29,32 @@ namespace APUToki.ViewModels
 
             TimetableCells = lectureItem.TimetableCells;
 
-            Debug.WriteLine("[LectureDetailPage]The timetable cell length is " + TimetableCells.Count);
-
-            foreach (var i in TimetableCells)
-            {
-                Debug.WriteLine("[LectureDetailPage]This lecture has " + i.Period);
-            }
-
             //define what the button is going to do, in this case open the syllabus of the given lecture id
             OpenWebCommand = new Command(() => Device.OpenUri
-            (new Uri("https://portal2.apu.ac.jp/campusp/slbssbdr.do?value%28risyunen%29=2019&value%28semekikn%29=1&value%28kougicd%29="
+            (new Uri($"https://portal2.apu.ac.jp/campusp/slbssbdr.do?value%28risyunen%29={lectureItem.Semester}&value%28semekikn%29=1&value%28kougicd%29="
             + lectureItem.SubjectId)));
 
-            AddToTimetableCommand = new Command(() => AddLecture(lectureItem));
+            if (LectureItem != null)
+            {
+                AddToTimetableCommand = new Command(() => AddLecture());
 
+                DeleteLectureCommand = new Command(() => DeleteLecture());
+            }
         }
 
-        private void AddLecture(Lecture lecture)
+        /// <summary>
+        /// Passes the lecture's timetable cell list to the timetable page
+        /// </summary>
+        private void AddLecture()
         {
-            MessagingCenter.Send(this, "AddTimetableCell", lecture.TimetableCells);
-            Debug.WriteLine($"Sent {lecture.TimetableCells} to TimetablePage.xaml.cs");
+            //send the timetable cell list to the timetable page so it can be added
+            MessagingCenter.Send(this, "AddTimetableCell", TimetableCells);
+        }
+
+        private void DeleteLecture()
+        {
+            MessagingCenter.Send(this, "RemoveTimetableCell", TimetableCells);
+
         }
 
     }

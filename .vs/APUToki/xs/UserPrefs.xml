@@ -1,15 +1,34 @@
-﻿<Properties StartupConfiguration="{87EA89BB-A0C3-4431-BF08-4BDF4A947D04}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/ViewModels/LectureSearchViewModel.cs">
+﻿<Properties StartupConfiguration="{C1477615-B0B2-4DBB-AE28-2420006A17C7}|Default">
+  <MonoDevelop.Ide.ItemProperties.APUToki.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.86F2AEB7-7AB8-4F59-A301-26BAF1C4C7C5" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/Views/TimetablePage.xaml.cs">
     <Files>
-      <File FileName="APUToki/Views/TimetablePage.xaml.cs" Line="63" Column="34" />
-      <File FileName="APUToki/ViewModels/TimetableViewModel.cs" Line="35" Column="10" />
-      <File FileName="APUToki/Views/LectureDetailPage.xaml.cs" Line="28" Column="1" />
-      <File FileName="APUToki/ViewModels/LectureSearchViewModel.cs" Line="55" Column="13" />
-      <File FileName="APUToki/Views/LectureSearchPage.xaml.cs" Line="28" Column="92" />
-      <File FileName="APUToki/ViewModels/LectureDetailViewModel.cs" Line="42" Column="69" />
+      <File FileName="APUToki/Views/TimetablePage.xaml.cs" Line="126" Column="64" />
+      <File FileName="APUToki/ViewModels/TimetableViewModel.cs" Line="23" Column="36" />
+      <File FileName="APUToki/Views/LectureDetailPage.xaml.cs" Line="30" Column="53" />
+      <File FileName="APUToki/ViewModels/LectureDetailViewModel.cs" Line="51" Column="76" />
+      <File FileName="APUToki/Views/LectureDetailPage.xaml" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="APUToki" expanded="True">
+            <Node name="APUToki" expanded="True">
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="LectureDetailPage.xaml" expanded="True" />
+                <Node name="LectureSearchPage.xaml" expanded="True" />
+                <Node name="TimetablePage.xaml" expanded="True">
+                  <Node name="TimetablePage.xaml.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="APUToki.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.APUToki.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.pixel_phone" />
+  <MonoDevelop.Ide.ItemProperties.APUToki.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.pixel_phone" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -12,7 +12,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     
-    <StackLayout Spacing="10" Padding="15">
+    <StackLayout Spacing="7" Padding="15">
         <Label Text="{Binding LectureItem.SubjectNameEN}" 
                FontSize="Large" XAlign="Center"/>
         <Label>
@@ -65,11 +65,11 @@
         </Label>
         
         
-        <Button Margin="0,10,0,0" 
+        <Button Margin="0,0,0,0" 
                 Text="Open Course Syllabus" 
                 Command="{Binding OpenWebCommand}" 
                 BackgroundColor="{StaticResource Primary}" 
-                TextColor="White" />
+                TextColor="White"/>
         
         <Grid ColumnSpacing="1" RowSpacing="1" BackgroundColor="Black" x:Name="gridLayout">
             <Grid.RowDefinitions>
@@ -145,7 +145,12 @@
         </Grid>
         
         <Button Text="Add to timetable"
-                Command="{Binding AddToTimetableCommand}"/>
-        
+                Command="{Binding AddToTimetableCommand}"
+                x:Name="btnAddToTimetable"
+                IsVisible="true"/>
+        <Button Text="Delete"
+                Command="{Binding DeleteLectureCommand}"
+                x:Name="btnDelete"
+                IsVisible="false"/>
     </StackLayout>
 </ContentPage>
