@@ -6,6 +6,7 @@ using APUToki.Models;
 using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Threading.Tasks;
 using System.Linq;
 
 namespace APUToki.Views
@@ -56,7 +57,7 @@ namespace APUToki.Views
                     Text = i.ParentLecture.SubjectNameEN,
                     VerticalOptions = LayoutOptions.Center,
                     HorizontalOptions = LayoutOptions.Center,
-                    FontSize = 8,
+                    FontSize = Device.GetNamedSize(NamedSize.Micro,typeof(Button)),
                     BackgroundColor = Color.White,
                 };
 
@@ -116,15 +117,27 @@ namespace APUToki.Views
         /// <param name="cellsToRemove">List of cells to remove.</param>
         public async void RemoveCellsFromTimetableAsync(List<TimetableCell> cellsToRemove)
         {
-            Debug.WriteLine("Removing lecture " + cellsToRemove[0].ParentLecture.SubjectNameEN);
+            //loop through the timetable cell list to remove
             foreach (var i in cellsToRemove)
             {
-                Debug.WriteLine($"and cell {i.Period} - {i.DayOfWeek} from timetable");
+                viewModel.Q1TimetableItems.Remove(i);
+                viewModel.Q2TimetableItems.Remove(i);
             }
 
+            //clear and re-draw the buttons from the timetalble
+            if (btnTermChange.Text.Contains("1st"))
+            {
+                ClearAllGridChildrens();
+                DrawCellsToGrid(viewModel.Q1TimetableItems);
+
+            }
+            else
+            {
+                ClearAllGridChildrens();
+                DrawCellsToGrid(viewModel.Q2TimetableItems);
+            }
             //remove the current page and go back to the timetable view page
             await Navigation.PopAsync();
-            //todo: add the remove from timetable function
         }
 
         /// <summary>

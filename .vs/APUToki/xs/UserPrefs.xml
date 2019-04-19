@@ -2,17 +2,18 @@
   <MonoDevelop.Ide.ItemProperties.APUToki.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.86F2AEB7-7AB8-4F59-A301-26BAF1C4C7C5" />
   <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/Views/TimetablePage.xaml.cs">
     <Files>
-      <File FileName="APUToki/Views/TimetablePage.xaml.cs" Line="126" Column="64" />
+      <File FileName="APUToki/Views/TimetablePage.xaml.cs" Line="60" Column="67" />
       <File FileName="APUToki/ViewModels/TimetableViewModel.cs" Line="23" Column="36" />
       <File FileName="APUToki/Views/LectureDetailPage.xaml.cs" Line="30" Column="53" />
       <File FileName="APUToki/ViewModels/LectureDetailViewModel.cs" Line="51" Column="76" />
-      <File FileName="APUToki/Views/LectureDetailPage.xaml" />
+      <File FileName="APUToki/Services/SyncEvents.cs" Line="3" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="APUToki" expanded="True">
             <Node name="APUToki" expanded="True">
+              <Node name="Services" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="LectureDetailPage.xaml" expanded="True" />
@@ -22,7 +23,6 @@
                 </Node>
               </Node>
             </Node>
-            <Node name="APUToki.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>

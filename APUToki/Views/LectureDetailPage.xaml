@@ -147,10 +147,12 @@
         <Button Text="Add to timetable"
                 Command="{Binding AddToTimetableCommand}"
                 x:Name="btnAddToTimetable"
-                IsVisible="true"/>
+                IsVisible="true"
+                FontSize="Medium"/>
         <Button Text="Delete"
                 Command="{Binding DeleteLectureCommand}"
                 x:Name="btnDelete"
-                IsVisible="false"/>
+                IsVisible="false"
+                FontSize="Medium"/>
     </StackLayout>
 </ContentPage>
