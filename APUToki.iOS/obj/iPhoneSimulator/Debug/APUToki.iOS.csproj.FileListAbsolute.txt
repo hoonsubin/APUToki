@@ -83,12 +83,6 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/bin/iPhoneSimulator/Debug/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/bin/iPhoneSimulator/Debug/APUToki.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/bin/iPhoneSimulator/Debug/APUToki.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.csprojAssemblyReference.cache
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.csproj.CoreCompileInputs.cache
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/XamlC.stamp
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.csproj.CopyComplete
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.exe
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.pdb
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.8-12.2/ibtool/_BundleResourceWithLogicalName.items
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.8-12.2/actool/_PartialAppManifest.items
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.8-12.2/actool/_BundleResourceWithLogicalName.items
@@ -107,3 +101,9 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.8-12.2/optimized/tab_calendar@2x.png
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.8-12.2/optimized/tab_calendar@3x.png
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.8-12.2/optimized/
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.csprojAssemblyReference.cache
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.csproj.CoreCompileInputs.cache
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/XamlC.stamp
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.csproj.CopyComplete
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.exe
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.pdb

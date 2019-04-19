@@ -72,9 +72,7 @@ namespace APUToki.Views
                 //create all new label
                 var cell = new BoxView
                 {
-                    VerticalOptions = LayoutOptions.Center,
-                    HorizontalOptions = LayoutOptions.Center,
-                    BackgroundColor = Color.Gray
+                    BackgroundColor = Color.Orange
                 };
 
                 //add the label to the grid layout with a dynamic row and column

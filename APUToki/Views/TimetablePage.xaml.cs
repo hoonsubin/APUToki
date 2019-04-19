@@ -28,6 +28,9 @@ namespace APUToki.Views
             //create a new list that holds the xaml elements
             CurrentCells = new List<View>();
 
+            //load the saved timetable cells
+            //viewModel.LoadTimetableContentsAsync().Wait();
+
             //add the existing timetable items to the grid
             DrawCellsToGrid(viewModel.Q1TimetableItems);
 
@@ -40,6 +43,12 @@ namespace APUToki.Views
             {
                 RemoveCellsFromTimetableAsync(arg);
             });
+
+            //show the last timetable view
+            if (Application.Current.Properties.ContainsKey("LastOpenedQ"))
+            {
+                btnTermChange.Text = Application.Current.Properties["LastOpenedQ"] as string;
+            }
         }
 
         /// <summary>
@@ -51,6 +60,11 @@ namespace APUToki.Views
             //loop through the list timetable cells from the view model
             foreach (var i in cellsToDisplay)
             {
+                var backgroundColor = new BoxView
+                {
+                    BackgroundColor = Color.LightGray
+                };
+
                 //create a new cell for the timetable to display
                 var cell = new Button
                 {
@@ -58,17 +72,22 @@ namespace APUToki.Views
                     VerticalOptions = LayoutOptions.Center,
                     HorizontalOptions = LayoutOptions.Center,
                     FontSize = Device.GetNamedSize(NamedSize.Micro,typeof(Button)),
-                    BackgroundColor = Color.White,
+                    BackgroundColor = Color.Transparent,
+                    TextColor = Color.Black,
+                    Margin = 0
                 };
 
                 //add button click function which will call the method inside the view model
                 cell.Clicked += async (sender, args) => await Navigation.PushAsync(new LectureDetailPage(new LectureDetailViewModel(i.ParentLecture), true));
+
+                gridLayout.Children.Add(backgroundColor, i.Column, i.Row);
 
                 //add the button to the grid layout with a dynamic row and column
                 gridLayout.Children.Add(cell, i.Column, i.Row);
 
                 //add the button to the current cells list which is used to track which element to delete
                 //this will generate the Current Cells list so that we don't have to save it
+                CurrentCells.Add(backgroundColor);
                 CurrentCells.Add(cell);
             }
         }
@@ -96,6 +115,8 @@ namespace APUToki.Views
                 ClearAllGridChildrens();
                 DrawCellsToGrid(viewModel.Q1TimetableItems);
             }
+
+            Application.Current.Properties["LastOpenedQ"] = btnTermChange.Text;
         }
 
         /// <summary>
@@ -108,7 +129,6 @@ namespace APUToki.Views
                 gridLayout.Children.Remove(i);
             }
             CurrentCells.Clear();
-            Debug.WriteLine("Clearing all grids");
         }
 
         /// <summary>
@@ -137,6 +157,7 @@ namespace APUToki.Views
                 DrawCellsToGrid(viewModel.Q2TimetableItems);
             }
             //remove the current page and go back to the timetable view page
+            viewModel.SaveTimetableContents();
             await Navigation.PopAsync();
         }
 
@@ -202,7 +223,8 @@ namespace APUToki.Views
                     DrawCellsToGrid(cellsToAdd);
                 }
 
-                //todo: soft message to notify that the lecture has been added
+                viewModel.SaveTimetableContents();
+
                 Application.Current.MainPage.DisplayAlert("Message", $"{cellsToAdd[0].ParentLecture.SubjectNameEN} has been added to the timetable", "Ok");
             }
         }

@@ -2,11 +2,28 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/APUToki.Android.pdb
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/com.totsky.APU_Toki.apk
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/com.totsky.APU_Toki-Signed.apk
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/APUToki.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/APUToki.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/FormsViewGroup.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/HtmlAgilityPack.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Mono.Android.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Plugin.Calendars.Abstractions.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Plugin.Connectivity.Abstractions.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/SQLiteNetExtensions.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/SQLiteNetExtensionsAsync.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Xamarin.Forms.Core.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Xamarin.Forms.Platform.Android.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Xamarin.Forms.Xaml.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Plugin.Connectivity.dll.mdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Plugin.Settings.Abstractions.dll.mdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Plugin.Settings.dll.mdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Xamarin.Essentials.dll.mdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/APUToki.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/MonoAndroid,Version=v8.1.AssemblyAttributes.cs
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/build.props
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/adb.props
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/APUToki.Android.csprojAssemblyReference.cache
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/libraryimports.cache.stamp
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/resourcepaths.cache
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/res.flag
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/APUToki.Android.csproj.CoreCompileInputs.cache
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/XamlC.stamp
@@ -34,39 +51,6 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/R.cs.flag
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/R.txt
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/uploadflags.txt
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/FormsViewGroup.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/HtmlAgilityPack.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Mono.Android.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Plugin.Calendars.Abstractions.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Plugin.Connectivity.Abstractions.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/SQLiteNetExtensions.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/SQLiteNetExtensionsAsync.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Xamarin.Forms.Core.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Xamarin.Forms.Platform.Android.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Xamarin.Forms.Xaml.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/APUToki.Android.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/APUToki.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/FormsViewGroup.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/HtmlAgilityPack.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Mono.Android.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Plugin.Calendars.Abstractions.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Plugin.Connectivity.Abstractions.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/SQLiteNetExtensions.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/SQLiteNetExtensionsAsync.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Xamarin.Forms.Core.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Xamarin.Forms.Platform.Android.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Xamarin.Forms.Xaml.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Plugin.Connectivity.dll.mdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Plugin.Settings.Abstractions.dll.mdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Plugin.Settings.dll.mdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/bin/Debug/Xamarin.Essentials.dll.mdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Plugin.Connectivity.dll.mdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Plugin.Settings.Abstractions.dll.mdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Plugin.Settings.dll.mdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Xamarin.Essentials.dll.mdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/build.props
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/adb.props
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/resourcepaths.cache
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/resolvedassemblies.hash
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/APUToki.Android.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Acr.UserDialogs.dll
@@ -165,6 +149,22 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Mono.Security.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/System.ServiceModel.Internals.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/System.Buffers.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/APUToki.Android.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/APUToki.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/FormsViewGroup.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/HtmlAgilityPack.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Mono.Android.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Plugin.Calendars.Abstractions.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Plugin.Connectivity.Abstractions.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/SQLiteNetExtensions.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/SQLiteNetExtensionsAsync.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Xamarin.Forms.Core.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Xamarin.Forms.Platform.Android.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Xamarin.Forms.Xaml.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Plugin.Connectivity.dll.mdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Plugin.Settings.Abstractions.dll.mdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Plugin.Settings.dll.mdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/linksrc/Xamarin.Essentials.dll.mdb
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/link.flag
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Acr.UserDialogs.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/AndHUD.dll
@@ -188,7 +188,7 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Microsoft.Extensions.FileSystemGlobbing.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Microsoft.Extensions.Primitives.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Mono.Android.dll
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Mono.Android.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Mono.Security 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Mono.Security.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/mscorlib.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/netstandard.dll
@@ -214,12 +214,17 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLitePCLRaw.batteries_green.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLitePCLRaw.batteries_v2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLitePCLRaw.core.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLitePCLRaw.lib.e_sqlite3 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLitePCLRaw.lib.e_sqlite3.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLitePCLRaw.provider.e_sqlite3.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Buffers.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Collections.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.ComponentModel.Composition 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.ComponentModel.Composition.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Core 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Core.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Data 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Data.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Diagnostics.Debug.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.dll
@@ -232,6 +237,7 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Linq.Expressions.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Memory.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Net.Http.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Numerics 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Numerics.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Numerics.Vectors.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.ObjectModel.dll
@@ -241,40 +247,58 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Runtime.CompilerServices.Unsafe.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Runtime.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Runtime.Extensions.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Runtime.Serialization 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Runtime.Serialization.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Security.Cryptography.Pkcs.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.ServiceModel.Internals 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.ServiceModel.Internals.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Text.Encoding.CodePages.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Threading.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Threading.Tasks.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Transactions.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Web.Services 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Web.Services.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Xml 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Xml.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Xml.Linq 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Xml.Linq.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Arch.Core.Common.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Arch.Lifecycle.Common.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Arch.Lifecycle.Runtime.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Animated.Vector.Drawable.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Annotations.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Compat 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Compat.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Core.UI 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Core.UI.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Core.Utils 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Core.Utils.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.CustomTabs.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Design 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Design.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Fragment 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Fragment.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Media.Compat 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Media.Compat.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Transition 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Transition.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.v4.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.v7.AppCompat 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.v7.AppCompat.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.v7.CardView.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.v7.MediaRouter 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.v7.MediaRouter.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.v7.Palette.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.v7.RecyclerView 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.v7.RecyclerView.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Android.Support.Vector.Drawable.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Essentials 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Essentials.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Essentials.dll.mdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Forms.Core 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Forms.Core.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Forms.Core.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Forms.Platform.Android 2.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Forms.Platform.Android.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Forms.Platform.Android.pdb
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Xamarin.Forms.Platform.dll

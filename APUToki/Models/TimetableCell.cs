@@ -112,7 +112,7 @@ namespace APUToki.Models
                 return false;
 
             //if it is a semester lecture, only check for row and column
-            if (ParentLecture.Term == "Semester")
+            if (ParentLecture.Term == "Semester" || other.ParentLecture.Term == "Semester")
             {
                 return Row == other.Row && Column == other.Column;
             }
