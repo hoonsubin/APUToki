@@ -31,31 +31,37 @@ namespace APUToki.ViewModels
 
         }
 
+        /// <summary>
+        /// Saves the lectures in the timetable as a single string divided by a delimiter
+        /// example: [SubjectNameEN]-[Curriculum]-[Semester]|[NextLecture]
+        /// </summary>
         public void SaveTimetableContents()
         {
             var allLectures = Q1TimetableItems.Union(Q2TimetableItems);
 
             string timetableSerial = string.Empty;
 
-            foreach (var i in allLectures)
+            if (allLectures.Any())
             {
-                string serial = i.ParentLecture.SubjectNameEN + "-" + i.ParentLecture.Curriculum + "-" + i.ParentLecture.Semester;
-
-                if (!timetableSerial.Contains(serial))
+                foreach (var i in allLectures)
                 {
-                    timetableSerial += serial + ApuBot.delimiter;
-                    Debug.WriteLine(i.GetHashCode());
+                    string serial = i.ParentLecture.SubjectNameEN + "-" + i.ParentLecture.Curriculum + "-" + i.ParentLecture.Semester;
+
+                    if (!timetableSerial.Contains(serial))
+                    {
+                        timetableSerial += serial + ApuBot.delimiter;
+                        Debug.WriteLine(i.GetHashCode());
+                    }
                 }
 
+                //remove the last delimiter
+                timetableSerial = timetableSerial.Remove(timetableSerial.Length - 1);
 
+                Debug.WriteLine("[TimetableViewModel]Saving " + timetableSerial);
             }
 
-            //remove the last delimiter
-            timetableSerial = timetableSerial.Remove(timetableSerial.Length - 1);
-
-            Debug.WriteLine("[TimetableViewModel]Saving " + timetableSerial);
-
             Application.Current.Properties["TimetableItems"] = timetableSerial;
+            Application.Current.SavePropertiesAsync();
         }
 
         public async Task LoadTimetableContentsAsync()
@@ -63,19 +69,30 @@ namespace APUToki.ViewModels
             //check if the timetable property exists first
             if (Application.Current.Properties.ContainsKey("TimetableItems"))
             {
+                //call the saved string and split it into an array
                 var timetableContents = Application.Current.Properties["TimetableItems"].ToString().Split(ApuBot.delimiter);
+
+                Debug.WriteLine("[TimetableViewModel]Loading string " + Application.Current.Properties["TimetableItems"]);
+
+                //load the database
                 var timetableCellsFromDb = await App.Database.GetAllLecturesAsync();
+                Debug.WriteLine("[TimetableViewModel]Finished loading database");
 
                 for (int i = 0; i < timetableContents.Length; i++)
                 {
+                    //split the lecture to its attributes
                     var lectureFromSave = timetableContents[i].Split('-');
 
+                    //use Linq to query through the lecture database
                     var lectureToLoad = timetableCellsFromDb.FirstOrDefault(x => x.SubjectNameEN == lectureFromSave[0]
                         && x.Curriculum == lectureFromSave[1]
                         && x.Semester == lectureFromSave[2]);
+                    Debug.WriteLine("[TimetableViewModel]Found matching lecture " + lectureFromSave[0]);
 
+                    //check if the lecture is not null
                     if (lectureToLoad != null)
                     {
+                        //add the timetable cells to the timetable page list so it can be drawn later
                         foreach (var cell in lectureToLoad.TimetableCells)
                         {
                             if (lectureToLoad.Term.Contains("1"))

@@ -47,7 +47,7 @@ namespace APUToki.Views
             //show the last timetable view
             if (Application.Current.Properties.ContainsKey("LastOpenedQ"))
             {
-                btnTermChange.Text = Application.Current.Properties["LastOpenedQ"] as string;
+                btnTermChange.Text = Application.Current.Properties["LastOpenedQ"].ToString();
             }
         }
 
@@ -117,6 +117,7 @@ namespace APUToki.Views
             }
 
             Application.Current.Properties["LastOpenedQ"] = btnTermChange.Text;
+            Application.Current.SavePropertiesAsync();
         }
 
         /// <summary>
@@ -156,8 +157,9 @@ namespace APUToki.Views
                 ClearAllGridChildrens();
                 DrawCellsToGrid(viewModel.Q2TimetableItems);
             }
-            //remove the current page and go back to the timetable view page
+            //save (update) the current list of lectures
             viewModel.SaveTimetableContents();
+            //remove the current page and go back to the timetable view page
             await Navigation.PopAsync();
         }
 

@@ -30,9 +30,15 @@ namespace APUToki.ViewModels
             TimetableCells = lectureItem.TimetableCells;
 
             //define what the button is going to do, in this case open the syllabus of the given lecture id
+
             OpenWebCommand = new Command(() => Device.OpenUri
             (new Uri($"https://portal2.apu.ac.jp/campusp/slbssbdr.do?value%28risyunen%29={lectureItem.Semester}&value%28semekikn%29=1&value%28kougicd%29="
             + lectureItem.SubjectId)));
+
+            /*
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync(new Uri($"https://portal2.apu.ac.jp/campusp/slbssbdr.do?value%28risyunen%29={LectureItem.Semester}&value%28semekikn%29=1&value%28kougicd%29="
+            + LectureItem.SubjectId), BrowserLaunchMode.SystemPreferred));
+            */
 
             if (LectureItem != null)
             {

@@ -6,6 +6,7 @@ using SQLiteNetExtensionsAsync.Extensions;
 using System.Diagnostics;
 using System.IO;
 using System;
+using System.Linq;
 
 namespace APUToki.Services
 {
@@ -99,6 +100,7 @@ namespace APUToki.Services
             //return _database.Table<Lecture>().ToListAsync();
             return _database.GetAllWithChildrenAsync<Lecture>();
         }
+
         /// <summary>
         /// Gets all timetable cells from the database async.
         /// </summary>

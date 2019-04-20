@@ -24,7 +24,7 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/bin/Debug/netstandard2.0/APUToki.dll
 /Users/hoonkim/.nuget/packages/xamarin.forms/3.6.0.344457/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll
 /Users/hoonkim/.nuget/packages/htmlagilitypack/1.8.13/lib/netstandard2.0/HtmlAgilityPack.dll
-/Users/hoonkim/.nuget/packages/epplus/4.5.3/lib/netstandard2.0/EPPlus.dll
+/Users/hoonkim/.nuget/packages/epplus/4.5.3.1/lib/netstandard2.0/EPPlus.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/12.8.0.0/lib/mono/Xamarin.iOS/Facades/System.Drawing.Common.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/12.8.0.0/lib/mono/Xamarin.iOS/Facades/System.Security.Cryptography.Pkcs.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/12.8.0.0/lib/mono/Xamarin.iOS/System.Security.dll

@@ -326,8 +326,6 @@ namespace APUToki.Services
             //xpath for finding the div element with the class entry
             string xpath = $"//div[contains(@class, 'entry')]";
 
-            var timetablePaths = new List<string>();
-
             var timetableStreams = new List<Stream>();
 
             //load the html document from the given link

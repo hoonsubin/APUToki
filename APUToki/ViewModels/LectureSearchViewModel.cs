@@ -28,7 +28,11 @@ namespace APUToki.ViewModels
 
         }
 
-        //invokes everytime when the searchbar is changed
+        /// <summary>
+        /// Searchs the lectures from the database with the given query async.
+        /// </summary>
+        /// <returns>Populates SearchResults list with the given match</returns>
+        /// <param name="query">Search query.</param>
         public async Task SearchLecturesAsync(string query)
         {
             //load saved lectures from the database

@@ -107,3 +107,6 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.csproj.CopyComplete
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.exe
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.8-12.2/optimized/apu_logo@3x.png
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.8-12.2/optimized/apu_logo@2x.png
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.8-12.2/optimized/apu_logo.png
