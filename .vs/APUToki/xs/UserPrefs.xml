@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{C1477615-B0B2-4DBB-AE28-2420006A17C7}|Default">
   <MonoDevelop.Ide.ItemProperties.APUToki.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.86F2AEB7-7AB8-4F59-A301-26BAF1C4C7C5" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/Views/TimetablePage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/ViewModels/LectureSearchViewModel.cs">
     <Files>
-      <File FileName="APUToki/Views/TimetablePage.xaml.cs" Line="40" Column="27" />
-      <File FileName="APUToki/ViewModels/TimetableViewModel.cs" Line="85" Column="1" />
+      <File FileName="APUToki/Views/LectureSearchPage.xaml" />
+      <File FileName="APUToki/Views/LectureSearchPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="APUToki/ViewModels/LectureSearchViewModel.cs" Line="1" Column="1" />
+      <File FileName="APUToki/Services/SyncEvents.cs" Line="283" Column="59" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,14 +13,15 @@
           <Node name="APUToki" expanded="True">
             <Node name="APUToki" expanded="True">
               <Node name="Services" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="LectureSearchViewModel.cs" selected="True" />
+              </Node>
               <Node name="Views" expanded="True">
+                <Node name="ItemsPage.xaml" expanded="True" />
                 <Node name="LectureDetailPage.xaml" expanded="True" />
                 <Node name="LectureSearchPage.xaml" expanded="True" />
                 <Node name="MainPage.xaml" expanded="True" />
-                <Node name="TimetablePage.xaml" expanded="True">
-                  <Node name="TimetablePage.xaml.cs" selected="True" />
-                </Node>
+                <Node name="TimetablePage.xaml" expanded="True" />
               </Node>
               <Node name="App.xaml" expanded="True" />
             </Node>
