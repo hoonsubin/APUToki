@@ -1,43 +1,35 @@
 ﻿<Properties StartupConfiguration="{C1477615-B0B2-4DBB-AE28-2420006A17C7}|Default">
-  <MonoDevelop.Ide.ItemProperties.APUToki.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.414751d77e8fd5e494a76ad634f6874090687401" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/ViewModels/LectureDetailViewModel.cs">
+  <MonoDevelop.Ide.ItemProperties.APUToki.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.86F2AEB7-7AB8-4F59-A301-26BAF1C4C7C5" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/Views/TimetablePage.xaml.cs">
     <Files>
-      <File FileName="APUToki/Views/TimetablePage.xaml.cs" Line="128" Column="44" />
-      <File FileName="APUToki/ViewModels/LectureDetailViewModel.cs" Line="6" Column="21" />
-      <File FileName="APUToki/ViewModels/TimetableViewModel.cs" Line="62" Column="1" />
-      <File FileName="APUToki/Services/ApuBot.cs" Line="375" Column="30" />
-      <File FileName="../../../../.nuget/packages/epplus/4.5.3.1/readme.txt" Line="30" Column="31" />
+      <File FileName="APUToki/Views/TimetablePage.xaml.cs" Line="40" Column="27" />
+      <File FileName="APUToki/ViewModels/TimetableViewModel.cs" Line="85" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="APUToki" expanded="True">
-            <Node name="APUToki" expanded="True" selected="True">
-              <Node name="Dependencies" expanded="True" />
+            <Node name="APUToki" expanded="True">
               <Node name="Services" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="LectureDetailPage.xaml" expanded="True" />
                 <Node name="LectureSearchPage.xaml" expanded="True" />
                 <Node name="MainPage.xaml" expanded="True" />
-                <Node name="TimetablePage.xaml" expanded="True" />
+                <Node name="TimetablePage.xaml" expanded="True">
+                  <Node name="TimetablePage.xaml.cs" selected="True" />
+                </Node>
               </Node>
               <Node name="App.xaml" expanded="True" />
-            </Node>
-            <Node name="APUToki.Android" expanded="True">
-              <Node name="References" expanded="True" />
-            </Node>
-            <Node name="APUToki.iOS" expanded="True">
-              <Node name="References" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.APUToki.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.pixel_phone" />
+  <MonoDevelop.Ide.ItemProperties.APUToki.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.nexus_one" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

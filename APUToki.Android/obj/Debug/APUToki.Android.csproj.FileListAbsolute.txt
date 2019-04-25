@@ -285,3 +285,6 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/stamp/_CopyMdbFiles.stamp
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/stamp/_CopyPdbFiles.stamp
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/machine.config
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/stamp/_CompileToDalvik.stamp
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/stamp/_GeneratePackageManagerJava.stamp

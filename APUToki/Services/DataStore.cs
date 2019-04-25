@@ -6,7 +6,7 @@ using SQLiteNetExtensionsAsync.Extensions;
 using System.Diagnostics;
 using System.IO;
 using System;
-using System.Linq;
+using Newtonsoft.Json;
 
 namespace APUToki.Services
 {
@@ -156,6 +156,40 @@ namespace APUToki.Services
             return _database.DeleteAllAsync(lectures, true);
         }
         #endregion
+
+        /// <summary>
+        /// Serializes the input Lecture object to JSON in string.
+        /// </summary>
+        /// <returns>Serialized json string.</returns>
+        /// <param name="lecture">Lecture.</param>
+        public string SerializeToJson(object lecture)
+        {
+            return JsonConvert.SerializeObject(lecture, Formatting.Indented,
+                new JsonSerializerSettings
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                });
+        }
+
+        /// <summary>
+        /// Deserializes from json to Lecture object.
+        /// </summary>
+        /// <returns>Lecture object.</returns>
+        /// <param name="json">Json.</param>
+        public List<TimetableCell> DeserializeTimetableListFromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<List<TimetableCell>>(json);
+        }
+
+        /// <summary>
+        /// Deserializes from json to Lecture object.
+        /// </summary>
+        /// <returns>Lecture object.</returns>
+        /// <param name="json">Json.</param>
+        public List<Lecture> DeserializeLectureListFromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<List<Lecture>>(json);
+        }
 
     }
 }

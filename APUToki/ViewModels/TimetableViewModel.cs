@@ -25,7 +25,6 @@ namespace APUToki.ViewModels
         {
             Title = "Timetable";
 
-            //todo: make a function to save and load these two lists from the database
             Q1TimetableItems = new List<TimetableCell>();
             Q2TimetableItems = new List<TimetableCell>();
 
@@ -37,88 +36,76 @@ namespace APUToki.ViewModels
         /// </summary>
         public void SaveTimetableContents()
         {
-            var allLectures = Q1TimetableItems.Union(Q2TimetableItems);
 
-            string timetableSerial = string.Empty;
+            //todo: change this method so that it serializes the list of timetable cell as xml
 
-            if (allLectures.Any())
+            var allTimeCells = Q1TimetableItems.Union(Q2TimetableItems);
+
+            var allLectures = new List<Lecture>();
+
+            foreach(var i in allTimeCells)
             {
-                foreach (var i in allLectures)
+                if (!allLectures.Contains(i.ParentLecture))
                 {
-                    string serial = i.ParentLecture.SubjectNameEN + "-" + i.ParentLecture.Curriculum + "-" + i.ParentLecture.Semester;
-
-                    if (!timetableSerial.Contains(serial))
-                    {
-                        timetableSerial += serial + ApuBot.delimiter;
-                        Debug.WriteLine(i.GetHashCode());
-                    }
+                    allLectures.Add(i.ParentLecture);
                 }
-
-                //remove the last delimiter
-                timetableSerial = timetableSerial.Remove(timetableSerial.Length - 1);
-
-                Debug.WriteLine("[TimetableViewModel]Saving " + timetableSerial);
             }
 
-            Application.Current.Properties["TimetableItems"] = timetableSerial;
-            Application.Current.SavePropertiesAsync();
+            if (allTimeCells.Any())
+            {
+                var serializedObject = App.Database.SerializeToJson(allLectures);
+
+                Debug.WriteLine("Saving " + serializedObject);
+
+                Application.Current.Properties["TimetableItems"] = serializedObject;
+                //save the serialized dictionary to the disk
+                Application.Current.SavePropertiesAsync();
+            }
+            else
+            {
+                Debug.WriteLine("No timetable in list to save");
+            }
+
         }
 
-        public async Task LoadTimetableContentsAsync()
+        public void LoadTimetableContents()
         {
-            //check if the timetable property exists first
             if (Application.Current.Properties.ContainsKey("TimetableItems"))
             {
-                //call the saved string and split it into an array
-                var timetableContents = Application.Current.Properties["TimetableItems"].ToString().Split(ApuBot.delimiter);
+                //todo: problem with loading the parent lecture object
 
-                Debug.WriteLine("[TimetableViewModel]Loading string " + Application.Current.Properties["TimetableItems"]);
 
-                //load the database
-                var timetableCellsFromDb = await App.Database.GetAllLecturesAsync();
-                Debug.WriteLine("[TimetableViewModel]Finished loading database");
+                List<Lecture> alllectures = App.Database.DeserializeLectureListFromJson(Application.Current.Properties["TimetableItems"].ToString());
 
-                for (int i = 0; i < timetableContents.Length; i++)
+                foreach (var i in alllectures)
                 {
-                    //split the lecture to its attributes
-                    var lectureFromSave = timetableContents[i].Split('-');
 
-                    //use Linq to query through the lecture database
-                    var lectureToLoad = timetableCellsFromDb.FirstOrDefault(x => x.SubjectNameEN == lectureFromSave[0]
-                        && x.Curriculum == lectureFromSave[1]
-                        && x.Semester == lectureFromSave[2]);
-                    Debug.WriteLine("[TimetableViewModel]Found matching lecture " + lectureFromSave[0]);
+                    Debug.WriteLine("Loading " + i.SubjectNameEN);
 
-                    //check if the lecture is not null
-                    if (lectureToLoad != null)
+                    foreach (var x in i.TimetableCells)
                     {
-                        //add the timetable cells to the timetable page list so it can be drawn later
-                        foreach (var cell in lectureToLoad.TimetableCells)
+                        x.ParentLecture = i;
+
+                        if (i.Term.Contains("1st"))
                         {
-                            if (lectureToLoad.Term.Contains("1"))
-                            {
-                                Q1TimetableItems.Add(cell);
-                            }
-                            else if (lectureToLoad.Term.Contains("2"))
-                            {
-                                Q2TimetableItems.Add(cell);
-                            }
-                            else
-                            {
-                                //add the semester lecture to both lists
-                                Q1TimetableItems.Add(cell);
-                                Q2TimetableItems.Add(cell);
-                            }
+
+                            Q1TimetableItems.Add(x);
                         }
-
-                        Debug.WriteLine("[TimetableViewModel]Loading lecture " + lectureToLoad.SubjectNameEN + " from the database");
-
-                    }
-                    else
-                    {
-                        Debug.WriteLine("[Error]Could not find " + i + " from the database");
+                        else if (i.Term.Contains("2nd"))
+                        {
+                            Q2TimetableItems.Add(x);
+                        }
+                        else
+                        {
+                            Q1TimetableItems.Add(x);
+                            Q2TimetableItems.Add(x);
+                        }
                     }
                 }
+            }
+            else
+            {
+                Debug.WriteLine("Found no save for timetables");
             }
         }
 

@@ -28,11 +28,16 @@ namespace APUToki.Views
             //create a new list that holds the xaml elements
             CurrentCells = new List<View>();
 
-            //load the saved timetable cells
-            //viewModel.LoadTimetableContentsAsync().Wait();
+            //show the last timetable view
+            if (Application.Current.Properties.ContainsKey("LastOpenedQ"))
+            {
+                btnTermChange.Text = Application.Current.Properties["LastOpenedQ"].ToString();
+            }
+
+            viewModel.LoadTimetableContents();
 
             //add the existing timetable items to the grid
-            DrawCellsToGrid(viewModel.Q1TimetableItems);
+            DrawQuarter();
 
             MessagingCenter.Subscribe<LectureDetailViewModel, List<TimetableCell>>(this, "AddTimetableCell", (sender, arg) => 
             {
@@ -44,11 +49,7 @@ namespace APUToki.Views
                 RemoveCellsFromTimetableAsync(arg);
             });
 
-            //show the last timetable view
-            if (Application.Current.Properties.ContainsKey("LastOpenedQ"))
-            {
-                btnTermChange.Text = Application.Current.Properties["LastOpenedQ"].ToString();
-            }
+           
         }
 
         /// <summary>
@@ -92,6 +93,22 @@ namespace APUToki.Views
             }
         }
 
+        void DrawQuarter()
+        {
+            var is1stQuarter = btnTermChange.Text.Contains("1st");
+
+            if (is1stQuarter)
+            {
+                ClearAllGridChildrens();
+                DrawCellsToGrid(viewModel.Q1TimetableItems);
+            }
+            else
+            {
+                ClearAllGridChildrens();
+                DrawCellsToGrid(viewModel.Q2TimetableItems);
+            }
+        }
+
 
         /// <summary>
         /// Switchs the quarter to be displayed when the button is pressed
@@ -104,16 +121,14 @@ namespace APUToki.Views
             {
                 //switch to 2nd quarter
                 btnTermChange.Text = "2nd Q";
-                ClearAllGridChildrens();
-                DrawCellsToGrid(viewModel.Q2TimetableItems);
+                DrawQuarter();
 
             }
             else
             {
                 //switch to 1st quarter
                 btnTermChange.Text = "1st Q";
-                ClearAllGridChildrens();
-                DrawCellsToGrid(viewModel.Q1TimetableItems);
+                DrawQuarter();
             }
 
             Application.Current.Properties["LastOpenedQ"] = btnTermChange.Text;
@@ -188,7 +203,7 @@ namespace APUToki.Views
                 {
 
                     //todo: get the lecture with the same period in the existing list, and add options to switch with current lecture
-                    Application.Current.MainPage.DisplayAlert("Alert", "Lecture is conflicting with existing lecture", "Dismiss");
+                    Application.Current.MainPage.DisplayAlert("Message","Lecture is conflicting with existing lecture", "Dismiss");
                 }
             }
             else
@@ -234,8 +249,8 @@ namespace APUToki.Views
         async void Search_ClickedAsync(object sender, EventArgs e)
         {
             //open the search page
-            await Navigation.PushAsync(new NavigationPage(new LectureSearchPage()));
-
+            //await Navigation.PushAsync(new NavigationPage(new LectureSearchPage()));
+            await Navigation.PushAsync(new LectureSearchPage());
         }
     }
 }
