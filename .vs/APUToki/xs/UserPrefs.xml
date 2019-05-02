@@ -1,19 +1,27 @@
 ﻿<Properties StartupConfiguration="{87EA89BB-A0C3-4431-BF08-4BDF4A947D04}|Default">
-  <MonoDevelop.Ide.ItemProperties.APUToki.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.FA2351C0-C17D-40B3-AF34-0E4EDF9EAA5A" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/Models/Lecture.cs">
+  <MonoDevelop.Ide.ItemProperties.APUToki.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.86F2AEB7-7AB8-4F59-A301-26BAF1C4C7C5" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/ViewModels/LectureDetailViewModel.cs">
     <Files>
-      <File FileName="APUToki/Views/LectureDetailPage.xaml.cs" Line="23" Column="39" />
-      <File FileName="APUToki/ViewModels/LectureDetailViewModel.cs" Line="14" Column="50" />
-      <File FileName="APUToki/Views/TimetablePage.xaml" Line="28" Column="13" />
-      <File FileName="APUToki/Views/TimetablePage.xaml.cs" Line="30" Column="16" />
-      <File FileName="APUToki/ViewModels/TimetableViewModel.cs" Line="28" Column="9" />
-      <File FileName="APUToki/Services/SyncEvents.cs" Line="235" Column="18" />
-      <File FileName="APUToki/Models/TimetableCell.cs" Line="116" Column="79" />
-      <File FileName="APUToki/Models/AcademicEvent.cs" Line="62" Column="9" />
-      <File FileName="APUToki/Models/Lecture.cs" Line="149" Column="40" />
+      <File FileName="APUToki/Views/TimetablePage.xaml.cs" Line="154" Column="41" />
+      <File FileName="APUToki/ViewModels/LectureDetailViewModel.cs" Line="34" Column="48" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="APUToki" expanded="True">
+            <Node name="APUToki" expanded="True">
+              <Node name="Services" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="LectureDetailViewModel.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.APUToki.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.pixel_phone" />
+  <MonoDevelop.Ide.ItemProperties.APUToki.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.nexus_one" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
