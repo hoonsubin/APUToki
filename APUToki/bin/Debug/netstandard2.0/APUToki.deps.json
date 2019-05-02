@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "04d0f2410c5592cf9dd0358f0757cf34fa2994dc"
+    "signature": "12d28be1473583842ebcbcdd27fd0605dbe0ad8b"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,13 +11,14 @@
         "dependencies": {
           "Acr.UserDialogs": "7.0.1",
           "CClarke.Plugin.Calendars": "1.0.0",
-          "EPPlus": "4.5.3",
+          "EPPlus": "4.5.3.1",
           "HtmlAgilityPack": "1.8.13",
           "NETStandard.Library": "2.0.3",
           "Plugin.Permissions": "3.0.0.12",
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "System.Buffers": "4.5.0",
+          "System.Drawing.Common": "4.5.1",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.0.1",
@@ -48,7 +49,7 @@
           }
         }
       },
-      "EPPlus/4.5.3": {
+      "EPPlus/4.5.3.1": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
           "System.ComponentModel.TypeConverter": "4.3.0",
@@ -64,8 +65,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/EPPlus.dll": {
-            "assemblyVersion": "4.5.3.0",
-            "fileVersion": "4.5.3.0"
+            "assemblyVersion": "4.5.3.1",
+            "fileVersion": "4.5.3.1"
           }
         }
       },
@@ -1107,12 +1108,12 @@
       "path": "cclarke.plugin.calendars/1.0.0",
       "hashPath": "cclarke.plugin.calendars.1.0.0.nupkg.sha512"
     },
-    "EPPlus/4.5.3": {
+    "EPPlus/4.5.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SfgIo0vmrIEavrkB4eOvalT5kIQiz8ma3VLtxHZfoBiRzdrqMPzjeeCNsVxjX2suNOjtcW604fSm1HuFO68Wsw==",
-      "path": "epplus/4.5.3",
-      "hashPath": "epplus.4.5.3.nupkg.sha512"
+      "sha512": "sha512-P/emyyYWEn7SG+u8AdXhzmTERkMbCt6FO45qO0Wodhxd43H/FQWgmlp+ABhuGpuia66IlnjwFfdyngNJw0Q5mg==",
+      "path": "epplus/4.5.3.1",
+      "hashPath": "epplus.4.5.3.1.nupkg.sha512"
     },
     "HtmlAgilityPack/1.8.13": {
       "type": "package",

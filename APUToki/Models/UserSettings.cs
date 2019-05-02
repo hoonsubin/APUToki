@@ -19,6 +19,7 @@ namespace APUToki.Models
             get => AppSettings.GetValueOrDefault(nameof(LastTimetableUpdate), string.Empty);
             set => AppSettings.AddOrUpdateValue(nameof(LastTimetableUpdate), value);
         }
+
         public static void ClearAllData()
         {
             AppSettings.Clear();

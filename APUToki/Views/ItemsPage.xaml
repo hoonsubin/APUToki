@@ -14,6 +14,15 @@
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--Page Level Resources: Compatibile with Xamarin Live Player-->
+            <Color x:Key="Primary">#ab003e</Color>
+            <Color x:Key="Accent">#8f8f8f</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="ItemsListView"
@@ -33,7 +42,7 @@
                         <ViewCell Height="30">
                             <StackLayout VerticalOptions="FillAndExpand" 
                                          Padding="5" 
-                                         BackgroundColor="#7c0020">
+                                         BackgroundColor="{StaticResource Primary}">
                                 
                                 <Label Text="{Binding Heading}" 
                                        TextColor="White"

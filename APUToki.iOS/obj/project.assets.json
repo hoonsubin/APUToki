@@ -43,7 +43,7 @@
           "lib/Xamarin.iOS10/Plugin.Calendars.dll": {}
         }
       },
-      "EPPlus/4.5.3": {
+      "EPPlus/4.5.3.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
@@ -494,7 +494,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.6.0.264807": {
+      "Xamarin.Forms/3.6.0.344457": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -623,12 +623,13 @@
         "dependencies": {
           "Acr.UserDialogs": "7.0.1",
           "CClarke.Plugin.Calendars": "1.0.0",
-          "EPPlus": "4.5.3",
+          "EPPlus": "4.5.3.1",
           "HtmlAgilityPack": "1.8.13",
           "Plugin.Permissions": "3.0.0.12",
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "System.Buffers": "4.5.0",
+          "System.Drawing.Common": "4.5.1",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.0.1",
@@ -685,7 +686,7 @@
           "lib/Xamarin.iOS10/Plugin.Calendars.dll": {}
         }
       },
-      "EPPlus/4.5.3": {
+      "EPPlus/4.5.3.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
@@ -1104,7 +1105,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.6.0.264807": {
+      "Xamarin.Forms/3.6.0.344457": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1233,12 +1234,13 @@
         "dependencies": {
           "Acr.UserDialogs": "7.0.1",
           "CClarke.Plugin.Calendars": "1.0.0",
-          "EPPlus": "4.5.3",
+          "EPPlus": "4.5.3.1",
           "HtmlAgilityPack": "1.8.13",
           "Plugin.Permissions": "3.0.0.12",
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "System.Buffers": "4.5.0",
+          "System.Drawing.Common": "4.5.1",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.0.1",
@@ -1295,7 +1297,7 @@
           "lib/Xamarin.iOS10/Plugin.Calendars.dll": {}
         }
       },
-      "EPPlus/4.5.3": {
+      "EPPlus/4.5.3.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
@@ -1714,7 +1716,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.6.0.264807": {
+      "Xamarin.Forms/3.6.0.344457": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1843,12 +1845,13 @@
         "dependencies": {
           "Acr.UserDialogs": "7.0.1",
           "CClarke.Plugin.Calendars": "1.0.0",
-          "EPPlus": "4.5.3",
+          "EPPlus": "4.5.3.1",
           "HtmlAgilityPack": "1.8.13",
           "Plugin.Permissions": "3.0.0.12",
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "System.Buffers": "4.5.0",
+          "System.Drawing.Common": "4.5.1",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.0.1",
@@ -1905,7 +1908,7 @@
           "lib/Xamarin.iOS10/Plugin.Calendars.dll": {}
         }
       },
-      "EPPlus/4.5.3": {
+      "EPPlus/4.5.3.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
@@ -2324,7 +2327,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.6.0.264807": {
+      "Xamarin.Forms/3.6.0.344457": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -2453,12 +2456,13 @@
         "dependencies": {
           "Acr.UserDialogs": "7.0.1",
           "CClarke.Plugin.Calendars": "1.0.0",
-          "EPPlus": "4.5.3",
+          "EPPlus": "4.5.3.1",
           "HtmlAgilityPack": "1.8.13",
           "Plugin.Permissions": "3.0.0.12",
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "System.Buffers": "4.5.0",
+          "System.Drawing.Common": "4.5.1",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.0.1",
@@ -2540,13 +2544,13 @@
         "lib/netstandard1.0/Plugin.Calendars.xml"
       ]
     },
-    "EPPlus/4.5.3": {
-      "sha512": "SfgIo0vmrIEavrkB4eOvalT5kIQiz8ma3VLtxHZfoBiRzdrqMPzjeeCNsVxjX2suNOjtcW604fSm1HuFO68Wsw==",
+    "EPPlus/4.5.3.1": {
+      "sha512": "P/emyyYWEn7SG+u8AdXhzmTERkMbCt6FO45qO0Wodhxd43H/FQWgmlp+ABhuGpuia66IlnjwFfdyngNJw0Q5mg==",
       "type": "package",
-      "path": "epplus/4.5.3",
+      "path": "epplus/4.5.3.1",
       "files": [
         ".signature.p7s",
-        "epplus.4.5.3.nupkg.sha512",
+        "epplus.4.5.3.1.nupkg.sha512",
         "epplus.nuspec",
         "lib/net35/EPPlus.dll",
         "lib/net35/EPPlus.xml",
@@ -3720,10 +3724,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/3.6.0.264807": {
-      "sha512": "T7gYS3PoGNtp6D7GAX7fF4QzR7NC36NNQSiuEb5TXO8rEqkZGwpC4u/6S62rH0wL3dabWNVpJPPnL5jZvWeoVg==",
+    "Xamarin.Forms/3.6.0.344457": {
+      "sha512": "YTPYiRg5q8Q1AgkjX9mx2/0wfCNyoSfztvvWw9HY4qM1lmOgkAxAbbtY8zi3fCPUXhfZrCAgRvJYNS8VM519kQ==",
       "type": "package",
-      "path": "xamarin.forms/3.6.0.264807",
+      "path": "xamarin.forms/3.6.0.344457",
       "files": [
         ".signature.p7s",
         "build/MonoAndroid10/proguard.cfg",
@@ -3880,7 +3884,7 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.3.6.0.264807.nupkg.sha512",
+        "xamarin.forms.3.6.0.344457.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -3893,10 +3897,12 @@
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
       "APUToki >= 1.0.0",
+      "EPPlus >= 4.5.3.1",
       "SQLiteNetExtensions.Async >= 2.1.0",
+      "System.Drawing.Common >= 4.5.1",
       "Xam.Plugins.Settings >= 3.1.1",
       "Xamarin.Essentials >= 1.1.0",
-      "Xamarin.Forms >= 3.6.0.264807"
+      "Xamarin.Forms >= 3.6.0.344457"
     ]
   },
   "packageFolders": {
@@ -3909,8 +3915,9 @@
       "projectName": "APUToki.iOS",
       "projectPath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/APUToki.iOS.csproj",
       "packagesPath": "/Users/hoonkim/.nuget/packages/",
-      "outputPath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj",
+      "outputPath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
       "configFilePaths": [
         "/Users/hoonkim/.config/NuGet/NuGet.Config"
       ],
@@ -3933,9 +3940,17 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "EPPlus": {
+            "target": "Package",
+            "version": "[4.5.3.1, )"
+          },
           "SQLiteNetExtensions.Async": {
             "target": "Package",
             "version": "[2.1.0, )"
+          },
+          "System.Drawing.Common": {
+            "target": "Package",
+            "version": "[4.5.1, )"
           },
           "Xam.Plugins.Settings": {
             "target": "Package",
@@ -3947,7 +3962,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[3.6.0.264807, )"
+            "version": "[3.6.0.344457, )"
           }
         }
       }

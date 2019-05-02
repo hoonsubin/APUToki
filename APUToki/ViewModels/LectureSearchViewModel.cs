@@ -6,13 +6,13 @@ using APUToki.Models;
 using APUToki.Services;
 using System.Diagnostics;
 using Xamarin.Forms;
-using Plugin.Connectivity;
 
 namespace APUToki.ViewModels
 {
     public class LectureSearchViewModel : ContentPage
     {
         public ObservableCollection<Lecture> SearchResults { get; set; }
+
         //public ObservableCollection<LectureItem> LectureDatabase { get; set; }
         public Command LoadItemsCommand { get; set; }
 
@@ -28,13 +28,17 @@ namespace APUToki.ViewModels
 
         }
 
-        //invokes everytime when the searchbar is changed
+        /// <summary>
+        /// Searchs the lectures from the database with the given query async.
+        /// </summary>
+        /// <returns>Populates SearchResults list with the given match</returns>
+        /// <param name="query">Search query.</param>
         public async Task SearchLecturesAsync(string query)
         {
             //load saved lectures from the database
             var database = await App.Database.GetAllLecturesAsync();
 
-            Debug.WriteLine("[SearchLecturesAsync]There are " + database.Count + " lectures in the database");
+            Debug.WriteLine($"[SearchLecturesAsync]There are {database.Count} lectures in the database");
 
             SearchResults.Clear();
 
@@ -78,12 +82,11 @@ namespace APUToki.ViewModels
             try
             {
                 //update the list only if it is connected to the internet
-                if (CrossConnectivity.Current.IsConnected)
+                if (SyncEvents.IsConnectedToInternet())
                 {
                     //get new events online, and add them to the database if there is a new one
                     await SyncEvents.UpdateLectureListAsync();
                 }
-                else { Debug.WriteLine("No internet connection"); }
 
             }
             catch (Exception ex)

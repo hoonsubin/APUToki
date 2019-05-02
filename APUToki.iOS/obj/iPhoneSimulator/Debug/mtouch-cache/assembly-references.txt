@@ -68,6 +68,4 @@
 /Users/hoonkim/.nuget/packages/xam.plugins.settings/3.1.1/lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll
 /Users/hoonkim/.nuget/packages/sqlitenetextensions.async/2.1.0/lib/netstandard1.1/SQLiteNetExtensionsAsync.dll
 /Users/hoonkim/.nuget/packages/xam.plugins.settings/3.1.1/lib/Xamarin.iOS10/Plugin.Settings.dll
-/Users/hoonkim/.nuget/packages/xam.plugin.connectivity/3.2.0/lib/Xamarin.iOS10/Plugin.Connectivity.dll
-/Users/hoonkim/.nuget/packages/xam.plugin.connectivity/3.2.0/lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll
 /Users/hoonkim/.nuget/packages/cclarke.plugin.calendars/1.0.0/lib/Xamarin.iOS10/Plugin.Calendars.dll

@@ -22,7 +22,7 @@
           "lib/netstandard1.0/Plugin.Calendars.dll": {}
         }
       },
-      "EPPlus/4.5.3": {
+      "EPPlus/4.5.3.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
@@ -1491,13 +1491,13 @@
         "lib/netstandard1.0/Plugin.Calendars.xml"
       ]
     },
-    "EPPlus/4.5.3": {
-      "sha512": "SfgIo0vmrIEavrkB4eOvalT5kIQiz8ma3VLtxHZfoBiRzdrqMPzjeeCNsVxjX2suNOjtcW604fSm1HuFO68Wsw==",
+    "EPPlus/4.5.3.1": {
+      "sha512": "P/emyyYWEn7SG+u8AdXhzmTERkMbCt6FO45qO0Wodhxd43H/FQWgmlp+ABhuGpuia66IlnjwFfdyngNJw0Q5mg==",
       "type": "package",
-      "path": "epplus/4.5.3",
+      "path": "epplus/4.5.3.1",
       "files": [
         ".signature.p7s",
-        "epplus.4.5.3.nupkg.sha512",
+        "epplus.4.5.3.1.nupkg.sha512",
         "epplus.nuspec",
         "lib/net35/EPPlus.dll",
         "lib/net35/EPPlus.xml",
@@ -5334,13 +5334,14 @@
     ".NETStandard,Version=v2.0": [
       "Acr.UserDialogs >= 7.0.1",
       "CClarke.Plugin.Calendars >= 1.0.0",
-      "EPPlus >= 4.5.3",
+      "EPPlus >= 4.5.3.1",
       "HtmlAgilityPack >= 1.8.13",
       "NETStandard.Library >= 2.0.3",
       "Plugin.Permissions >= 3.0.0.12",
       "SQLiteNetExtensions >= 2.1.0",
       "SQLiteNetExtensions.Async >= 2.1.0",
       "System.Buffers >= 4.5.0",
+      "System.Drawing.Common >= 4.5.1",
       "Xam.Plugin.Connectivity >= 3.2.0",
       "Xam.Plugins.Settings >= 3.1.1",
       "Xamarin.Essentials >= 1.0.1",
@@ -5359,7 +5360,7 @@
       "projectName": "APUToki",
       "projectPath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/APUToki.csproj",
       "packagesPath": "/Users/hoonkim/.nuget/packages/",
-      "outputPath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj",
+      "outputPath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -5397,7 +5398,7 @@
           },
           "EPPlus": {
             "target": "Package",
-            "version": "[4.5.3, )"
+            "version": "[4.5.3.1, )"
           },
           "HtmlAgilityPack": {
             "target": "Package",
@@ -5424,6 +5425,10 @@
           "System.Buffers": {
             "target": "Package",
             "version": "[4.5.0, )"
+          },
+          "System.Drawing.Common": {
+            "target": "Package",
+            "version": "[4.5.1, )"
           },
           "Xam.Plugin.Connectivity": {
             "target": "Package",

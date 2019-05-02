@@ -110,7 +110,15 @@ namespace APUToki.Models
         {
             if (other is null)
                 return false;
-            return Row == other.Row && Column == other.Column;
+
+            //if it is a semester lecture, only check for row and column
+            if (ParentLecture.Term == "Semester" || other.ParentLecture.Term == "Semester")
+            {
+                return Row == other.Row && Column == other.Column;
+            }
+
+            return Row == other.Row && Column == other.Column && ParentLecture.Term == other.ParentLecture.Term;
+
         }
 
         public override bool Equals(object obj) => Equals(obj as TimetableCell);

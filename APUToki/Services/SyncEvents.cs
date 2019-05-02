@@ -11,6 +11,7 @@ using System.Collections.ObjectModel;
 using APUToki.Models;
 using Acr.UserDialogs;
 using Xamarin.Essentials;
+using System.Net;
 
 namespace APUToki.Services
 {
@@ -245,6 +246,7 @@ namespace APUToki.Services
         /// <returns>The course list async</returns>
         public static async Task UpdateLectureListAsync()
         {
+
             //get the current lecture database version
             string currentVer = UserSettings.LastTimetableUpdate;
 
@@ -256,34 +258,43 @@ namespace APUToki.Services
             if (currentVer != currentOnlineVer)
             {
                 //ask user if they want to update
-                var answer = await Application.Current.MainPage.DisplayAlert("Notice", "There is a updated timetable\nOnline version updated " + currentOnlineVer, "Yes", "No");
+                var answer = await Application.Current.MainPage.DisplayAlert("Notice", "There is a timetable online. Wish to update?\nOnline version: " + currentOnlineVer, "Yes", "No");
 
                 if (answer)
                 {
-                    //todo: add progress bar feature
-                    //get all the lectures online
-                    var newLectures = ApuBot.LecturesList();
-
-                    var oldDatabase = await App.Database.GetAllLecturesAsync();
-
-                    if (oldDatabase.Count > 0)
+                    using (IProgressDialog progress = UserDialogs.Instance.Progress("Progress", null, null, true, MaskType.Black))
                     {
-                        foreach (var i in oldDatabase)
+                        progress.PercentComplete = 1;
+
+                        //get all the lectures online
+                        var newLectures = ApuBot.LecturesList();
+
+                        var oldDatabase = await App.Database.GetAllLecturesAsync();
+
+                        int currentRate = newLectures.Count() / 100;
+
+                        progress.PercentComplete = 5;
+
+                        //empty the current local database to not make duplicates
+                        await App.Database.DeleteAllLecturesAsync(oldDatabase);
+
+                        foreach (var i in newLectures)
                         {
-                            await App.Database.DeleteLectureAsync(i);
+                            await App.Database.SaveLectureAsync(i);
+                            if (progress.PercentComplete < 90)
+                            {
+                                progress.PercentComplete += 1;
+                            }
+
                         }
+
+                        //update the last updated version date to a persistant setting
+                        UserSettings.LastTimetableUpdate = currentOnlineVer;
+                        Debug.WriteLine("[SyncEvents]The lectures database has been updated");
+                        progress.PercentComplete = 100;
+                        await Application.Current.MainPage.DisplayAlert("Notice", "Updated the database", "Dismiss");
                     }
-                    //empty the current local database to not make duplicates
-                    //await App.Database.DeleteAllLecturesAsync(oldDatabase);
 
-                    //add all the new lectures to the database
-                    await App.Database.SaveAllLecturesAsync(newLectures);
-
-
-                    Debug.WriteLine("[SyncEvents]The lectures database has been updated");
-                    await Application.Current.MainPage.DisplayAlert("Notice", "Updated the database", "Dismiss");
-                    //update the last updated version date to a persistant setting
-                    UserSettings.LastTimetableUpdate = currentOnlineVer;
                 }
             }
             else
@@ -292,20 +303,26 @@ namespace APUToki.Services
             }
         }
 
-        public static async Task<List<TimetableCell>> GetTimetableContents()
-        {
-            //todo: change this to call timetable list from the database
-            var tempMockupData = new List<TimetableCell>
-            {
-                new TimetableCell{Period = "1st Period", DayOfWeek = "Monday"},
-                new TimetableCell{Period = "2st Period", DayOfWeek = "Monday"},
-                new TimetableCell{Period = "1st Period", DayOfWeek = "Friday"},
-            };
-
-
-            return await App.Database.GetAllTimetableCellsAsync();
-        }
         #endregion
+
+        public static bool IsConnectedToInternet()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                using (client.OpenRead("https://www.apu.ac.jp"))
+                {
+                    //return true if the site loads
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
 
     }
 }

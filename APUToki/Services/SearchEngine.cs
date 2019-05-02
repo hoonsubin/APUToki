@@ -20,22 +20,32 @@ namespace APUToki.Services
         /// <returns>list of results</returns>
         /// <param name="query">Query.</param>
         /// <param name="database">Database.</param>
-        public static List<Lecture> SearchLecture(string query, List<Lecture> database)
+        public static List<Lecture> SearchLecture(string _query, List<Lecture> database)
         {
             var results = new List<Lecture>();
 
-            //make the search query lowercase and trim it
-            query = query.ToLower().Trim();
-
             //check if the query is not empty
-            if (!string.IsNullOrEmpty(query))
+            if (!string.IsNullOrEmpty(_query))
             {
+                //make the search query lowercase and trim it
+                string query = _query.ToLower().Trim();
+
                 //start counting
                 var searchTime = System.Diagnostics.Stopwatch.StartNew();
 
+                var res = database.FindAll(x => x.SearchTags.FirstOrDefault(tag => tag.Contains(query)) != null);
+
+                foreach(var i in res)
+                {
+                    results.Add(i);
+                }
+
+                /*
                 //iterate through the lecture database
                 foreach (var lecture in database)
                 {
+                    lecture.SearchTags.Where(x => x.Contains(query));
+
                     //iterate through the list of tags in the lecture
                     foreach (var searchTag in lecture.SearchTags)
                     {
@@ -46,6 +56,7 @@ namespace APUToki.Services
                         }
                     }
                 }
+                */
                 //stop the search timer
                 searchTime.Stop();
 

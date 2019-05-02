@@ -1,6 +1,7 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/bin/Debug/netstandard2.0/APUToki.deps.json
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/bin/Debug/netstandard2.0/APUToki.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/bin/Debug/netstandard2.0/APUToki.pdb
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/APUToki.csprojAssemblyReference.cache
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/App.xaml.g.cs
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/Views/AboutPage.xaml.g.cs
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/Views/ItemsPage.xaml.g.cs
@@ -14,4 +15,3 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/APUToki.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/APUToki.pdb
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/obj/Debug/netstandard2.0/APUToki.csprojAssemblyReference.cache

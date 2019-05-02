@@ -33,11 +33,9 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLitePCLRaw.core.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLitePCLRaw.lib.e_sqlite3.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/SQLitePCLRaw.provider.e_sqlite3.dll
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Buffers.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Core.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.IdentityModel.dll
-/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Memory.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Net.Http.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Numerics.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Numerics.Vectors.dll
@@ -80,6 +78,7 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Web.Services.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Drawing.Common.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Text.Encoding.CodePages.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Memory.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Runtime.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Threading.Tasks.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Diagnostics.Debug.dll
@@ -95,3 +94,4 @@
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.ObjectModel.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/Mono.Security.dll
 /Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.ServiceModel.Internals.dll
+/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/android/assets/System.Buffers.dll

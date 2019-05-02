@@ -13,43 +13,59 @@
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--Page Level Resources: Compatibile with Xamarin Live Player-->
+            <Color x:Key="Primary">#ab003e</Color>
+            <Color x:Key="Accent">#8f8f8f</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <ContentPage.Content>
         <Grid ColumnSpacing="1" RowSpacing="1" BackgroundColor="Gray" x:Name="gridLayout">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
+                <RowDefinition Height="0.5*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="0.7*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             
-            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="0"/>
-            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="1"/>
+            <BoxView Color="White" Grid.Row="0" Grid.Column="0"/>
+            <Button Text="1st Q" Grid.Row="0" Grid.Column="0" Margin="-1.5"
+                    VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="White"
+                    FontSize="Small" x:Name="btnTermChange" Clicked="SwitchQuarter_Clicked"/>
+            
+            <!--Columns of day of weeks-->
+            <BoxView Color="{StaticResource Primary}" Grid.Row="0" Grid.Column="1"/>
             <Label Text="Mon" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="2"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="0" Grid.Column="2"/>
             <Label Text="Tue" Grid.Row="0" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="3"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="0" Grid.Column="3"/>
             <Label Text="Wed" Grid.Row="0" Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="4"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="0" Grid.Column="4"/>
             <Label Text="Thu" Grid.Row="0" Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="0" Grid.Column="5"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="0" Grid.Column="5"/>
             <Label Text="Fri" Grid.Row="0" Grid.Column="5" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
             
-            <BoxView Color="Maroon" Grid.Row="1" Grid.Column="0"/>
-            <Label Text="1" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="2" Grid.Column="0"/>
-            <Label Text="2" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="3" Grid.Column="0"/>
-            <Label Text="3" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="4" Grid.Column="0"/>
-            <Label Text="4" Grid.Row="4" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="5" Grid.Column="0"/>
-            <Label Text="5" Grid.Row="5" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
-            <BoxView Color="Maroon" Grid.Row="6" Grid.Column="0"/>
-            <Label Text="6" Grid.Row="6" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+            <!--Rows of periods-->
+            <BoxView Color="{StaticResource Primary}" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="1" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="Large"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="2" Grid.Column="0"/>
+            <Label Text="2" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="Large"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="3" Grid.Column="0"/>
+            <Label Text="3" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="Large"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="4" Grid.Column="0"/>
+            <Label Text="4" Grid.Row="4" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="Large"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="5" Grid.Column="0"/>
+            <Label Text="5" Grid.Row="5" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="Large"/>
+            <BoxView Color="{StaticResource Primary}" Grid.Row="6" Grid.Column="0"/>
+            <Label Text="6" Grid.Row="6" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" FontSize="Large"/>
             
+            <!--White gird spaces-->
             <BoxView Color="White" Grid.Row="1" Grid.Column="1"/>
             <BoxView Color="White" Grid.Row="1" Grid.Column="2"/>
             <BoxView Color="White" Grid.Row="1" Grid.Column="3"/>
