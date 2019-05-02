@@ -12,7 +12,6 @@ using APUToki.Models;
 using Acr.UserDialogs;
 using Xamarin.Essentials;
 using System.Net;
-using Plugin.Connectivity;
 
 namespace APUToki.Services
 {
