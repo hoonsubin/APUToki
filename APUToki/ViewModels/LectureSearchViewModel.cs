@@ -62,7 +62,7 @@ namespace APUToki.ViewModels
 
                 if (resultsCount <= 0)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Notice", "No results found", "Dismiss");
+                    await Application.Current.MainPage.DisplayAlert("Notice", "No results found for " + query, "Dismiss");
                 }
             }
 
@@ -92,6 +92,7 @@ namespace APUToki.ViewModels
             catch (Exception ex)
             {
                 await SyncEvents.SendErrorEmail(ex.ToString());
+                Debug.WriteLine(ex.ToString());
             }
             finally
             {

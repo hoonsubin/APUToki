@@ -147,8 +147,9 @@ namespace APUToki.Views
             CurrentCells.Clear();
         }
 
+
         /// <summary>
-        /// Removes the given list of cells from timetable.
+        /// Removes the given list of cells from timetable and the list that holds.
         /// </summary>
         /// <param name="cellsToRemove">List of cells to remove.</param>
         public async void RemoveCellsFromTimetableAsync(List<TimetableCell> cellsToRemove)
@@ -177,6 +178,7 @@ namespace APUToki.Views
             //remove the current page and go back to the timetable view page
             await Navigation.PopAsync();
         }
+
 
         /// <summary>
         /// Checks the existing list of timetable cells and compare them with the new ones

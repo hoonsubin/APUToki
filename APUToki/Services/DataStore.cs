@@ -157,6 +157,8 @@ namespace APUToki.Services
         }
         #endregion
 
+        #region JSON Serialization
+
         /// <summary>
         /// Serializes the input Lecture object to JSON in string.
         /// </summary>
@@ -190,6 +192,6 @@ namespace APUToki.Services
         {
             return JsonConvert.DeserializeObject<List<Lecture>>(json);
         }
-
+        #endregion
     }
 }

@@ -262,6 +262,7 @@ namespace APUToki.Services
 
                 if (answer)
                 {
+                    //using the progress bar function
                     using (IProgressDialog progress = UserDialogs.Instance.Progress("Progress", null, null, true, MaskType.Black))
                     {
                         progress.PercentComplete = 1;
@@ -269,9 +270,9 @@ namespace APUToki.Services
                         //get all the lectures online
                         var newLectures = ApuBot.LecturesList();
 
+                        //get existing lecture database content as list
                         var oldDatabase = await App.Database.GetAllLecturesAsync();
 
-                        int currentRate = newLectures.Count() / 100;
 
                         progress.PercentComplete = 5;
 
@@ -280,18 +281,22 @@ namespace APUToki.Services
 
                         foreach (var i in newLectures)
                         {
+                            //save the object directly to the database
                             await App.Database.SaveLectureAsync(i);
-                            if (progress.PercentComplete < 90)
-                            {
-                                progress.PercentComplete += 1;
-                            }
+                            progress.PercentComplete += 1;
 
                         }
+
+                        //replace the JSON string of timetable lectures to the ones from online
+                        ReplaceTimetableJson(newLectures);
+                        progress.PercentComplete = 95;
 
                         //update the last updated version date to a persistant setting
                         UserSettings.LastTimetableUpdate = currentOnlineVer;
                         Debug.WriteLine("[SyncEvents]The lectures database has been updated");
                         progress.PercentComplete = 100;
+
+                        //show notification message that the database has been updated
                         await Application.Current.MainPage.DisplayAlert("Notice", "Updated the database", "Dismiss");
                     }
 
@@ -300,6 +305,51 @@ namespace APUToki.Services
             else
             {
                 Debug.WriteLine("[SyncEvents]No updates found");
+            }
+        }
+
+        /// <summary>
+        /// Replaces the serialized timetable string with new ones from the given database.
+        /// </summary>
+        /// <param name="database">Database.</param>
+        private static void ReplaceTimetableJson(List<Lecture> database)
+        {
+            //check if the system has a serialized timetable
+            if (Application.Current.Properties.ContainsKey("TimetableItems"))
+            {
+                Debug.WriteLine("Replacing the timetable JSON string");
+
+                //deserialize the JSON as list of lectures
+                List<Lecture> currentTimetable = App.Database.DeserializeLectureListFromJson(Application.Current.Properties["TimetableItems"].ToString());
+
+                var updatedTimetable = new List<Lecture>();
+
+                foreach (var lecture in currentTimetable)
+                {
+                    //get the same lecture that's in both the database and the timetable list
+                    var newLecture = database.FirstOrDefault(x => x.Equals(lecture));
+
+                    if (newLecture != null)
+                    {
+                        //add the lecture to the new list
+                        updatedTimetable.Add(newLecture);
+                    }
+                    else
+                    {
+                        Debug.WriteLine("[SyncEvents]The fuck?! Cannot find " + lecture.SubjectNameEN + " from the db");
+                    }
+                }
+
+                var serializedObject = App.Database.SerializeToJson(updatedTimetable);
+
+                //assign the serialized object list
+                Application.Current.Properties["TimetableItems"] = serializedObject;
+                //save the serialized dictionary to the disk
+                Application.Current.SavePropertiesAsync();
+            }
+            else
+            {
+                Debug.WriteLine("[SyncEvents]Found no saved timetable items");
             }
         }
 

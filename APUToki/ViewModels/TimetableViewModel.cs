@@ -72,9 +72,6 @@ namespace APUToki.ViewModels
         {
             if (Application.Current.Properties.ContainsKey("TimetableItems"))
             {
-                //todo: problem with loading the parent lecture object
-
-
                 List<Lecture> alllectures = App.Database.DeserializeLectureListFromJson(Application.Current.Properties["TimetableItems"].ToString());
 
                 foreach (var i in alllectures)
