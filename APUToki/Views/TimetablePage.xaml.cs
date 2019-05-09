@@ -34,6 +34,7 @@ namespace APUToki.Views
                 btnTermChange.Text = Application.Current.Properties["LastOpenedQ"].ToString();
             }
 
+            //todo: this part is resource intensive for old phones
             viewModel.LoadTimetableContents();
 
             //add the existing timetable items to the grid

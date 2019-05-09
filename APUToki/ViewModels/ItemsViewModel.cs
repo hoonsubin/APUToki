@@ -33,18 +33,6 @@ namespace APUToki.ViewModels
             //set the load items command to Execute load items command
             async void execute() => await ExecuteLoadItemsCommand();
             LoadItemsCommand = new Command(execute);
-
-            /*
-            //messaging center is used to communicate with different components with in the project
-            //the subscribe operator will make this page listen to the sender which is NewItemPage
-            MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) => {
-                //the message will contain the following values and pass it to NewItemPage
-                var newItem = item as Item;
-                //and add the item to the database
-                await App.Database.SaveItemAsync(newItem);
-                await ExecuteLoadItemsCommand();
-            });
-            */
         }
 
         //setup and group the given list into a grouped list

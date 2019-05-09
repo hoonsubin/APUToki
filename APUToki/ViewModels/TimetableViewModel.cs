@@ -36,27 +36,29 @@ namespace APUToki.ViewModels
         /// </summary>
         public void SaveTimetableContents()
         {
-
-            //todo: change this method so that it serializes the list of timetable cell as xml
-
+            //combine Quarter 1 and Querter 2
             var allTimeCells = Q1TimetableItems.Union(Q2TimetableItems);
 
-            var allLectures = new List<Lecture>();
-
-            foreach(var i in allTimeCells)
-            {
-                if (!allLectures.Contains(i.ParentLecture))
-                {
-                    allLectures.Add(i.ParentLecture);
-                }
-            }
-
+            //make sure the list is not empty
             if (allTimeCells.Any())
             {
+                var allLectures = new List<Lecture>();
+
+                //loop through all the timetable cells and add the lectures that are not in the list
+                foreach (var i in allTimeCells)
+                {
+                    if (!allLectures.Contains(i.ParentLecture))
+                    {
+                        allLectures.Add(i.ParentLecture);
+                    }
+                }
+
+                //serialize the list of lectures as JSON string
                 var serializedObject = App.Database.SerializeToJson(allLectures);
 
                 Debug.WriteLine("Saving " + serializedObject);
 
+                //assign the JOSN list to the properties dictionary
                 Application.Current.Properties["TimetableItems"] = serializedObject;
                 //save the serialized dictionary to the disk
                 Application.Current.SavePropertiesAsync();
@@ -72,6 +74,7 @@ namespace APUToki.ViewModels
         {
             if (Application.Current.Properties.ContainsKey("TimetableItems"))
             {
+                //deserialized the saved JSON string as list of lectures
                 List<Lecture> alllectures = App.Database.DeserializeLectureListFromJson(Application.Current.Properties["TimetableItems"].ToString());
 
                 foreach (var i in alllectures)
@@ -79,20 +82,20 @@ namespace APUToki.ViewModels
 
                     Debug.WriteLine("Loading " + i.SubjectNameEN);
 
+                    //loop through the timetable cells to add the items to the quarter lists
                     foreach (var x in i.TimetableCells)
                     {
                         x.ParentLecture = i;
 
                         if (i.Term.Contains("1st"))
                         {
-
                             Q1TimetableItems.Add(x);
                         }
                         else if (i.Term.Contains("2nd"))
                         {
                             Q2TimetableItems.Add(x);
                         }
-                        else
+                        else //semester lectures
                         {
                             Q1TimetableItems.Add(x);
                             Q2TimetableItems.Add(x);

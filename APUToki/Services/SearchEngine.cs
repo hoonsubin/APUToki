@@ -22,6 +22,9 @@ namespace APUToki.Services
         /// <param name="database">Database.</param>
         public static List<Lecture> SearchLecture(string _query, List<Lecture> database)
         {
+            //todo: update the method so that it will split the query by commas and read them as tags
+            //todo: add filters to prune the database
+
             var results = new List<Lecture>();
 
             //check if the query is not empty
@@ -33,6 +36,7 @@ namespace APUToki.Services
                 //start counting
                 var searchTime = System.Diagnostics.Stopwatch.StartNew();
 
+                //use Linq to string compare the tag for all the lectures inside the database
                 var res = database.FindAll(x => x.SearchTags.FirstOrDefault(tag => tag.Contains(query)) != null);
 
                 foreach(var i in res)
@@ -40,23 +44,6 @@ namespace APUToki.Services
                     results.Add(i);
                 }
 
-                /*
-                //iterate through the lecture database
-                foreach (var lecture in database)
-                {
-                    lecture.SearchTags.Where(x => x.Contains(query));
-
-                    //iterate through the list of tags in the lecture
-                    foreach (var searchTag in lecture.SearchTags)
-                    {
-                        //add the resulting lecture of the tg matches the given query
-                        if (searchTag.Contains(query))
-                        {
-                            results.Add(lecture);
-                        }
-                    }
-                }
-                */
                 //stop the search timer
                 searchTime.Stop();
 
