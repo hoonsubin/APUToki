@@ -25,6 +25,9 @@ namespace APUToki.Services
 
         }
 
+        /// <summary>
+        /// returns where the SQLite database is saved in string directory
+        /// </summary>
         public static string DatabaseFilePath
         {
             get

@@ -35,6 +35,7 @@
             </Grid.ColumnDefinitions>
             
             <BoxView Color="White" Grid.Row="0" Grid.Column="0"/>
+            <!--The Quarter button text has different fittings for "2nd Q"-->
             <Button Text="1st Q" Grid.Row="0" Grid.Column="0" Margin="-1.5"
                     VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="White"
                     FontSize="Small" x:Name="btnTermChange" Clicked="SwitchQuarter_Clicked"/>

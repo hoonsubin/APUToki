@@ -34,7 +34,7 @@ namespace APUToki.Views
                 btnTermChange.Text = Application.Current.Properties["LastOpenedQ"].ToString();
             }
 
-            //todo: this part is resource intensive for old phones
+            //todo: this part is resource intensive for old phones because it loads all the JSON
             viewModel.LoadTimetableContents();
 
             //add the existing timetable items to the grid
@@ -45,16 +45,14 @@ namespace APUToki.Views
                 AddCellsToTimetable(arg);
             });
 
-            MessagingCenter.Subscribe<LectureDetailViewModel, List<TimetableCell>>(this, "RemoveTimetableCell", (sender, arg) =>
+            MessagingCenter.Subscribe<LectureDetailViewModel, List<TimetableCell>>(this, "RemoveTimetableCell", async (sender, arg) =>
             {
-                RemoveCellsFromTimetableAsync(arg);
+                await RemoveCellsFromTimetableAsync(arg);
             });
-
-           
         }
 
         /// <summary>
-        /// Gets the list of cells, and draws them to the timetable grid
+        /// Gets the list of lecture cells, and draws them to the timetable grid
         /// </summary>
         /// <param name="cellsToDisplay">Cells to display.</param>
         void DrawCellsToGrid(List<TimetableCell> cellsToDisplay)
@@ -96,8 +94,10 @@ namespace APUToki.Views
 
         void DrawQuarter()
         {
+            //set which quarter the user is viewing
             var is1stQuarter = btnTermChange.Text.Contains("1st");
 
+            //this is a simple block that will clear all the cells and repopulate with new ones
             if (is1stQuarter)
             {
                 ClearAllGridChildrens();
@@ -118,6 +118,7 @@ namespace APUToki.Views
         /// <param name="e">Even argument</param>
         void SwitchQuarter_Clicked(object sender, EventArgs e)
         {
+
             if (btnTermChange.Text.Contains("1st"))
             {
                 //switch to 2nd quarter
@@ -127,7 +128,7 @@ namespace APUToki.Views
             }
             else
             {
-                //switch to 1st quarter
+                //switch to 1st quarter if the button contains any other text than "1st"
                 btnTermChange.Text = "1st Q";
                 DrawQuarter();
             }
@@ -153,7 +154,7 @@ namespace APUToki.Views
         /// Removes the given list of cells from timetable and the list that holds.
         /// </summary>
         /// <param name="cellsToRemove">List of cells to remove.</param>
-        public async void RemoveCellsFromTimetableAsync(List<TimetableCell> cellsToRemove)
+        public async Task<bool> RemoveCellsFromTimetableAsync(List<TimetableCell> cellsToRemove)
         {
             //loop through the timetable cell list to remove
             foreach (var i in cellsToRemove)
@@ -162,7 +163,7 @@ namespace APUToki.Views
                 viewModel.Q2TimetableItems.Remove(i);
             }
 
-            //clear and re-draw the buttons from the timetalble
+            //clear all cells and re-draw the buttons from the timetalble
             if (btnTermChange.Text.Contains("1st"))
             {
                 ClearAllGridChildrens();
@@ -178,6 +179,8 @@ namespace APUToki.Views
             viewModel.SaveTimetableContents();
             //remove the current page and go back to the timetable view page
             await Navigation.PopAsync();
+
+            return true;
         }
 
 

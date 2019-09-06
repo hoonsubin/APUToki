@@ -58,7 +58,7 @@ namespace APUToki.ViewModels
 
                 Debug.WriteLine("Saving " + serializedObject);
 
-                //assign the JOSN list to the properties dictionary
+                //assign the JOSN list to the properties dictionary to make it persistant
                 Application.Current.Properties["TimetableItems"] = serializedObject;
                 //save the serialized dictionary to the disk
                 Application.Current.SavePropertiesAsync();
@@ -70,8 +70,13 @@ namespace APUToki.ViewModels
 
         }
 
+        /// <summary>
+        /// Loads the JSON string that is saved in the device property keys
+        /// And converts then to list of timetable lectures (both 1st and 2nd quarter)
+        /// </summary>
         public void LoadTimetableContents()
         {
+            //todo: this method consumes a lot of resource, must refactor
             if (Application.Current.Properties.ContainsKey("TimetableItems"))
             {
                 //deserialized the saved JSON string as list of lectures
@@ -79,12 +84,12 @@ namespace APUToki.ViewModels
 
                 foreach (var i in alllectures)
                 {
-
                     Debug.WriteLine("Loading " + i.SubjectNameEN);
 
                     //loop through the timetable cells to add the items to the quarter lists
                     foreach (var x in i.TimetableCells)
                     {
+                        //assign the parent lecture as this is not saved in the JSON
                         x.ParentLecture = i;
 
                         if (i.Term.Contains("1st"))

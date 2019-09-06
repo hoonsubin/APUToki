@@ -1,17 +1,17 @@
---cache=/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.8-12.2/mtouch-cache
---sim=/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone11.8-12.2/APUToki.iOS.app
+--cache=/Users/hoonkim/Documents/Projects/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.8-12.2/mtouch-cache
+--sim=/Users/hoonkim/Documents/Projects/APUToki/APUToki.iOS/bin/iPhoneSimulator/Debug/device-builds/iphone11.8-12.2/APUToki.iOS.app
 --executable=APUToki.iOS
---debug
---nolink
+ --debug
+ --nolink
 --sdkroot=/Applications/Xcode.app/Contents/Developer
 --sdk=12.2
 --targetver=12.0
---aot-options=-O=-float32
---http-message-handler=NSUrlSessionHandler
---abi=x86_64
---symbollist=/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.8-12.2/mtouch-symbols.list
---dsym=no
--r=/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/bin/Debug/netstandard2.0/APUToki.dll
+ --aot-options=-O=-float32
+ --http-message-handler=NSUrlSessionHandler
+ --abi=x86_64
+--symbollist=/Users/hoonkim/Documents/Projects/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.8-12.2/mtouch-symbols.list
+ --dsym=no
+-r=/Users/hoonkim/Documents/Projects/APUToki/APUToki/bin/Debug/netstandard2.0/APUToki.dll
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/OpenTK-1.0.dll
 -r=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll
@@ -234,7 +234,7 @@
 -r=/Users/hoonkim/.nuget/packages/xamarin.forms/3.6.0.344457/lib/Xamarin.iOS10/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll
 -r=/Users/hoonkim/.nuget/packages/xamarin.forms/3.6.0.344457/lib/Xamarin.iOS10/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll
 -r=/Users/hoonkim/.nuget/packages/xamarin.forms/3.6.0.344457/lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
--r=/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/bin/Debug/netstandard2.0/APUToki.dll
---target-framework=Xamarin.iOS,v1.0
---root-assembly=/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.iOS/bin/iPhoneSimulator/Debug/APUToki.iOS.exe
-
+-r=/Users/hoonkim/Documents/Projects/APUToki/APUToki/bin/Debug/netstandard2.0/APUToki.dll
+ --target-framework=Xamarin.iOS,v1.0
+--root-assembly=/Users/hoonkim/Documents/Projects/APUToki/APUToki.iOS/bin/iPhoneSimulator/Debug/APUToki.iOS.exe
+ 

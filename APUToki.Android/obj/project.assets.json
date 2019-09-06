@@ -2801,11 +2801,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/APUToki.Android.csproj",
+      "projectUniqueName": "/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/APUToki.Android.csproj",
       "projectName": "APUToki.Android",
-      "projectPath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/APUToki.Android.csproj",
+      "projectPath": "/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/APUToki.Android.csproj",
       "packagesPath": "/Users/hoonkim/.nuget/packages/",
-      "outputPath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/",
+      "outputPath": "/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -2820,8 +2820,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/APUToki.csproj": {
-              "projectPath": "/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki/APUToki.csproj"
+            "/Users/hoonkim/Documents/Projects/APUToki/APUToki/APUToki.csproj": {
+              "projectPath": "/Users/hoonkim/Documents/Projects/APUToki/APUToki/APUToki.csproj"
             }
           }
         }

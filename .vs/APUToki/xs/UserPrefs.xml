@@ -1,20 +1,26 @@
 ﻿<Properties StartupConfiguration="{C1477615-B0B2-4DBB-AE28-2420006A17C7}|Default">
-  <MonoDevelop.Ide.ItemProperties.APUToki.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.86F2AEB7-7AB8-4F59-A301-26BAF1C4C7C5" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/ViewModels/ItemsViewModel.cs">
+  <MonoDevelop.Ide.ItemProperties.APUToki.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.ACBCFE0E-1C22-4985-A68A-428A82702B5F" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/Views/TimetablePage.xaml.cs">
     <Files>
-      <File FileName="APUToki/ViewModels/ItemsViewModel.cs" Line="35" Column="53" />
+      <File FileName="APUToki/Views/TimetablePage.xaml.cs" Line="16" Column="6" />
+      <File FileName="APUToki/Views/TimetablePage.xaml" />
+      <File FileName="APUToki/ViewModels/TimetableViewModel.cs" />
+      <File FileName="APUToki/Services/DataStore.cs" />
+      <File FileName="APUToki/Models/AcademicEvent.cs" />
+      <File FileName="APUToki/Models/Lecture.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="APUToki" expanded="True">
             <Node name="APUToki" expanded="True">
+              <Node name="Models" expanded="True" />
               <Node name="Services" expanded="True" />
-              <Node name="ViewModels" expanded="True">
-                <Node name="ItemsViewModel.cs" selected="True" />
-              </Node>
+              <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="TimetablePage.xaml" expanded="True" />
+                <Node name="TimetablePage.xaml" expanded="True">
+                  <Node name="TimetablePage.xaml.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -22,7 +28,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.APUToki.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.nexus_one" />
+  <MonoDevelop.Ide.ItemProperties.APUToki.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.nexus_one" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
