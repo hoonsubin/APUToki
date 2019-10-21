@@ -26,7 +26,6 @@
 /Users/hoonkim/Documents/Projects/APUToki/APUToki/obj/Debug/netstandard2.0/Views/LectureSearchPage.xaml.g.cs
 /Users/hoonkim/Documents/Projects/APUToki/APUToki/obj/Debug/netstandard2.0/Views/MainPage.xaml.g.cs
 /Users/hoonkim/Documents/Projects/APUToki/APUToki/obj/Debug/netstandard2.0/Views/TimetablePage.xaml.g.cs
-/Users/hoonkim/Documents/Projects/APUToki/APUToki/obj/Debug/netstandard2.0/APUToki.csproj.CoreCompileInputs.cache
 /Users/hoonkim/Documents/Projects/APUToki/APUToki/obj/Debug/netstandard2.0/APUToki.AssemblyInfoInputs.cache
 /Users/hoonkim/Documents/Projects/APUToki/APUToki/obj/Debug/netstandard2.0/APUToki.AssemblyInfo.cs
 /Users/hoonkim/Documents/Projects/APUToki/APUToki/obj/Debug/netstandard2.0/XamlC.stamp
