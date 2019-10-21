@@ -76,7 +76,6 @@ LinearLayout;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug
 LinearLayout;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingimage.xml
 LinearLayout;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingprogress.xml
 LinearLayout;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/bottomtablayout.xml
-md5cdf32c66d6cb288af0857131206b2ac4.ProgressWheel;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingprogress.xml
 paths;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/58/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
 paths;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/58/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
 ProgressBar;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loading.xml
