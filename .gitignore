@@ -352,6 +352,8 @@ node_modules/
 **/*.Server/ModelManifest.xml
 _Pvt_Extensions
 
+desktop.ini
+
 # Paket dependency manager
 .paket/paket.exe
 paket-files/

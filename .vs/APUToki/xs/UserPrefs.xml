@@ -1,22 +1,19 @@
 ﻿<Properties StartupConfiguration="{C1477615-B0B2-4DBB-AE28-2420006A17C7}|Default">
   <MonoDevelop.Ide.ItemProperties.APUToki.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.AAFC6609-4870-4F01-9AFF-12C0FFC04F60" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/Services/DataStore.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/Views/TimetablePage.xaml.cs">
     <Files>
       <File FileName="APUToki/Views/TimetablePage.xaml.cs" Line="16" Column="6" />
-      <File FileName="APUToki/Views/TimetablePage.xaml" Line="1" Column="1" />
-      <File FileName="APUToki/ViewModels/TimetableViewModel.cs" Line="1" Column="1" />
-      <File FileName="APUToki/Services/DataStore.cs" Line="21" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="APUToki" expanded="True">
             <Node name="APUToki" expanded="True">
-              <Node name="Models" expanded="True" />
               <Node name="Services" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="TimetablePage.xaml" expanded="True" />
+                <Node name="TimetablePage.xaml" expanded="True">
+                  <Node name="TimetablePage.xaml.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>

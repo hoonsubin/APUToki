@@ -3947,11 +3947,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hoonkim/Documents/Projects/APUToki/APUToki.iOS/APUToki.iOS.csproj",
+      "projectUniqueName": "/Users/hoonkim/Projects/APUToki/APUToki.iOS/APUToki.iOS.csproj",
       "projectName": "APUToki.iOS",
-      "projectPath": "/Users/hoonkim/Documents/Projects/APUToki/APUToki.iOS/APUToki.iOS.csproj",
+      "projectPath": "/Users/hoonkim/Projects/APUToki/APUToki.iOS/APUToki.iOS.csproj",
       "packagesPath": "/Users/hoonkim/.nuget/packages/",
-      "outputPath": "/Users/hoonkim/Documents/Projects/APUToki/APUToki.iOS/obj/",
+      "outputPath": "/Users/hoonkim/Projects/APUToki/APUToki.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -3966,8 +3966,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/hoonkim/Documents/Projects/APUToki/APUToki/APUToki.csproj": {
-              "projectPath": "/Users/hoonkim/Documents/Projects/APUToki/APUToki/APUToki.csproj"
+            "/Users/hoonkim/Projects/APUToki/APUToki/APUToki.csproj": {
+              "projectPath": "/Users/hoonkim/Projects/APUToki/APUToki/APUToki.csproj"
             }
           }
         }

@@ -5417,11 +5417,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hoonkim/Documents/Projects/APUToki/APUToki/APUToki.csproj",
+      "projectUniqueName": "/Users/hoonkim/Projects/APUToki/APUToki/APUToki.csproj",
       "projectName": "APUToki",
-      "projectPath": "/Users/hoonkim/Documents/Projects/APUToki/APUToki/APUToki.csproj",
+      "projectPath": "/Users/hoonkim/Projects/APUToki/APUToki/APUToki.csproj",
       "packagesPath": "/Users/hoonkim/.nuget/packages/",
-      "outputPath": "/Users/hoonkim/Documents/Projects/APUToki/APUToki/obj/",
+      "outputPath": "/Users/hoonkim/Projects/APUToki/APUToki/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/hoonkim/.config/NuGet/NuGet.Config"
