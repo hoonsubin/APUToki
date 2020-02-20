@@ -9,43 +9,43 @@
     ".NETStandard,Version=v2.0/": {
       "APUToki/1.0.0": {
         "dependencies": {
-          "Acr.UserDialogs": "7.0.1",
-          "CClarke.Plugin.Calendars": "1.0.0",
+          "Acr.UserDialogs": "7.0.35",
+          "CClarke.Plugin.Calendars": "1.0.14",
           "EPPlus": "4.5.3.2",
-          "HtmlAgilityPack": "1.8.13",
+          "HtmlAgilityPack": "1.11.17",
           "NETStandard.Library": "2.0.3",
           "Plugin.Permissions": "3.0.0.12",
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "System.Buffers": "4.5.0",
-          "System.Drawing.Common": "4.6.0",
+          "System.Drawing.Common": "4.7.0",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
-          "Xamarin.Essentials": "1.0.1",
-          "Xamarin.Forms": "3.6.0.264807",
+          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Forms": "4.1.0.581479",
           "sqlite-net-pcl": "1.6.292"
         },
         "runtime": {
           "APUToki.dll": {}
         }
       },
-      "Acr.UserDialogs/7.0.1": {
+      "Acr.UserDialogs/7.0.35": {
         "runtime": {
           "lib/netstandard2.0/Acr.UserDialogs.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
-      "CClarke.Plugin.Calendars/1.0.0": {
+      "CClarke.Plugin.Calendars/1.0.14": {
         "runtime": {
           "lib/netstandard1.0/Plugin.Calendars.Abstractions.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "1.0.14.0",
+            "fileVersion": "1.0.14.0"
           },
           "lib/netstandard1.0/Plugin.Calendars.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "1.0.14.0",
+            "fileVersion": "1.0.14.0"
           }
         }
       },
@@ -54,7 +54,7 @@
           "Microsoft.Extensions.Configuration.Json": "2.2.0",
           "System.ComponentModel.TypeConverter": "4.3.0",
           "System.Data.Common": "4.3.0",
-          "System.Drawing.Common": "4.6.0",
+          "System.Drawing.Common": "4.7.0",
           "System.Reflection": "4.3.0",
           "System.Security.Claims": "4.3.0",
           "System.Security.Cryptography.Pkcs": "4.5.1",
@@ -70,7 +70,7 @@
           }
         }
       },
-      "HtmlAgilityPack/1.8.13": {
+      "HtmlAgilityPack/1.11.17": {
         "dependencies": {
           "System.Net.Http": "4.3.2",
           "System.Xml.XPath": "4.3.0",
@@ -79,8 +79,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {
-            "assemblyVersion": "1.8.13.0",
-            "fileVersion": "1.8.13.0"
+            "assemblyVersion": "1.11.17.0",
+            "fileVersion": "1.11.17.0"
           }
         }
       },
@@ -466,7 +466,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Drawing.Common/4.6.0": {
+      "System.Drawing.Common/4.7.0": {
         "runtime": {
           "lib/netstandard2.0/System.Drawing.Common.dll": {
             "assemblyVersion": "4.0.0.1",
@@ -1059,7 +1059,7 @@
           }
         }
       },
-      "Xamarin.Essentials/1.0.1": {
+      "Xamarin.Essentials/1.3.1": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
@@ -1070,19 +1070,19 @@
           }
         }
       },
-      "Xamarin.Forms/3.6.0.264807": {
+      "Xamarin.Forms/4.1.0.581479": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.0.0"
+            "fileVersion": "4.1.0.287"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.1.0.287"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.0.0"
+            "fileVersion": "4.1.0.287"
           }
         }
       }
@@ -1094,19 +1094,19 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Acr.UserDialogs/7.0.1": {
+    "Acr.UserDialogs/7.0.35": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+eGbTgwaFPzcaRnMdnAK5pHA0eoeoxkhy80FNwGeewqvA+DM6fUPM9yMbrN2hw3rcuBaXd2ghy2Xq5XU7m8qkw==",
-      "path": "acr.userdialogs/7.0.1",
-      "hashPath": "acr.userdialogs.7.0.1.nupkg.sha512"
+      "sha512": "sha512-z/b/LYtRW6logITXFhbN65MHzuiUyDsQ4gJmui178FmEgpB2TgOwUnXE1rGw/zrU3IE5zjMcUt07oRHILarDtA==",
+      "path": "acr.userdialogs/7.0.35",
+      "hashPath": "acr.userdialogs.7.0.35.nupkg.sha512"
     },
-    "CClarke.Plugin.Calendars/1.0.0": {
+    "CClarke.Plugin.Calendars/1.0.14": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+glJm1FLp6W4MRpTbvNwCB/RhXrwVQlPsW5ukYuj+HaYVswH/pd8Mm0x+9msHrqDfiSHlUAMvcGplKSns0R8iA==",
-      "path": "cclarke.plugin.calendars/1.0.0",
-      "hashPath": "cclarke.plugin.calendars.1.0.0.nupkg.sha512"
+      "sha512": "sha512-wIX8W8sQ78gT9nxGX55R4FcIba+gW1MFi6DU20iVPXccgTEMmPEt3KbWntB8oAsRW5vjbvsxbGnlYavsMR3h/Q==",
+      "path": "cclarke.plugin.calendars/1.0.14",
+      "hashPath": "cclarke.plugin.calendars.1.0.14.nupkg.sha512"
     },
     "EPPlus/4.5.3.2": {
       "type": "package",
@@ -1115,12 +1115,12 @@
       "path": "epplus/4.5.3.2",
       "hashPath": "epplus.4.5.3.2.nupkg.sha512"
     },
-    "HtmlAgilityPack/1.8.13": {
+    "HtmlAgilityPack/1.11.17": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bkib2dbqxgJaDqsAZJ+8xs+JnmpY8ZN32whuMndj//d+j9L7YlcoC9dK6YeTxrruq9Ytm81BSRodOSXHBqw1ag==",
-      "path": "htmlagilitypack/1.8.13",
-      "hashPath": "htmlagilitypack.1.8.13.nupkg.sha512"
+      "sha512": "sha512-/aFnzxmvcWj9D2KEH9tEHE4rv5ZOGOTmgWtZK/Wr3ZwU0NrXVwzpPM2O57Roe08N9/h7tvwMD8lqT6KlKPahBg==",
+      "path": "htmlagilitypack/1.11.17",
+      "hashPath": "htmlagilitypack.1.11.17.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/2.2.0": {
       "type": "package",
@@ -1437,12 +1437,12 @@
       "path": "system.diagnostics.tracing/4.3.0",
       "hashPath": "system.diagnostics.tracing.4.3.0.nupkg.sha512"
     },
-    "System.Drawing.Common/4.6.0": {
+    "System.Drawing.Common/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2A3spjjoPZnvpVh/sDTzd+0H8ZqTdr+hH/6obB8MMfG81EJ85PmxCKDBxhBVQiA25PliKAZ1sKogDcq9mSnFEA==",
-      "path": "system.drawing.common/4.6.0",
-      "hashPath": "system.drawing.common.4.6.0.nupkg.sha512"
+      "sha512": "sha512-v+XbyYHaZjDfn0ENmJEV1VYLgGgCTx1gnfOBcppowbpOAriglYgGCvFCPr2EEZyBvXlpxbEsTwkOlInl107ahA==",
+      "path": "system.drawing.common/4.7.0",
+      "hashPath": "system.drawing.common.4.7.0.nupkg.sha512"
     },
     "System.Globalization/4.3.0": {
       "type": "package",
@@ -1759,19 +1759,19 @@
       "path": "xam.plugins.settings/3.1.1",
       "hashPath": "xam.plugins.settings.3.1.1.nupkg.sha512"
     },
-    "Xamarin.Essentials/1.0.1": {
+    "Xamarin.Essentials/1.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cGSje2LlYsCdscPt2zAG4e0Zzr08zc21Cj4DAMub3GR37lc/vzAVwGxco8NeCSzcZs147wYbXkFCXwOr4LUO9A==",
-      "path": "xamarin.essentials/1.0.1",
-      "hashPath": "xamarin.essentials.1.0.1.nupkg.sha512"
+      "sha512": "sha512-+51728AdZ/qtABGvcIaNXgEoL2jAtxAXLHS8PvGCP0pb6n7twBqYpfgkmwHYVgu+U99szgtL+Jot8L+OXorPcA==",
+      "path": "xamarin.essentials/1.3.1",
+      "hashPath": "xamarin.essentials.1.3.1.nupkg.sha512"
     },
-    "Xamarin.Forms/3.6.0.264807": {
+    "Xamarin.Forms/4.1.0.581479": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PbnXpStyxNYJzPrXXMW17F4YeMsFAs6YT9LL2vxObDWCGtaKkLia4UyBPF3Qbhy+lQPeap/ijV1Rlvasp4DFiA==",
-      "path": "xamarin.forms/3.6.0.264807",
-      "hashPath": "xamarin.forms.3.6.0.264807.nupkg.sha512"
+      "sha512": "sha512-wrO8AOW1xsFoGgT1SUvJ9OEeqAduJOm0xezZGNe0rCiAv2N9Qc/n5uywhlSia1s1k+Zy/hOrhZ4b7/EM6z9oog==",
+      "path": "xamarin.forms/4.1.0.581479",
+      "hashPath": "xamarin.forms.4.1.0.581479.nupkg.sha512"
     }
   }
 }

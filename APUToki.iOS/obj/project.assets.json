@@ -2,19 +2,13 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
-      "Acr.UserDialogs/7.0.1": {
+      "Acr.UserDialogs/7.0.35": {
         "type": "package",
         "dependencies": {
           "BTProgressHUD": "1.2.0.6"
         },
         "frameworkAssemblies": [
-          "OpenTK-1.0",
-          "System",
-          "System.Core",
-          "System.Net.Http",
-          "System.Xml",
-          "System.Xml.Linq",
-          "Xamarin.iOS"
+          "System.Drawing.Common.dll"
         ],
         "compile": {
           "lib/xamarinios10/Acr.UserDialogs.dll": {}
@@ -32,7 +26,7 @@
           "lib/Xamarin.iOS10/BTProgressHUD.dll": {}
         }
       },
-      "CClarke.Plugin.Calendars/1.0.0": {
+      "CClarke.Plugin.Calendars/1.0.14": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Plugin.Calendars.Abstractions.dll": {},
@@ -65,7 +59,7 @@
           "lib/netstandard2.0/EPPlus.dll": {}
         }
       },
-      "HtmlAgilityPack/1.8.13": {
+      "HtmlAgilityPack/1.11.17": {
         "type": "package",
         "dependencies": {
           "System.Net.Http": "4.3.2",
@@ -494,7 +488,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.6.0.344457": {
+      "Xamarin.Forms/4.1.0.581479": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -572,8 +566,8 @@
           "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pl"
           },
-          "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll": {
-            "locale": "pt-BR"
+          "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Platform.iOS.resources.dll": {
+            "locale": "pt-br"
           },
           "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pt"
@@ -621,19 +615,19 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.0.1",
-          "CClarke.Plugin.Calendars": "1.0.0",
+          "Acr.UserDialogs": "7.0.35",
+          "CClarke.Plugin.Calendars": "1.0.14",
           "EPPlus": "4.5.3.2",
-          "HtmlAgilityPack": "1.8.13",
+          "HtmlAgilityPack": "1.11.17",
           "Plugin.Permissions": "3.0.0.12",
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "System.Buffers": "4.5.0",
-          "System.Drawing.Common": "4.6.0",
+          "System.Drawing.Common": "4.7.0",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
-          "Xamarin.Essentials": "1.0.1",
-          "Xamarin.Forms": "3.6.0.264807",
+          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Forms": "4.1.0.581479",
           "sqlite-net-pcl": "1.6.292"
         },
         "compile": {
@@ -645,19 +639,13 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
-      "Acr.UserDialogs/7.0.1": {
+      "Acr.UserDialogs/7.0.35": {
         "type": "package",
         "dependencies": {
           "BTProgressHUD": "1.2.0.6"
         },
         "frameworkAssemblies": [
-          "OpenTK-1.0",
-          "System",
-          "System.Core",
-          "System.Net.Http",
-          "System.Xml",
-          "System.Xml.Linq",
-          "Xamarin.iOS"
+          "System.Drawing.Common.dll"
         ],
         "compile": {
           "lib/xamarinios10/Acr.UserDialogs.dll": {}
@@ -675,7 +663,7 @@
           "lib/Xamarin.iOS10/BTProgressHUD.dll": {}
         }
       },
-      "CClarke.Plugin.Calendars/1.0.0": {
+      "CClarke.Plugin.Calendars/1.0.14": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Plugin.Calendars.Abstractions.dll": {},
@@ -708,7 +696,7 @@
           "lib/netstandard2.0/EPPlus.dll": {}
         }
       },
-      "HtmlAgilityPack/1.8.13": {
+      "HtmlAgilityPack/1.11.17": {
         "type": "package",
         "dependencies": {
           "System.Net.Http": "4.3.2",
@@ -1105,7 +1093,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.6.0.344457": {
+      "Xamarin.Forms/4.1.0.581479": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1183,8 +1171,8 @@
           "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pl"
           },
-          "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll": {
-            "locale": "pt-BR"
+          "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Platform.iOS.resources.dll": {
+            "locale": "pt-br"
           },
           "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pt"
@@ -1232,19 +1220,19 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.0.1",
-          "CClarke.Plugin.Calendars": "1.0.0",
+          "Acr.UserDialogs": "7.0.35",
+          "CClarke.Plugin.Calendars": "1.0.14",
           "EPPlus": "4.5.3.2",
-          "HtmlAgilityPack": "1.8.13",
+          "HtmlAgilityPack": "1.11.17",
           "Plugin.Permissions": "3.0.0.12",
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "System.Buffers": "4.5.0",
-          "System.Drawing.Common": "4.6.0",
+          "System.Drawing.Common": "4.7.0",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
-          "Xamarin.Essentials": "1.0.1",
-          "Xamarin.Forms": "3.6.0.264807",
+          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Forms": "4.1.0.581479",
           "sqlite-net-pcl": "1.6.292"
         },
         "compile": {
@@ -1256,19 +1244,13 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
-      "Acr.UserDialogs/7.0.1": {
+      "Acr.UserDialogs/7.0.35": {
         "type": "package",
         "dependencies": {
           "BTProgressHUD": "1.2.0.6"
         },
         "frameworkAssemblies": [
-          "OpenTK-1.0",
-          "System",
-          "System.Core",
-          "System.Net.Http",
-          "System.Xml",
-          "System.Xml.Linq",
-          "Xamarin.iOS"
+          "System.Drawing.Common.dll"
         ],
         "compile": {
           "lib/xamarinios10/Acr.UserDialogs.dll": {}
@@ -1286,7 +1268,7 @@
           "lib/Xamarin.iOS10/BTProgressHUD.dll": {}
         }
       },
-      "CClarke.Plugin.Calendars/1.0.0": {
+      "CClarke.Plugin.Calendars/1.0.14": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Plugin.Calendars.Abstractions.dll": {},
@@ -1319,7 +1301,7 @@
           "lib/netstandard2.0/EPPlus.dll": {}
         }
       },
-      "HtmlAgilityPack/1.8.13": {
+      "HtmlAgilityPack/1.11.17": {
         "type": "package",
         "dependencies": {
           "System.Net.Http": "4.3.2",
@@ -1716,7 +1698,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.6.0.344457": {
+      "Xamarin.Forms/4.1.0.581479": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1794,8 +1776,8 @@
           "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pl"
           },
-          "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll": {
-            "locale": "pt-BR"
+          "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Platform.iOS.resources.dll": {
+            "locale": "pt-br"
           },
           "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pt"
@@ -1843,19 +1825,19 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.0.1",
-          "CClarke.Plugin.Calendars": "1.0.0",
+          "Acr.UserDialogs": "7.0.35",
+          "CClarke.Plugin.Calendars": "1.0.14",
           "EPPlus": "4.5.3.2",
-          "HtmlAgilityPack": "1.8.13",
+          "HtmlAgilityPack": "1.11.17",
           "Plugin.Permissions": "3.0.0.12",
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "System.Buffers": "4.5.0",
-          "System.Drawing.Common": "4.6.0",
+          "System.Drawing.Common": "4.7.0",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
-          "Xamarin.Essentials": "1.0.1",
-          "Xamarin.Forms": "3.6.0.264807",
+          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Forms": "4.1.0.581479",
           "sqlite-net-pcl": "1.6.292"
         },
         "compile": {
@@ -1867,19 +1849,13 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
-      "Acr.UserDialogs/7.0.1": {
+      "Acr.UserDialogs/7.0.35": {
         "type": "package",
         "dependencies": {
           "BTProgressHUD": "1.2.0.6"
         },
         "frameworkAssemblies": [
-          "OpenTK-1.0",
-          "System",
-          "System.Core",
-          "System.Net.Http",
-          "System.Xml",
-          "System.Xml.Linq",
-          "Xamarin.iOS"
+          "System.Drawing.Common.dll"
         ],
         "compile": {
           "lib/xamarinios10/Acr.UserDialogs.dll": {}
@@ -1897,7 +1873,7 @@
           "lib/Xamarin.iOS10/BTProgressHUD.dll": {}
         }
       },
-      "CClarke.Plugin.Calendars/1.0.0": {
+      "CClarke.Plugin.Calendars/1.0.14": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Plugin.Calendars.Abstractions.dll": {},
@@ -1930,7 +1906,7 @@
           "lib/netstandard2.0/EPPlus.dll": {}
         }
       },
-      "HtmlAgilityPack/1.8.13": {
+      "HtmlAgilityPack/1.11.17": {
         "type": "package",
         "dependencies": {
           "System.Net.Http": "4.3.2",
@@ -2327,7 +2303,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/3.6.0.344457": {
+      "Xamarin.Forms/4.1.0.581479": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -2405,8 +2381,8 @@
           "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pl"
           },
-          "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll": {
-            "locale": "pt-BR"
+          "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Platform.iOS.resources.dll": {
+            "locale": "pt-br"
           },
           "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pt"
@@ -2454,19 +2430,19 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.0.1",
-          "CClarke.Plugin.Calendars": "1.0.0",
+          "Acr.UserDialogs": "7.0.35",
+          "CClarke.Plugin.Calendars": "1.0.14",
           "EPPlus": "4.5.3.2",
-          "HtmlAgilityPack": "1.8.13",
+          "HtmlAgilityPack": "1.11.17",
           "Plugin.Permissions": "3.0.0.12",
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "System.Buffers": "4.5.0",
-          "System.Drawing.Common": "4.6.0",
+          "System.Drawing.Common": "4.7.0",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
-          "Xamarin.Essentials": "1.0.1",
-          "Xamarin.Forms": "3.6.0.264807",
+          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Forms": "4.1.0.581479",
           "sqlite-net-pcl": "1.6.292"
         },
         "compile": {
@@ -2479,27 +2455,44 @@
     }
   },
   "libraries": {
-    "Acr.UserDialogs/7.0.1": {
-      "sha512": "+eGbTgwaFPzcaRnMdnAK5pHA0eoeoxkhy80FNwGeewqvA+DM6fUPM9yMbrN2hw3rcuBaXd2ghy2Xq5XU7m8qkw==",
+    "Acr.UserDialogs/7.0.35": {
+      "sha512": "z/b/LYtRW6logITXFhbN65MHzuiUyDsQ4gJmui178FmEgpB2TgOwUnXE1rGw/zrU3IE5zjMcUt07oRHILarDtA==",
       "type": "package",
-      "path": "acr.userdialogs/7.0.1",
+      "path": "acr.userdialogs/7.0.35",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "acr.userdialogs.7.0.1.nupkg.sha512",
+        "acr.userdialogs.7.0.35.nupkg.sha512",
         "acr.userdialogs.nuspec",
-        "lib/monoandroid70/Acr.UserDialogs.dll",
-        "lib/monoandroid80/Acr.UserDialogs.dll",
+        "lib/monoandroid81/Acr.UserDialogs.dll",
+        "lib/monoandroid81/Acr.UserDialogs.pdb",
+        "lib/monoandroid81/Acr.UserDialogs.xml",
+        "lib/monoandroid90/Acr.UserDialogs.dll",
+        "lib/monoandroid90/Acr.UserDialogs.pdb",
+        "lib/monoandroid90/Acr.UserDialogs.xml",
         "lib/netstandard2.0/Acr.UserDialogs.dll",
+        "lib/netstandard2.0/Acr.UserDialogs.pdb",
+        "lib/netstandard2.0/Acr.UserDialogs.xml",
         "lib/uap10.0.16299/Acr.UserDialogs.dll",
+        "lib/uap10.0.16299/Acr.UserDialogs.pdb",
         "lib/uap10.0.16299/Acr.UserDialogs.pri",
+        "lib/uap10.0.16299/Acr.UserDialogs.xml",
         "lib/uap10.0.16299/Acr.UserDialogs/Acr.UserDialogs.xr.xml",
         "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/ActionSheetContentDialog.xaml",
         "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/DatePickerControl.xaml",
         "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/LoginContentDialog.xaml",
         "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/ProgressContentDialog.xaml",
         "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/TimePickerControl.xaml",
-        "lib/xamarinios10/Acr.UserDialogs.dll"
+        "lib/xamarinios10/Acr.UserDialogs.dll",
+        "lib/xamarinios10/Acr.UserDialogs.pdb",
+        "lib/xamarinios10/Acr.UserDialogs.xml",
+        "lib/xamarinmac20/Acr.UserDialogs.dll",
+        "lib/xamarinmac20/Acr.UserDialogs.pdb",
+        "lib/xamarinmac20/Acr.UserDialogs.xml",
+        "lib/xamarintvos10/Acr.UserDialogs.dll",
+        "lib/xamarintvos10/Acr.UserDialogs.pdb",
+        "lib/xamarintvos10/Acr.UserDialogs.xml",
+        "readme.txt"
       ]
     },
     "BTProgressHUD/1.2.0.6": {
@@ -2515,14 +2508,14 @@
         "lib/Xamarin.iOS10/BTProgressHUD.dll"
       ]
     },
-    "CClarke.Plugin.Calendars/1.0.0": {
-      "sha512": "+glJm1FLp6W4MRpTbvNwCB/RhXrwVQlPsW5ukYuj+HaYVswH/pd8Mm0x+9msHrqDfiSHlUAMvcGplKSns0R8iA==",
+    "CClarke.Plugin.Calendars/1.0.14": {
+      "sha512": "wIX8W8sQ78gT9nxGX55R4FcIba+gW1MFi6DU20iVPXccgTEMmPEt3KbWntB8oAsRW5vjbvsxbGnlYavsMR3h/Q==",
       "type": "package",
-      "path": "cclarke.plugin.calendars/1.0.0",
+      "path": "cclarke.plugin.calendars/1.0.14",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "cclarke.plugin.calendars.1.0.0.nupkg.sha512",
+        "cclarke.plugin.calendars.1.0.14.nupkg.sha512",
         "cclarke.plugin.calendars.nuspec",
         "lib/MonoAndroid10/Plugin.Calendars.Abstractions.dll",
         "lib/MonoAndroid10/Plugin.Calendars.Abstractions.pdb",
@@ -2565,18 +2558,18 @@
         "readme.txt"
       ]
     },
-    "HtmlAgilityPack/1.8.13": {
-      "sha512": "bkib2dbqxgJaDqsAZJ+8xs+JnmpY8ZN32whuMndj//d+j9L7YlcoC9dK6YeTxrruq9Ytm81BSRodOSXHBqw1ag==",
+    "HtmlAgilityPack/1.11.17": {
+      "sha512": "/aFnzxmvcWj9D2KEH9tEHE4rv5ZOGOTmgWtZK/Wr3ZwU0NrXVwzpPM2O57Roe08N9/h7tvwMD8lqT6KlKPahBg==",
       "type": "package",
-      "path": "htmlagilitypack/1.8.13",
+      "path": "htmlagilitypack/1.11.17",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "htmlagilitypack.1.8.13.nupkg.sha512",
+        "htmlagilitypack.1.11.17.nupkg.sha512",
         "htmlagilitypack.nuspec",
-        "lib/Net20/HtmlAgilityPack.dll",
-        "lib/Net20/HtmlAgilityPack.pdb",
-        "lib/Net20/HtmlAgilityPack.xml",
+        "lib/Net35/HtmlAgilityPack.dll",
+        "lib/Net35/HtmlAgilityPack.pdb",
+        "lib/Net35/HtmlAgilityPack.xml",
         "lib/Net40-client/HtmlAgilityPack.dll",
         "lib/Net40-client/HtmlAgilityPack.pdb",
         "lib/Net40-client/HtmlAgilityPack.xml",
@@ -3759,10 +3752,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/3.6.0.344457": {
-      "sha512": "7IffIKgL0fmgbfCLKzXaFKJ7uOueKiz/BIgmAG1Z5WMn+vMKeALe5GgRs3Uddo670VzllIHWkNEZD3lG+e02bw==",
+    "Xamarin.Forms/4.1.0.581479": {
+      "sha512": "wrO8AOW1xsFoGgT1SUvJ9OEeqAduJOm0xezZGNe0rCiAv2N9Qc/n5uywhlSia1s1k+Zy/hOrhZ4b7/EM6z9oog==",
       "type": "package",
-      "path": "xamarin.forms/3.6.0.344457",
+      "path": "xamarin.forms/4.1.0.581479",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3800,6 +3793,26 @@
         "lib/MonoAndroid81/Xamarin.Forms.Xaml.dll",
         "lib/MonoAndroid81/Xamarin.Forms.Xaml.pdb",
         "lib/MonoAndroid81/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid81/de/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid81/de/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid81/es/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid81/es/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid81/fr/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid81/fr/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid81/it/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid81/it/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid81/ja/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid81/ja/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid81/ko/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid81/ko/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid81/pt-br/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid81/pt-br/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid81/ru/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid81/ru/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid81/zh-Hans/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid81/zh-Hans/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid81/zh-Hant/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid81/zh-Hant/Xamarin.Forms.Xaml.xml",
         "lib/MonoAndroid90/Design/Xamarin.Forms.Core.Design.dll",
         "lib/MonoAndroid90/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/MonoAndroid90/FormsViewGroup.dll",
@@ -3813,6 +3826,26 @@
         "lib/MonoAndroid90/Xamarin.Forms.Xaml.dll",
         "lib/MonoAndroid90/Xamarin.Forms.Xaml.pdb",
         "lib/MonoAndroid90/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid90/de/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid90/de/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid90/es/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid90/es/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid90/fr/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid90/fr/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid90/it/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid90/it/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid90/ja/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid90/ja/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid90/ko/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid90/ko/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid90/pt-br/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid90/pt-br/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid90/ru/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid90/ru/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid90/zh-Hans/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid90/zh-Hans/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid90/zh-Hant/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid90/zh-Hant/Xamarin.Forms.Xaml.xml",
         "lib/Xamarin.Mac/Design/Xamarin.Forms.Core.Design.dll",
         "lib/Xamarin.Mac/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/Xamarin.Mac/Xamarin.Forms.Core.dll",
@@ -3834,27 +3867,43 @@
         "lib/Xamarin.iOS10/ca/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/cs/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/da/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/de/Xamarin.Forms.Core.xml",
         "lib/Xamarin.iOS10/de/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/de/Xamarin.Forms.Xaml.xml",
         "lib/Xamarin.iOS10/el/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/es/Xamarin.Forms.Core.xml",
         "lib/Xamarin.iOS10/es/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/es/Xamarin.Forms.Xaml.xml",
         "lib/Xamarin.iOS10/fi/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/fr/Xamarin.Forms.Core.xml",
         "lib/Xamarin.iOS10/fr/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/fr/Xamarin.Forms.Xaml.xml",
         "lib/Xamarin.iOS10/he/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/hi/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/hr/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/hu/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/id/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/it/Xamarin.Forms.Core.xml",
         "lib/Xamarin.iOS10/it/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/it/Xamarin.Forms.Xaml.xml",
+        "lib/Xamarin.iOS10/ja/Xamarin.Forms.Core.xml",
         "lib/Xamarin.iOS10/ja/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ja/Xamarin.Forms.Xaml.xml",
+        "lib/Xamarin.iOS10/ko/Xamarin.Forms.Core.xml",
         "lib/Xamarin.iOS10/ko/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ko/Xamarin.Forms.Xaml.xml",
         "lib/Xamarin.iOS10/ms/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/nb/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/nl/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll",
-        "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Core.xml",
+        "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Xaml.xml",
         "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/ro/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ru/Xamarin.Forms.Core.xml",
         "lib/Xamarin.iOS10/ru/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/ru/Xamarin.Forms.Xaml.xml",
         "lib/Xamarin.iOS10/sk/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/sv/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/th/Xamarin.Forms.Platform.iOS.resources.dll",
@@ -3862,8 +3911,12 @@
         "lib/Xamarin.iOS10/uk/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/vi/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/zh-Hans/Xamarin.Forms.Core.xml",
         "lib/Xamarin.iOS10/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/zh-Hans/Xamarin.Forms.Xaml.xml",
+        "lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Core.xml",
         "lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/zh-Hant/Xamarin.Forms.Xaml.xml",
         "lib/netstandard1.0/Design/Xamarin.Forms.Core.Design.dll",
         "lib/netstandard1.0/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/netstandard1.0/Xamarin.Forms.Core.dll",
@@ -3882,6 +3935,26 @@
         "lib/netstandard2.0/Xamarin.Forms.Xaml.dll",
         "lib/netstandard2.0/Xamarin.Forms.Xaml.pdb",
         "lib/netstandard2.0/Xamarin.Forms.Xaml.xml",
+        "lib/netstandard2.0/de/Xamarin.Forms.Core.xml",
+        "lib/netstandard2.0/de/Xamarin.Forms.Xaml.xml",
+        "lib/netstandard2.0/es/Xamarin.Forms.Core.xml",
+        "lib/netstandard2.0/es/Xamarin.Forms.Xaml.xml",
+        "lib/netstandard2.0/fr/Xamarin.Forms.Core.xml",
+        "lib/netstandard2.0/fr/Xamarin.Forms.Xaml.xml",
+        "lib/netstandard2.0/it/Xamarin.Forms.Core.xml",
+        "lib/netstandard2.0/it/Xamarin.Forms.Xaml.xml",
+        "lib/netstandard2.0/ja/Xamarin.Forms.Core.xml",
+        "lib/netstandard2.0/ja/Xamarin.Forms.Xaml.xml",
+        "lib/netstandard2.0/ko/Xamarin.Forms.Core.xml",
+        "lib/netstandard2.0/ko/Xamarin.Forms.Xaml.xml",
+        "lib/netstandard2.0/pt-br/Xamarin.Forms.Core.xml",
+        "lib/netstandard2.0/pt-br/Xamarin.Forms.Xaml.xml",
+        "lib/netstandard2.0/ru/Xamarin.Forms.Core.xml",
+        "lib/netstandard2.0/ru/Xamarin.Forms.Xaml.xml",
+        "lib/netstandard2.0/zh-Hans/Xamarin.Forms.Core.xml",
+        "lib/netstandard2.0/zh-Hans/Xamarin.Forms.Xaml.xml",
+        "lib/netstandard2.0/zh-Hant/Xamarin.Forms.Core.xml",
+        "lib/netstandard2.0/zh-Hant/Xamarin.Forms.Xaml.xml",
         "lib/tizen40/Design/Xamarin.Forms.Core.Design.dll",
         "lib/tizen40/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/tizen40/Xamarin.Forms.Core.dll",
@@ -3902,6 +3975,7 @@
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.pdb",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.pri",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/AutoSuggestStyle.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsCheckBoxStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsCommandBarStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsEmbeddedPageWrapper.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsFlyout.xbf",
@@ -3920,7 +3994,7 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.3.6.0.344457.nupkg.sha512",
+        "xamarin.forms.4.1.0.581479.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -3938,7 +4012,7 @@
       "System.Drawing.Common >= 4.5.1",
       "Xam.Plugins.Settings >= 3.1.1",
       "Xamarin.Essentials >= 1.1.0",
-      "Xamarin.Forms >= 3.6.0.344457"
+      "Xamarin.Forms >= 4.1.0.581479"
     ]
   },
   "packageFolders": {
@@ -3998,7 +4072,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[3.6.0.344457, )"
+            "version": "[4.1.0.581479, )"
           }
         }
       }
@@ -4033,8 +4107,21 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package downgrade: System.Drawing.Common from 4.6.0 to 4.5.1. Reference the package directly from the project to select a different version. \n APUToki.iOS -> APUToki -> System.Drawing.Common (>= 4.6.0) \n APUToki.iOS -> System.Drawing.Common (>= 4.5.1)",
+      "message": "Detected package downgrade: System.Drawing.Common from 4.7.0 to 4.5.1. Reference the package directly from the project to select a different version. \n APUToki.iOS -> APUToki -> System.Drawing.Common (>= 4.7.0) \n APUToki.iOS -> System.Drawing.Common (>= 4.5.1)",
       "libraryId": "System.Drawing.Common",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.3.1 to 1.1.0. Reference the package directly from the project to select a different version. \n APUToki.iOS -> APUToki -> Xamarin.Essentials (>= 1.3.1) \n APUToki.iOS -> Xamarin.Essentials (>= 1.1.0)",
+      "libraryId": "Xamarin.Essentials",
       "targetGraphs": [
         "Xamarin.iOS,Version=v1.0",
         "Xamarin.iOS,Version=v1.0/win",

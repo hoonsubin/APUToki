@@ -4,6 +4,7 @@
 @string/appbar_scrolling_view_behavior;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/flyoutcontent.xml
 @string/appbar_scrolling_view_behavior;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/rootlayout.xml
 @string/appbar_scrolling_view_behavior;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/shellcontent.xml
+@string/appbar_scrolling_view_behavior;/Users/hoonkim/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/flyoutcontent.xml
 adaptive-icon;obj/Debug/res/mipmap-anydpi-v26/icon.xml
 adaptive-icon;obj/Debug/res/mipmap-anydpi-v26/icon_round.xml
 alpha;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/anim/enterfromleft.xml
@@ -16,6 +17,7 @@ android.support.design.widget.AppBarLayout;/Users/hoonkim/Documents/Projects/App
 android.support.design.widget.AppBarLayout;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/flyoutcontent.xml
 android.support.design.widget.AppBarLayout;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/rootlayout.xml
 android.support.design.widget.AppBarLayout;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/shellcontent.xml
+android.support.design.widget.AppBarLayout;/Users/hoonkim/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/flyoutcontent.xml
 android.support.design.widget.BottomNavigationView;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/bottomtablayout.xml
 android.support.design.widget.BottomNavigationView;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/bottomtablayout.xml
 android.support.design.widget.CoordinatorLayout;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/flyoutcontent.xml
@@ -24,6 +26,7 @@ android.support.design.widget.CoordinatorLayout;/Users/hoonkim/Documents/Project
 android.support.design.widget.CoordinatorLayout;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/flyoutcontent.xml
 android.support.design.widget.CoordinatorLayout;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/rootlayout.xml
 android.support.design.widget.CoordinatorLayout;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/shellcontent.xml
+android.support.design.widget.CoordinatorLayout;/Users/hoonkim/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/flyoutcontent.xml
 android.support.design.widget.TabLayout;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/rootlayout.xml
 android.support.design.widget.TabLayout;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/rootlayout.xml
 android.support.design.widget.TabLayout;obj/Debug/res/layout/tabbar.xml
@@ -33,6 +36,7 @@ android.support.v4.widget.NestedScrollView;/Users/hoonkim/Documents/Projects/APU
 android.support.v4.widget.NestedScrollView;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/shellcontent.xml
 android.support.v7.widget.RecyclerView;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/flyoutcontent.xml
 android.support.v7.widget.RecyclerView;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/flyoutcontent.xml
+android.support.v7.widget.RecyclerView;/Users/hoonkim/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/flyoutcontent.xml
 android.support.v7.widget.Toolbar;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/rootlayout.xml
 android.support.v7.widget.Toolbar;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/shellcontent.xml
 android.support.v7.widget.Toolbar;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/layout/rootlayout.xml
@@ -40,6 +44,7 @@ android.support.v7.widget.Toolbar;/Users/hoonkim/Documents/Projects/APUToki/APUT
 android.support.v7.widget.Toolbar;obj/Debug/res/layout/toolbar.xml
 androidhud.ProgressWheel;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingprogress.xml
 androidhud.ProgressWheel;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingprogress.xml
+androidhud.ProgressWheel;/Users/hoonkim/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingprogress.xml
 attr;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/values/attrs.xml
 attr;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/values/attrs.xml
 background;obj/Debug/res/mipmap-anydpi-v26/icon.xml
@@ -67,6 +72,7 @@ gradient;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/
 gradient;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/drawable/roundedbgdark.xml
 ImageView;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingimage.xml
 ImageView;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingimage.xml
+ImageView;/Users/hoonkim/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingimage.xml
 item;obj/Debug/res/values/styles.xml
 LinearLayout;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loading.xml
 LinearLayout;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingimage.xml
@@ -81,6 +87,10 @@ paths;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/l
 paths;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/58/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
 ProgressBar;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loading.xml
 ProgressBar;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loading.xml
+ProgressBar;/Users/hoonkim/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loading.xml
+RelativeLayout;/Users/hoonkim/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loading.xml
+RelativeLayout;/Users/hoonkim/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingimage.xml
+RelativeLayout;/Users/hoonkim/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingprogress.xml
 resources;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/values/attrs.xml
 resources;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/values/strings.xml
 resources;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/values/attrs.xml
@@ -108,6 +118,9 @@ TextView;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debu
 TextView;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loading.xml
 TextView;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingimage.xml
 TextView;/Users/hoonkim/Documents/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingprogress.xml
+TextView;/Users/hoonkim/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loading.xml
+TextView;/Users/hoonkim/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingimage.xml
+TextView;/Users/hoonkim/Projects/APUToki/APUToki.Android/obj/Debug/lp/1/jl/res/layout/loadingprogress.xml
 translate;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/anim/enterfromleft.xml
 translate;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/anim/enterfromright.xml
 translate;/Users/hoonkim/Documents/Projects/Apps/APUToki/APUToki.Android/obj/Debug/lp/60/jl/res/anim/exittoleft.xml
