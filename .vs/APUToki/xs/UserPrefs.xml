@@ -1,8 +1,8 @@
-﻿<Properties StartupConfiguration="{87EA89BB-A0C3-4431-BF08-4BDF4A947D04}|Default">
+﻿<Properties StartupConfiguration="{C1477615-B0B2-4DBB-AE28-2420006A17C7}|Default">
   <MonoDevelop.Ide.ItemProperties.APUToki.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7A777EE4-F38F-4629-B942-61D92BD90C23" />
   <MonoDevelop.Ide.Workbench ActiveDocument="APUToki/App.xaml">
     <Files>
-      <File FileName="APUToki/App.xaml" Line="1" Column="1" />
+      <File FileName="APUToki/App.xaml" Line="17" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,7 +10,10 @@
           <Node name="APUToki" expanded="True">
             <Node name="APUToki" expanded="True">
               <Node name="Views" expanded="True" />
-              <Node name="App.xaml" selected="True" />
+            </Node>
+            <Node name="APUToki.Android" expanded="True" />
+            <Node name="APUToki.iOS" expanded="True">
+              <Node name="Packages" selected="True" />
             </Node>
           </Node>
         </State>

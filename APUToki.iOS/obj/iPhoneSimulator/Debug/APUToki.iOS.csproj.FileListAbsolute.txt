@@ -333,3 +333,6 @@
 /Users/hoonkim/Projects/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.csproj.CopyComplete
 /Users/hoonkim/Projects/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.exe
 /Users/hoonkim/Projects/APUToki/APUToki.iOS/obj/iPhoneSimulator/Debug/APUToki.iOS.pdb
+/Users/hoonkim/Projects/APUToki/APUToki.iOS/bin/iPhoneSimulator/Debug/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/hoonkim/Projects/APUToki/APUToki.iOS/bin/iPhoneSimulator/Debug/System.Text.Encodings.Web.dll
+/Users/hoonkim/Projects/APUToki/APUToki.iOS/bin/iPhoneSimulator/Debug/System.Text.Json.dll
